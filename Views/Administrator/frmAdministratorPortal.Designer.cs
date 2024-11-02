@@ -28,12 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmAdministratorPortal";
+            button1 = new Button();
+            SuspendLayout();
+            // 
+            // button1
+            // 
+            button1.Location = new Point(150, 191);
+            button1.Name = "button1";
+            button1.Size = new Size(448, 230);
+            button1.TabIndex = 0;
+            button1.Text = "I have been changed";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // frmAdministratorPortal
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(878, 582);
+            Controls.Add(button1);
+            Name = "frmAdministratorPortal";
+            Text = "frmAdministratorPortal";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button button1;
     }
 }
