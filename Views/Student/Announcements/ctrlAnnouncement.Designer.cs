@@ -30,45 +30,45 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ctrlAnnouncement));
             panel5 = new Panel();
-            rtModuleIntro = new RichTextBox();
+            rtAnnouncementContent = new RichTextBox();
             panel6 = new Panel();
             label5 = new Label();
-            label16 = new Label();
+            lblAnnouncementModule = new Label();
             label17 = new Label();
-            label18 = new Label();
+            lblAnnouncementPostDate = new Label();
             label50 = new Label();
-            label51 = new Label();
+            lblAnnouncementPostedBy = new Label();
             panel5.SuspendLayout();
             SuspendLayout();
             // 
             // panel5
             // 
             panel5.BackColor = Color.OldLace;
-            panel5.Controls.Add(rtModuleIntro);
+            panel5.Controls.Add(rtAnnouncementContent);
             panel5.Controls.Add(panel6);
             panel5.Controls.Add(label5);
-            panel5.Controls.Add(label16);
+            panel5.Controls.Add(lblAnnouncementModule);
             panel5.Controls.Add(label17);
-            panel5.Controls.Add(label18);
+            panel5.Controls.Add(lblAnnouncementPostDate);
             panel5.Controls.Add(label50);
-            panel5.Controls.Add(label51);
+            panel5.Controls.Add(lblAnnouncementPostedBy);
             panel5.Location = new Point(3, 3);
             panel5.Name = "panel5";
             panel5.Size = new Size(813, 204);
             panel5.TabIndex = 56;
             // 
-            // rtModuleIntro
+            // rtAnnouncementContent
             // 
-            rtModuleIntro.BackColor = Color.OldLace;
-            rtModuleIntro.BorderStyle = BorderStyle.None;
-            rtModuleIntro.Font = new Font("Microsoft YaHei UI Light", 10F);
-            rtModuleIntro.Location = new Point(204, 22);
-            rtModuleIntro.Name = "rtModuleIntro";
-            rtModuleIntro.ReadOnly = true;
-            rtModuleIntro.ScrollBars = RichTextBoxScrollBars.Vertical;
-            rtModuleIntro.Size = new Size(593, 161);
-            rtModuleIntro.TabIndex = 55;
-            rtModuleIntro.Text = resources.GetString("rtModuleIntro.Text");
+            rtAnnouncementContent.BackColor = Color.OldLace;
+            rtAnnouncementContent.BorderStyle = BorderStyle.None;
+            rtAnnouncementContent.Font = new Font("Microsoft YaHei UI Light", 10F);
+            rtAnnouncementContent.Location = new Point(204, 22);
+            rtAnnouncementContent.Name = "rtAnnouncementContent";
+            rtAnnouncementContent.ReadOnly = true;
+            rtAnnouncementContent.ScrollBars = RichTextBoxScrollBars.Vertical;
+            rtAnnouncementContent.Size = new Size(593, 161);
+            rtAnnouncementContent.TabIndex = 55;
+            rtAnnouncementContent.Text = resources.GetString("rtAnnouncementContent.Text");
             // 
             // panel6
             // 
@@ -90,18 +90,18 @@
             label5.Text = "Module";
             label5.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label16
+            // lblAnnouncementModule
             // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Segoe UI Semilight", 12F);
-            label16.ForeColor = Color.Black;
-            label16.ImeMode = ImeMode.NoControl;
-            label16.Location = new Point(16, 154);
-            label16.Name = "label16";
-            label16.Size = new Size(106, 21);
-            label16.TabIndex = 40;
-            label16.Text = "Cyber Security";
-            label16.TextAlign = ContentAlignment.MiddleLeft;
+            lblAnnouncementModule.AutoSize = true;
+            lblAnnouncementModule.Font = new Font("Segoe UI Semilight", 12F);
+            lblAnnouncementModule.ForeColor = Color.RoyalBlue;
+            lblAnnouncementModule.ImeMode = ImeMode.NoControl;
+            lblAnnouncementModule.Location = new Point(16, 154);
+            lblAnnouncementModule.Name = "lblAnnouncementModule";
+            lblAnnouncementModule.Size = new Size(106, 21);
+            lblAnnouncementModule.TabIndex = 40;
+            lblAnnouncementModule.Text = "Cyber Security";
+            lblAnnouncementModule.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label17
             // 
@@ -115,18 +115,18 @@
             label17.Text = "Posted On";
             label17.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label18
+            // lblAnnouncementPostDate
             // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Segoe UI Semilight", 12F);
-            label18.ForeColor = Color.Black;
-            label18.ImeMode = ImeMode.NoControl;
-            label18.Location = new Point(16, 101);
-            label18.Name = "label18";
-            label18.Size = new Size(91, 21);
-            label18.TabIndex = 38;
-            label18.Text = "23 Oct 2024";
-            label18.TextAlign = ContentAlignment.MiddleLeft;
+            lblAnnouncementPostDate.AutoSize = true;
+            lblAnnouncementPostDate.Font = new Font("Segoe UI Semilight", 12F);
+            lblAnnouncementPostDate.ForeColor = Color.RoyalBlue;
+            lblAnnouncementPostDate.ImeMode = ImeMode.NoControl;
+            lblAnnouncementPostDate.Location = new Point(16, 101);
+            lblAnnouncementPostDate.Name = "lblAnnouncementPostDate";
+            lblAnnouncementPostDate.Size = new Size(91, 21);
+            lblAnnouncementPostDate.TabIndex = 38;
+            lblAnnouncementPostDate.Text = "23 Oct 2024";
+            lblAnnouncementPostDate.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label50
             // 
@@ -140,28 +140,27 @@
             label50.Text = "Posted By";
             label50.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label51
+            // lblAnnouncementPostedBy
             // 
-            label51.AutoSize = true;
-            label51.Font = new Font("Segoe UI Semilight", 15F);
-            label51.ForeColor = Color.Black;
-            label51.ImeMode = ImeMode.NoControl;
-            label51.Location = new Point(16, 42);
-            label51.Name = "label51";
-            label51.Size = new Size(114, 28);
-            label51.TabIndex = 36;
-            label51.Text = "Mr Kennedy";
-            label51.TextAlign = ContentAlignment.MiddleLeft;
+            lblAnnouncementPostedBy.AutoSize = true;
+            lblAnnouncementPostedBy.Font = new Font("Segoe UI Semilight", 15F);
+            lblAnnouncementPostedBy.ForeColor = Color.RoyalBlue;
+            lblAnnouncementPostedBy.ImeMode = ImeMode.NoControl;
+            lblAnnouncementPostedBy.Location = new Point(16, 42);
+            lblAnnouncementPostedBy.Name = "lblAnnouncementPostedBy";
+            lblAnnouncementPostedBy.Size = new Size(114, 28);
+            lblAnnouncementPostedBy.TabIndex = 36;
+            lblAnnouncementPostedBy.Text = "Mr Kennedy";
+            lblAnnouncementPostedBy.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // ctrlAnnouncement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ControlLight;
-            BorderStyle = BorderStyle.FixedSingle;
+            BackColor = Color.OldLace;
             Controls.Add(panel5);
             Name = "ctrlAnnouncement";
-            Size = new Size(819, 210);
+            Size = new Size(821, 212);
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             ResumeLayout(false);
@@ -172,11 +171,11 @@
         private Panel panel5;
         private Panel panel6;
         private Label label5;
-        private Label label16;
+        private Label lblAnnouncementModule;
         private Label label17;
-        private Label label18;
+        private Label lblAnnouncementPostDate;
         private Label label50;
-        private Label label51;
-        private RichTextBox rtModuleIntro;
+        private Label lblAnnouncementPostedBy;
+        private RichTextBox rtAnnouncementContent;
     }
 }

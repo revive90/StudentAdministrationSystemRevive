@@ -122,12 +122,12 @@
 
 </value>
   </data>
-  <data name="richTextBox1.Text" xml:space="preserve">
+  <data name="rtFeedbackAreasOfImprovement.Text" xml:space="preserve">
     <value>While your app has a strong foundation, there are a few areas where further refinement would enhance its effectiveness. Firstly, the side menu could benefit from additional functionality, such as collapsible sections or icons that represent each category, as this can improve usability and reduce screen clutter. The UI responsiveness could also be improved to ensure a seamless experience across various screen sizes, particularly for smaller resolutions. Additionally, enhancing error handling and data validation within the app will improve robustness, ensuring the app handles unexpected inputs and scenarios gracefully without disrupting user experience.
 
 </value>
   </data>
-  <data name="richTextBox2.Text" xml:space="preserve">
+  <data name="rtFeedbackImprovementStrategies.Text" xml:space="preserve">
     <value>To strengthen your app further, consider implementing a responsive design for the UI elements, particularly the side menu and content area, so they adapt well to different screen sizes. Introducing a collapsible or customizable side menu would give users more flexibility and provide a cleaner interface. Focus on improving error handling by identifying potential user input errors and coding appropriate validation and response messages. Lastly, consider adding unit tests to validate each layer’s functionality. This approach will help catch issues early in development, ultimately improving the reliability and quality of your application.
 
 

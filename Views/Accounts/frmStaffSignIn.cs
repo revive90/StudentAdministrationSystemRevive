@@ -1,4 +1,5 @@
 ﻿using StudentAdministrationSystemRevive.Accounts;
+using StudentAdministrationSystemRevive.Views.Administrator;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,13 @@ namespace StudentAdministrationSystemRevive.Views.Accounts
         {
             frmForgotPassword frmForgotPassword = new frmForgotPassword();
             frmForgotPassword.Show();
+            this.Close();
+        }
+
+        private void btnStaffSignIn_Click(object sender, EventArgs e)
+        {
+            frmAdministratorPortal frmAdminPortal = new frmAdministratorPortal();
+            frmAdminPortal.Show();
             this.Close();
         }
     }
