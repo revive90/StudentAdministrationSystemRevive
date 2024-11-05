@@ -29,32 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ctrlAssessments));
-            label5 = new Label();
+            lblAssignmentAssignmentTitle = new Label();
             button8 = new Button();
             label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
+            lblAssignmentAssignmentDueDate = new Label();
+            lblAssignmentAssignmentMaxMark = new Label();
             label4 = new Label();
-            rtModuleIntro = new RichTextBox();
+            rtAssignmentContent = new RichTextBox();
             panel1 = new Panel();
             panel2 = new Panel();
-            label6 = new Label();
-            label7 = new Label();
             panel3 = new Panel();
             SuspendLayout();
             // 
-            // label5
+            // lblAssignmentAssignmentTitle
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Semilight", 15F);
-            label5.ForeColor = Color.RoyalBlue;
-            label5.ImeMode = ImeMode.NoControl;
-            label5.Location = new Point(33, 11);
-            label5.Name = "label5";
-            label5.Size = new Size(152, 28);
-            label5.TabIndex = 31;
-            label5.Text = "Assignment One";
-            label5.TextAlign = ContentAlignment.MiddleLeft;
+            lblAssignmentAssignmentTitle.AutoSize = true;
+            lblAssignmentAssignmentTitle.Font = new Font("Segoe UI Semilight", 15F);
+            lblAssignmentAssignmentTitle.ForeColor = Color.RoyalBlue;
+            lblAssignmentAssignmentTitle.ImeMode = ImeMode.NoControl;
+            lblAssignmentAssignmentTitle.Location = new Point(33, 11);
+            lblAssignmentAssignmentTitle.Name = "lblAssignmentAssignmentTitle";
+            lblAssignmentAssignmentTitle.Size = new Size(152, 28);
+            lblAssignmentAssignmentTitle.TabIndex = 31;
+            lblAssignmentAssignmentTitle.Text = "Assignment One";
+            lblAssignmentAssignmentTitle.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // button8
             // 
@@ -84,56 +82,56 @@
             label1.Text = "Due ";
             label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label2
+            // lblAssignmentAssignmentDueDate
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semilight", 12F);
-            label2.ForeColor = Color.Black;
-            label2.ImeMode = ImeMode.NoControl;
-            label2.Location = new Point(358, 19);
-            label2.Name = "label2";
-            label2.Size = new Size(103, 21);
-            label2.TabIndex = 44;
-            label2.Text = "2 Dec at 15:00";
-            label2.TextAlign = ContentAlignment.MiddleLeft;
+            lblAssignmentAssignmentDueDate.AutoSize = true;
+            lblAssignmentAssignmentDueDate.Font = new Font("Segoe UI Semilight", 12F);
+            lblAssignmentAssignmentDueDate.ForeColor = Color.Black;
+            lblAssignmentAssignmentDueDate.ImeMode = ImeMode.NoControl;
+            lblAssignmentAssignmentDueDate.Location = new Point(358, 19);
+            lblAssignmentAssignmentDueDate.Name = "lblAssignmentAssignmentDueDate";
+            lblAssignmentAssignmentDueDate.Size = new Size(103, 21);
+            lblAssignmentAssignmentDueDate.TabIndex = 44;
+            lblAssignmentAssignmentDueDate.Text = "2 Dec at 15:00";
+            lblAssignmentAssignmentDueDate.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label3
+            // lblAssignmentAssignmentMaxMark
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semilight", 12F);
-            label3.ForeColor = Color.Black;
-            label3.ImeMode = ImeMode.NoControl;
-            label3.Location = new Point(691, 18);
-            label3.Name = "label3";
-            label3.Size = new Size(32, 21);
-            label3.TabIndex = 46;
-            label3.Text = "100";
-            label3.TextAlign = ContentAlignment.MiddleLeft;
+            lblAssignmentAssignmentMaxMark.AutoSize = true;
+            lblAssignmentAssignmentMaxMark.Font = new Font("Segoe UI Semilight", 12F);
+            lblAssignmentAssignmentMaxMark.ForeColor = Color.Black;
+            lblAssignmentAssignmentMaxMark.ImeMode = ImeMode.NoControl;
+            lblAssignmentAssignmentMaxMark.Location = new Point(601, 18);
+            lblAssignmentAssignmentMaxMark.Name = "lblAssignmentAssignmentMaxMark";
+            lblAssignmentAssignmentMaxMark.Size = new Size(32, 21);
+            lblAssignmentAssignmentMaxMark.TabIndex = 46;
+            lblAssignmentAssignmentMaxMark.Text = "100";
+            lblAssignmentAssignmentMaxMark.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ImeMode = ImeMode.NoControl;
-            label4.Location = new Point(598, 19);
+            label4.Location = new Point(508, 19);
             label4.Name = "label4";
             label4.Size = new Size(87, 20);
             label4.TabIndex = 45;
             label4.Text = "Max Points";
             label4.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // rtModuleIntro
+            // rtAssignmentContent
             // 
-            rtModuleIntro.BackColor = Color.OldLace;
-            rtModuleIntro.BorderStyle = BorderStyle.None;
-            rtModuleIntro.Font = new Font("Microsoft YaHei UI Light", 10F);
-            rtModuleIntro.Location = new Point(33, 60);
-            rtModuleIntro.Name = "rtModuleIntro";
-            rtModuleIntro.ReadOnly = true;
-            rtModuleIntro.ScrollBars = RichTextBoxScrollBars.Vertical;
-            rtModuleIntro.Size = new Size(832, 401);
-            rtModuleIntro.TabIndex = 56;
-            rtModuleIntro.Text = resources.GetString("rtModuleIntro.Text");
+            rtAssignmentContent.BackColor = Color.OldLace;
+            rtAssignmentContent.BorderStyle = BorderStyle.None;
+            rtAssignmentContent.Font = new Font("Microsoft YaHei UI Light", 10F);
+            rtAssignmentContent.Location = new Point(33, 60);
+            rtAssignmentContent.Name = "rtAssignmentContent";
+            rtAssignmentContent.ReadOnly = true;
+            rtAssignmentContent.ScrollBars = RichTextBoxScrollBars.Vertical;
+            rtAssignmentContent.Size = new Size(769, 401);
+            rtAssignmentContent.TabIndex = 56;
+            rtAssignmentContent.Text = resources.GetString("rtAssignmentContent.Text");
             // 
             // panel1
             // 
@@ -151,31 +149,6 @@
             panel2.Size = new Size(1, 35);
             panel2.TabIndex = 58;
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Semilight", 12F);
-            label6.ForeColor = Color.Black;
-            label6.ImeMode = ImeMode.NoControl;
-            label6.Location = new Point(545, 18);
-            label6.Name = "label6";
-            label6.Size = new Size(38, 21);
-            label6.TabIndex = 60;
-            label6.Text = "N/A";
-            label6.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.ImeMode = ImeMode.NoControl;
-            label7.Location = new Point(488, 19);
-            label7.Name = "label7";
-            label7.Size = new Size(51, 20);
-            label7.TabIndex = 59;
-            label7.Text = "Grade";
-            label7.TextAlign = ContentAlignment.MiddleLeft;
-            // 
             // panel3
             // 
             panel3.BackColor = Color.RoyalBlue;
@@ -190,16 +163,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.OldLace;
             Controls.Add(panel3);
-            Controls.Add(label6);
-            Controls.Add(label7);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(rtModuleIntro);
-            Controls.Add(label3);
+            Controls.Add(rtAssignmentContent);
+            Controls.Add(lblAssignmentAssignmentMaxMark);
             Controls.Add(label4);
-            Controls.Add(label2);
+            Controls.Add(lblAssignmentAssignmentDueDate);
             Controls.Add(label1);
-            Controls.Add(label5);
+            Controls.Add(lblAssignmentAssignmentTitle);
             Controls.Add(button8);
             Name = "ctrlAssessments";
             Size = new Size(875, 509);
@@ -209,17 +180,15 @@
 
         #endregion
 
-        private Label label5;
+        private Label lblAssignmentAssignmentTitle;
         private Button button8;
         private Label label1;
-        private Label label2;
-        private Label label3;
+        private Label lblAssignmentAssignmentDueDate;
+        private Label lblAssignmentAssignmentMaxMark;
         private Label label4;
-        private RichTextBox rtModuleIntro;
+        private RichTextBox rtAssignmentContent;
         private Panel panel1;
         private Panel panel2;
-        private Label label6;
-        private Label label7;
         private Panel panel3;
     }
 }

@@ -39,7 +39,7 @@
             label2 = new Label();
             label1 = new Label();
             lblForgotPassword = new Label();
-            btnStudentSignIn = new Button();
+            btnStaffSignIn = new Button();
             SuspendLayout();
             // 
             // textBox3
@@ -162,20 +162,21 @@
             lblForgotPassword.Text = "Forgot Password?";
             lblForgotPassword.Click += lblForgotPassword_Click;
             // 
-            // btnStudentSignIn
+            // btnStaffSignIn
             // 
-            btnStudentSignIn.BackColor = Color.RoyalBlue;
-            btnStudentSignIn.Cursor = Cursors.Hand;
-            btnStudentSignIn.FlatAppearance.BorderSize = 0;
-            btnStudentSignIn.FlatStyle = FlatStyle.Flat;
-            btnStudentSignIn.Font = new Font("Microsoft YaHei UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnStudentSignIn.ForeColor = Color.White;
-            btnStudentSignIn.Location = new Point(269, 458);
-            btnStudentSignIn.Name = "btnStudentSignIn";
-            btnStudentSignIn.Size = new Size(115, 45);
-            btnStudentSignIn.TabIndex = 30;
-            btnStudentSignIn.Text = "Sign in";
-            btnStudentSignIn.UseVisualStyleBackColor = false;
+            btnStaffSignIn.BackColor = Color.RoyalBlue;
+            btnStaffSignIn.Cursor = Cursors.Hand;
+            btnStaffSignIn.FlatAppearance.BorderSize = 0;
+            btnStaffSignIn.FlatStyle = FlatStyle.Flat;
+            btnStaffSignIn.Font = new Font("Microsoft YaHei UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnStaffSignIn.ForeColor = Color.White;
+            btnStaffSignIn.Location = new Point(269, 458);
+            btnStaffSignIn.Name = "btnStaffSignIn";
+            btnStaffSignIn.Size = new Size(115, 45);
+            btnStaffSignIn.TabIndex = 30;
+            btnStaffSignIn.Text = "Sign in";
+            btnStaffSignIn.UseVisualStyleBackColor = false;
+            btnStaffSignIn.Click += btnStaffSignIn_Click;
             // 
             // frmStaffSignIn
             // 
@@ -184,7 +185,7 @@
             BackColor = Color.White;
             ClientSize = new Size(460, 533);
             Controls.Add(lblForgotPassword);
-            Controls.Add(btnStudentSignIn);
+            Controls.Add(btnStaffSignIn);
             Controls.Add(textBox3);
             Controls.Add(label4);
             Controls.Add(label8);
@@ -217,6 +218,6 @@
         private Label label2;
         private Label label1;
         private Label lblForgotPassword;
-        private Button btnStudentSignIn;
+        private Button btnStaffSignIn;
     }
 }

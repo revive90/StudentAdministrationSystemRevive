@@ -28,47 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label5 = new Label();
-            label6 = new Label();
+            lblAssessmentGradesAssessmentTitle = new Label();
+            lblAssessmentGradesPointsAchieved = new Label();
             label7 = new Label();
             panel2 = new Panel();
-            label3 = new Label();
+            lblAssessmentGradesPointsMax = new Label();
             label4 = new Label();
             panel1 = new Panel();
-            label1 = new Label();
+            lblAssessmentGradesPointsAchievedPercent = new Label();
             label2 = new Label();
-            label8 = new Label();
+            lblAssessmentGradesGrade = new Label();
             label9 = new Label();
             panel3 = new Panel();
             panel4 = new Panel();
             panel5 = new Panel();
             SuspendLayout();
             // 
-            // label5
+            // lblAssessmentGradesAssessmentTitle
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Semilight", 15F);
-            label5.ForeColor = Color.RoyalBlue;
-            label5.ImeMode = ImeMode.NoControl;
-            label5.Location = new Point(30, 30);
-            label5.Name = "label5";
-            label5.Size = new Size(152, 28);
-            label5.TabIndex = 32;
-            label5.Text = "Assignment One";
-            label5.TextAlign = ContentAlignment.MiddleLeft;
+            lblAssessmentGradesAssessmentTitle.AutoSize = true;
+            lblAssessmentGradesAssessmentTitle.Font = new Font("Segoe UI Semilight", 15F);
+            lblAssessmentGradesAssessmentTitle.ForeColor = Color.RoyalBlue;
+            lblAssessmentGradesAssessmentTitle.ImeMode = ImeMode.NoControl;
+            lblAssessmentGradesAssessmentTitle.Location = new Point(30, 30);
+            lblAssessmentGradesAssessmentTitle.Name = "lblAssessmentGradesAssessmentTitle";
+            lblAssessmentGradesAssessmentTitle.Size = new Size(152, 28);
+            lblAssessmentGradesAssessmentTitle.TabIndex = 32;
+            lblAssessmentGradesAssessmentTitle.Text = "Assignment One";
+            lblAssessmentGradesAssessmentTitle.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label6
+            // lblAssessmentGradesPointsAchieved
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Semilight", 17F);
-            label6.ForeColor = Color.Black;
-            label6.ImeMode = ImeMode.NoControl;
-            label6.Location = new Point(368, 32);
-            label6.Name = "label6";
-            label6.Size = new Size(55, 31);
-            label6.TabIndex = 65;
-            label6.Text = "N/A";
-            label6.TextAlign = ContentAlignment.MiddleLeft;
+            lblAssessmentGradesPointsAchieved.AutoSize = true;
+            lblAssessmentGradesPointsAchieved.Font = new Font("Segoe UI Semilight", 17F);
+            lblAssessmentGradesPointsAchieved.ForeColor = Color.Black;
+            lblAssessmentGradesPointsAchieved.ImeMode = ImeMode.NoControl;
+            lblAssessmentGradesPointsAchieved.Location = new Point(368, 32);
+            lblAssessmentGradesPointsAchieved.Name = "lblAssessmentGradesPointsAchieved";
+            lblAssessmentGradesPointsAchieved.Size = new Size(55, 31);
+            lblAssessmentGradesPointsAchieved.TabIndex = 65;
+            lblAssessmentGradesPointsAchieved.Text = "N/A";
+            lblAssessmentGradesPointsAchieved.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label7
             // 
@@ -90,18 +90,18 @@
             panel2.Size = new Size(1, 50);
             panel2.TabIndex = 63;
             // 
-            // label3
+            // lblAssessmentGradesPointsMax
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semilight", 17F);
-            label3.ForeColor = Color.Black;
-            label3.ImeMode = ImeMode.NoControl;
-            label3.Location = new Point(535, 32);
-            label3.Name = "label3";
-            label3.Size = new Size(47, 31);
-            label3.TabIndex = 62;
-            label3.Text = "100";
-            label3.TextAlign = ContentAlignment.MiddleLeft;
+            lblAssessmentGradesPointsMax.AutoSize = true;
+            lblAssessmentGradesPointsMax.Font = new Font("Segoe UI Semilight", 17F);
+            lblAssessmentGradesPointsMax.ForeColor = Color.Black;
+            lblAssessmentGradesPointsMax.ImeMode = ImeMode.NoControl;
+            lblAssessmentGradesPointsMax.Location = new Point(535, 32);
+            lblAssessmentGradesPointsMax.Name = "lblAssessmentGradesPointsMax";
+            lblAssessmentGradesPointsMax.Size = new Size(47, 31);
+            lblAssessmentGradesPointsMax.TabIndex = 62;
+            lblAssessmentGradesPointsMax.Text = "100";
+            lblAssessmentGradesPointsMax.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label4
             // 
@@ -123,43 +123,43 @@
             panel1.Size = new Size(1, 50);
             panel1.TabIndex = 64;
             // 
-            // label1
+            // lblAssessmentGradesPointsAchievedPercent
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semilight", 17F);
-            label1.ForeColor = Color.Black;
-            label1.ImeMode = ImeMode.NoControl;
-            label1.Location = new Point(610, 32);
-            label1.Name = "label1";
-            label1.Size = new Size(47, 31);
-            label1.TabIndex = 67;
-            label1.Text = "100";
-            label1.TextAlign = ContentAlignment.MiddleLeft;
+            lblAssessmentGradesPointsAchievedPercent.AutoSize = true;
+            lblAssessmentGradesPointsAchievedPercent.Font = new Font("Segoe UI Semilight", 17F);
+            lblAssessmentGradesPointsAchievedPercent.ForeColor = Color.Black;
+            lblAssessmentGradesPointsAchievedPercent.ImeMode = ImeMode.NoControl;
+            lblAssessmentGradesPointsAchievedPercent.Location = new Point(619, 32);
+            lblAssessmentGradesPointsAchievedPercent.Name = "lblAssessmentGradesPointsAchievedPercent";
+            lblAssessmentGradesPointsAchievedPercent.Size = new Size(47, 31);
+            lblAssessmentGradesPointsAchievedPercent.TabIndex = 67;
+            lblAssessmentGradesPointsAchievedPercent.Text = "100";
+            lblAssessmentGradesPointsAchievedPercent.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ImeMode = ImeMode.NoControl;
-            label2.Location = new Point(655, 39);
+            label2.Location = new Point(664, 39);
             label2.Name = "label2";
             label2.Size = new Size(22, 20);
             label2.TabIndex = 66;
             label2.Text = "%";
             label2.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label8
+            // lblAssessmentGradesGrade
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI Semilight", 17F);
-            label8.ForeColor = Color.Black;
-            label8.ImeMode = ImeMode.NoControl;
-            label8.Location = new Point(800, 32);
-            label8.Name = "label8";
-            label8.Size = new Size(47, 31);
-            label8.TabIndex = 69;
-            label8.Text = "100";
-            label8.TextAlign = ContentAlignment.MiddleLeft;
+            lblAssessmentGradesGrade.AutoSize = true;
+            lblAssessmentGradesGrade.Font = new Font("Segoe UI Semilight", 17F);
+            lblAssessmentGradesGrade.ForeColor = Color.Black;
+            lblAssessmentGradesGrade.ImeMode = ImeMode.NoControl;
+            lblAssessmentGradesGrade.Location = new Point(764, 29);
+            lblAssessmentGradesGrade.Name = "lblAssessmentGradesGrade";
+            lblAssessmentGradesGrade.Size = new Size(40, 31);
+            lblAssessmentGradesGrade.TabIndex = 69;
+            lblAssessmentGradesGrade.Text = "2.1";
+            lblAssessmentGradesGrade.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label9
             // 
@@ -168,9 +168,9 @@
             label9.ImeMode = ImeMode.NoControl;
             label9.Location = new Point(707, 38);
             label9.Name = "label9";
-            label9.Size = new Size(87, 20);
+            label9.Size = new Size(51, 20);
             label9.TabIndex = 68;
-            label9.Text = "Max Points";
+            label9.Text = "Grade";
             label9.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // panel3
@@ -205,17 +205,17 @@
             Controls.Add(panel5);
             Controls.Add(panel4);
             Controls.Add(panel3);
-            Controls.Add(label8);
+            Controls.Add(lblAssessmentGradesGrade);
             Controls.Add(label9);
-            Controls.Add(label1);
+            Controls.Add(lblAssessmentGradesPointsAchievedPercent);
             Controls.Add(label2);
             Controls.Add(panel1);
-            Controls.Add(label6);
+            Controls.Add(lblAssessmentGradesPointsAchieved);
             Controls.Add(label7);
             Controls.Add(panel2);
-            Controls.Add(label3);
+            Controls.Add(lblAssessmentGradesPointsMax);
             Controls.Add(label4);
-            Controls.Add(label5);
+            Controls.Add(lblAssessmentGradesAssessmentTitle);
             Name = "ctrlAssessmentGrades";
             Size = new Size(864, 95);
             Load += ctrlAssessmentGrades_Load;
@@ -225,16 +225,16 @@
 
         #endregion
 
-        private Label label5;
-        private Label label6;
+        private Label lblAssessmentGradesAssessmentTitle;
+        private Label lblAssessmentGradesPointsAchieved;
         private Label label7;
         private Panel panel2;
-        private Label label3;
+        private Label lblAssessmentGradesPointsMax;
         private Label label4;
         private Panel panel1;
-        private Label label1;
+        private Label lblAssessmentGradesPointsAchievedPercent;
         private Label label2;
-        private Label label8;
+        private Label lblAssessmentGradesGrade;
         private Label label9;
         private Panel panel3;
         private Panel panel4;

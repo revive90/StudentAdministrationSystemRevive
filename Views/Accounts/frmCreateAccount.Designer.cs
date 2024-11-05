@@ -30,8 +30,6 @@
         {
             label1 = new Label();
             panel2 = new Panel();
-            textBox3 = new TextBox();
-            label4 = new Label();
             textBox4 = new TextBox();
             label5 = new Label();
             textBox5 = new TextBox();
@@ -48,6 +46,12 @@
             label9 = new Label();
             button1 = new Button();
             lblForgotPassword = new Label();
+            label4 = new Label();
+            label10 = new Label();
+            label11 = new Label();
+            comboBox1 = new ComboBox();
+            comboBox2 = new ComboBox();
+            comboBox3 = new ComboBox();
             SuspendLayout();
             // 
             // label1
@@ -56,38 +60,17 @@
             label1.Font = new Font("Microsoft YaHei UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(43, 37);
             label1.Name = "label1";
-            label1.Size = new Size(282, 39);
+            label1.Size = new Size(384, 39);
             label1.TabIndex = 2;
-            label1.Text = "Create an account";
+            label1.Text = "Create a student account";
             // 
             // panel2
             // 
             panel2.BackColor = Color.Gainsboro;
-            panel2.Location = new Point(374, 61);
+            panel2.Location = new Point(448, 58);
             panel2.Name = "panel2";
-            panel2.Size = new Size(384, 1);
+            panel2.Size = new Size(364, 1);
             panel2.TabIndex = 16;
-            // 
-            // textBox3
-            // 
-            textBox3.BackColor = Color.White;
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(457, 149);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(330, 34);
-            textBox3.TabIndex = 24;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Microsoft YaHei UI", 12F);
-            label4.ForeColor = Color.Black;
-            label4.Location = new Point(457, 122);
-            label4.Name = "label4";
-            label4.Size = new Size(106, 21);
-            label4.TabIndex = 23;
-            label4.Text = "University ID";
             // 
             // textBox4
             // 
@@ -115,7 +98,7 @@
             textBox5.BackColor = Color.White;
             textBox5.BorderStyle = BorderStyle.FixedSingle;
             textBox5.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox5.Location = new Point(457, 289);
+            textBox5.Location = new Point(63, 567);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(330, 34);
             textBox5.TabIndex = 28;
@@ -125,7 +108,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft YaHei UI", 12F);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(457, 262);
+            label6.Location = new Point(63, 540);
             label6.Name = "label6";
             label6.Size = new Size(149, 21);
             label6.TabIndex = 27;
@@ -136,7 +119,7 @@
             textBox6.BackColor = Color.White;
             textBox6.BorderStyle = BorderStyle.FixedSingle;
             textBox6.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox6.Location = new Point(457, 218);
+            textBox6.Location = new Point(63, 496);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(330, 34);
             textBox6.TabIndex = 26;
@@ -146,7 +129,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Microsoft YaHei UI", 12F);
             label7.ForeColor = Color.Black;
-            label7.Location = new Point(457, 191);
+            label7.Location = new Point(63, 469);
             label7.Name = "label7";
             label7.Size = new Size(111, 21);
             label7.TabIndex = 25;
@@ -244,7 +227,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Microsoft YaHei UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(503, 354);
+            button1.Location = new Point(533, 511);
             button1.Name = "button1";
             button1.Size = new Size(225, 45);
             button1.TabIndex = 37;
@@ -257,19 +240,85 @@
             lblForgotPassword.Cursor = Cursors.Hand;
             lblForgotPassword.Font = new Font("Microsoft YaHei UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblForgotPassword.ForeColor = Color.Black;
-            lblForgotPassword.Location = new Point(525, 425);
+            lblForgotPassword.Location = new Point(555, 582);
             lblForgotPassword.Name = "lblForgotPassword";
             lblForgotPassword.Size = new Size(179, 19);
             lblForgotPassword.TabIndex = 38;
             lblForgotPassword.Text = "Already have an account?";
             lblForgotPassword.Click += lblForgotPassword_Click;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Microsoft YaHei UI", 12F);
+            label4.ForeColor = Color.Black;
+            label4.Location = new Point(482, 122);
+            label4.Name = "label4";
+            label4.Size = new Size(170, 21);
+            label4.TabIndex = 39;
+            label4.Text = "Degree Prodgramme";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Microsoft YaHei UI", 12F);
+            label10.ForeColor = Color.Black;
+            label10.Location = new Point(482, 191);
+            label10.Name = "label10";
+            label10.Size = new Size(176, 21);
+            label10.TabIndex = 40;
+            label10.Text = "Desired Start (Cohort)";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Microsoft YaHei UI", 12F);
+            label11.ForeColor = Color.Black;
+            label11.Location = new Point(482, 262);
+            label11.Name = "label11";
+            label11.Size = new Size(158, 21);
+            label11.TabIndex = 41;
+            label11.Text = "Programme Length";
+            // 
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Microsoft YaHei UI", 12F);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(482, 294);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(330, 29);
+            comboBox1.TabIndex = 42;
+            // 
+            // comboBox2
+            // 
+            comboBox2.Font = new Font("Microsoft YaHei UI", 12F);
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(482, 218);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(330, 29);
+            comboBox2.TabIndex = 43;
+            // 
+            // comboBox3
+            // 
+            comboBox3.Font = new Font("Microsoft YaHei UI", 12F);
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(482, 149);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(330, 29);
+            comboBox3.TabIndex = 44;
+            // 
             // frmCreateAccount
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(845, 497);
+            ClientSize = new Size(873, 659);
+            Controls.Add(comboBox3);
+            Controls.Add(comboBox2);
+            Controls.Add(comboBox1);
+            Controls.Add(label11);
+            Controls.Add(label10);
+            Controls.Add(label4);
             Controls.Add(lblForgotPassword);
             Controls.Add(button1);
             Controls.Add(textBox1);
@@ -284,8 +333,6 @@
             Controls.Add(label6);
             Controls.Add(textBox6);
             Controls.Add(label7);
-            Controls.Add(textBox3);
-            Controls.Add(label4);
             Controls.Add(textBox4);
             Controls.Add(label5);
             Controls.Add(panel2);
@@ -301,8 +348,6 @@
 
         private Label label1;
         private Panel panel2;
-        private TextBox textBox3;
-        private Label label4;
         private TextBox textBox4;
         private Label label5;
         private TextBox textBox5;
@@ -319,5 +364,11 @@
         private Label label9;
         private Button button1;
         private Label lblForgotPassword;
+        private Label label4;
+        private Label label10;
+        private Label label11;
+        private ComboBox comboBox1;
+        private ComboBox comboBox2;
+        private ComboBox comboBox3;
     }
 }

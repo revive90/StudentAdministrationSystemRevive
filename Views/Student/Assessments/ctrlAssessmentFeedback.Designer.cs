@@ -29,43 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ctrlAssessmentFeedback));
-            label1 = new Label();
-            label2 = new Label();
             label5 = new Label();
             rtFeedbackStrengths = new RichTextBox();
-            richTextBox1 = new RichTextBox();
-            richTextBox2 = new RichTextBox();
+            rtFeedbackAreasOfImprovement = new RichTextBox();
+            rtFeedbackImprovementStrategies = new RichTextBox();
             label3 = new Label();
             label4 = new Label();
-            label6 = new Label();
+            lblAssessmentFeedbackTitle = new Label();
             panel1 = new Panel();
             panel2 = new Panel();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            label1.ForeColor = Color.Black;
-            label1.ImeMode = ImeMode.NoControl;
-            label1.Location = new Point(769, 15);
-            label1.Name = "label1";
-            label1.Size = new Size(35, 21);
-            label1.TabIndex = 81;
-            label1.Text = "100";
-            label1.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic);
-            label2.ImeMode = ImeMode.NoControl;
-            label2.Location = new Point(800, 15);
-            label2.Name = "label2";
-            label2.Size = new Size(24, 21);
-            label2.TabIndex = 80;
-            label2.Text = "%";
-            label2.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label5
             // 
@@ -91,27 +64,27 @@
             rtFeedbackStrengths.TabIndex = 84;
             rtFeedbackStrengths.Text = resources.GetString("rtFeedbackStrengths.Text");
             // 
-            // richTextBox1
+            // rtFeedbackAreasOfImprovement
             // 
-            richTextBox1.BackColor = Color.OldLace;
-            richTextBox1.BorderStyle = BorderStyle.None;
-            richTextBox1.Font = new Font("Segoe UI Semilight", 11.25F);
-            richTextBox1.Location = new Point(28, 314);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(798, 158);
-            richTextBox1.TabIndex = 85;
-            richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            rtFeedbackAreasOfImprovement.BackColor = Color.OldLace;
+            rtFeedbackAreasOfImprovement.BorderStyle = BorderStyle.None;
+            rtFeedbackAreasOfImprovement.Font = new Font("Segoe UI Semilight", 11.25F);
+            rtFeedbackAreasOfImprovement.Location = new Point(28, 314);
+            rtFeedbackAreasOfImprovement.Name = "rtFeedbackAreasOfImprovement";
+            rtFeedbackAreasOfImprovement.Size = new Size(798, 158);
+            rtFeedbackAreasOfImprovement.TabIndex = 85;
+            rtFeedbackAreasOfImprovement.Text = resources.GetString("rtFeedbackAreasOfImprovement.Text");
             // 
-            // richTextBox2
+            // rtFeedbackImprovementStrategies
             // 
-            richTextBox2.BackColor = Color.OldLace;
-            richTextBox2.BorderStyle = BorderStyle.None;
-            richTextBox2.Font = new Font("Segoe UI Semilight", 11.25F);
-            richTextBox2.Location = new Point(28, 522);
-            richTextBox2.Name = "richTextBox2";
-            richTextBox2.Size = new Size(798, 158);
-            richTextBox2.TabIndex = 86;
-            richTextBox2.Text = resources.GetString("richTextBox2.Text");
+            rtFeedbackImprovementStrategies.BackColor = Color.OldLace;
+            rtFeedbackImprovementStrategies.BorderStyle = BorderStyle.None;
+            rtFeedbackImprovementStrategies.Font = new Font("Segoe UI Semilight", 11.25F);
+            rtFeedbackImprovementStrategies.Location = new Point(28, 522);
+            rtFeedbackImprovementStrategies.Name = "rtFeedbackImprovementStrategies";
+            rtFeedbackImprovementStrategies.Size = new Size(798, 158);
+            rtFeedbackImprovementStrategies.TabIndex = 86;
+            rtFeedbackImprovementStrategies.Text = resources.GetString("rtFeedbackImprovementStrategies.Text");
             // 
             // label3
             // 
@@ -139,18 +112,18 @@
             label4.Text = "Improvement Strategies";
             label4.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label6
+            // lblAssessmentFeedbackTitle
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Semilight", 15F);
-            label6.ForeColor = Color.RoyalBlue;
-            label6.ImeMode = ImeMode.NoControl;
-            label6.Location = new Point(279, 8);
-            label6.Name = "label6";
-            label6.Size = new Size(237, 28);
-            label6.TabIndex = 89;
-            label6.Text = "Assignment One Feedback";
-            label6.TextAlign = ContentAlignment.MiddleLeft;
+            lblAssessmentFeedbackTitle.AutoSize = true;
+            lblAssessmentFeedbackTitle.Font = new Font("Segoe UI Semilight", 15F);
+            lblAssessmentFeedbackTitle.ForeColor = Color.RoyalBlue;
+            lblAssessmentFeedbackTitle.ImeMode = ImeMode.NoControl;
+            lblAssessmentFeedbackTitle.Location = new Point(279, 8);
+            lblAssessmentFeedbackTitle.Name = "lblAssessmentFeedbackTitle";
+            lblAssessmentFeedbackTitle.Size = new Size(237, 28);
+            lblAssessmentFeedbackTitle.TabIndex = 89;
+            lblAssessmentFeedbackTitle.Text = "Assignment One Feedback";
+            lblAssessmentFeedbackTitle.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // panel1
             // 
@@ -175,14 +148,12 @@
             BackColor = Color.OldLace;
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(label6);
+            Controls.Add(lblAssessmentFeedbackTitle);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(richTextBox2);
-            Controls.Add(richTextBox1);
+            Controls.Add(rtFeedbackImprovementStrategies);
+            Controls.Add(rtFeedbackAreasOfImprovement);
             Controls.Add(rtFeedbackStrengths);
-            Controls.Add(label1);
-            Controls.Add(label2);
             Controls.Add(label5);
             Name = "ctrlAssessmentFeedback";
             Size = new Size(846, 716);
@@ -191,15 +162,13 @@
         }
 
         #endregion
-        private Label label1;
-        private Label label2;
         private Label label5;
         private RichTextBox rtFeedbackStrengths;
-        private RichTextBox richTextBox1;
-        private RichTextBox richTextBox2;
+        private RichTextBox rtFeedbackAreasOfImprovement;
+        private RichTextBox rtFeedbackImprovementStrategies;
         private Label label3;
         private Label label4;
-        private Label label6;
+        private Label lblAssessmentFeedbackTitle;
         private Panel panel1;
         private Panel panel2;
     }

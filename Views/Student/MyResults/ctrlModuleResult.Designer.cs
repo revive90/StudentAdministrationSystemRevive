@@ -33,9 +33,9 @@
             panel4 = new Panel();
             panel1 = new Panel();
             label5 = new Label();
-            label3 = new Label();
+            lblResultsFinalMarkPercent = new Label();
             label4 = new Label();
-            label2 = new Label();
+            lblResultsFinalModuleGrade = new Label();
             panel2 = new Panel();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -59,9 +59,9 @@
             panel3.Controls.Add(panel4);
             panel3.Controls.Add(panel1);
             panel3.Controls.Add(label5);
-            panel3.Controls.Add(label3);
+            panel3.Controls.Add(lblResultsFinalMarkPercent);
             panel3.Controls.Add(label4);
-            panel3.Controls.Add(label2);
+            panel3.Controls.Add(lblResultsFinalModuleGrade);
             panel3.Location = new Point(3, 64);
             panel3.Name = "panel3";
             panel3.Size = new Size(276, 188);
@@ -96,18 +96,18 @@
             label5.Text = "PASS";
             label5.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // lblResultsFinalMarkPercent
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Light", 35F, FontStyle.Bold);
-            label3.ForeColor = Color.Black;
-            label3.ImeMode = ImeMode.NoControl;
-            label3.Location = new Point(72, 70);
-            label3.Name = "label3";
-            label3.Size = new Size(115, 62);
-            label3.TabIndex = 27;
-            label3.Text = "68%";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
+            lblResultsFinalMarkPercent.AutoSize = true;
+            lblResultsFinalMarkPercent.Font = new Font("Segoe UI Light", 35F, FontStyle.Bold);
+            lblResultsFinalMarkPercent.ForeColor = Color.Black;
+            lblResultsFinalMarkPercent.ImeMode = ImeMode.NoControl;
+            lblResultsFinalMarkPercent.Location = new Point(72, 70);
+            lblResultsFinalMarkPercent.Name = "lblResultsFinalMarkPercent";
+            lblResultsFinalMarkPercent.Size = new Size(115, 62);
+            lblResultsFinalMarkPercent.TabIndex = 27;
+            lblResultsFinalMarkPercent.Text = "68%";
+            lblResultsFinalMarkPercent.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -122,18 +122,18 @@
             label4.Text = "Final Score";
             label4.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // lblResultsFinalModuleGrade
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Light", 15F, FontStyle.Bold);
-            label2.ForeColor = Color.Gray;
-            label2.ImeMode = ImeMode.NoControl;
-            label2.Location = new Point(137, 152);
-            label2.Name = "label2";
-            label2.Size = new Size(36, 28);
-            label2.TabIndex = 25;
-            label2.Text = "2.1";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
+            lblResultsFinalModuleGrade.AutoSize = true;
+            lblResultsFinalModuleGrade.Font = new Font("Segoe UI Light", 15F, FontStyle.Bold);
+            lblResultsFinalModuleGrade.ForeColor = Color.Gray;
+            lblResultsFinalModuleGrade.ImeMode = ImeMode.NoControl;
+            lblResultsFinalModuleGrade.Location = new Point(137, 152);
+            lblResultsFinalModuleGrade.Name = "lblResultsFinalModuleGrade";
+            lblResultsFinalModuleGrade.Size = new Size(36, 28);
+            lblResultsFinalModuleGrade.TabIndex = 25;
+            lblResultsFinalModuleGrade.Text = "2.1";
+            lblResultsFinalModuleGrade.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -163,9 +163,9 @@
 
         private Label lblResultModuleName;
         private Panel panel3;
-        private Label label3;
+        private Label lblResultsFinalMarkPercent;
         private Label label4;
-        private Label label2;
+        private Label lblResultsFinalModuleGrade;
         private Label label5;
         private Panel panel4;
         private Panel panel1;

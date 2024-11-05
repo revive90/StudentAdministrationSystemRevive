@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStudentPortal));
             panel1 = new Panel();
-            pictureBox1 = new PictureBox();
             label2 = new Label();
             label1 = new Label();
             panel3 = new Panel();
@@ -64,14 +62,12 @@
             btnMyDetails = new Button();
             pnlContentPane = new Panel();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.RoyalBlue;
-            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, 0);
@@ -80,24 +76,14 @@
             panel1.TabIndex = 0;
             panel1.MouseDown += panel1_MouseDown;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(965, 2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(40, 40);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
-            // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(1011, 13);
+            label2.Location = new Point(1013, 9);
             label2.Name = "label2";
-            label2.Size = new Size(87, 15);
+            label2.Size = new Size(118, 21);
             label2.TabIndex = 0;
             label2.Text = "Account Name";
             // 
@@ -500,7 +486,6 @@
             Load += frmStudentPortal_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -522,7 +507,6 @@
         private Label label2;
         private Button btnFiller2;
         private Button btnFiller1;
-        private PictureBox pictureBox1;
         private Button button1;
         private Panel pnlIndicatorSupport;
         private Panel pnlIndicatorMyDetails;
