@@ -4,10 +4,10 @@ using StudentAdministrationSystemRevive.Views.Administrator.Enrollment;
 using StudentAdministrationSystemRevive.Views.Administrator.Overview;
 using StudentAdministrationSystemRevive.Views.Administrator.Results;
 using StudentAdministrationSystemRevive.Views.Administrator.StudentManagement;
-using StudentAdministrationSystemRevive.Views.Administrator.Support;
 using StudentAdministrationSystemRevive.Views.Administrator.TeachingStaff;
 using StudentAdministrationSystemRevive.Views.Alerts;
 using StudentAdministrationSystemRevive.Views.StudentPages;
+using StudentAdministrationSystemRevive.Views.UserAdministrator.Assessments;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -89,14 +89,7 @@ namespace StudentAdministrationSystemRevive.Views.Administrator
             frm.Show();
         }
 
-        private void btnSupportRequests_Click(object sender, EventArgs e)
-        {
-            frmAdminSupport frm = new frmAdminSupport();
-            frm.TopLevel = false;
-            pnlAdminContentPane.Controls.Add(frm);
-            frm.BringToFront();
-            frm.Show();
-        }
+
 
         private void btnResults_Click(object sender, EventArgs e)
         {
@@ -110,6 +103,15 @@ namespace StudentAdministrationSystemRevive.Views.Administrator
         private void frmAdministratorPortal_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAssessments_Click(object sender, EventArgs e)
+        {
+            frmAdminAssessments frm = new frmAdminAssessments();
+            frm.TopLevel = false;
+            pnlAdminContentPane.Controls.Add(frm);
+            frm.BringToFront();
+            frm.Show();
         }
     }
 }

@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace StudentAdministrationSystemRevive.Views.Administrator.Support
+namespace StudentAdministrationSystemRevive.Views.UserAdministrator.Assessments
 {
-    public partial class frmAdminSupport : Form
+    public partial class ctrlAssessments : UserControl
     {
-        public frmAdminSupport()
+        public ctrlAssessments()
         {
             InitializeComponent();
         }
+
+        public bool TopLevel { get; internal set; }
     }
 }

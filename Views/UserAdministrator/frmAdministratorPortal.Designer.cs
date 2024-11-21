@@ -49,7 +49,7 @@
             pnlIndicatorHome = new Panel();
             btnResults = new Button();
             btnStudentManagement = new Button();
-            btnSupportRequests = new Button();
+            btnAssessments = new Button();
             btnEnrollment = new Button();
             btnExit = new Button();
             btnLogout = new Button();
@@ -94,7 +94,7 @@
             panel2.Controls.Add(pnlIndicatorHome);
             panel2.Controls.Add(btnResults);
             panel2.Controls.Add(btnStudentManagement);
-            panel2.Controls.Add(btnSupportRequests);
+            panel2.Controls.Add(btnAssessments);
             panel2.Controls.Add(btnEnrollment);
             panel2.Controls.Add(btnExit);
             panel2.Controls.Add(btnLogout);
@@ -280,23 +280,23 @@
             btnStudentManagement.UseVisualStyleBackColor = false;
             btnStudentManagement.Click += btnStudentManagement_Click;
             // 
-            // btnSupportRequests
+            // btnAssessments
             // 
-            btnSupportRequests.BackColor = Color.White;
-            btnSupportRequests.Cursor = Cursors.Hand;
-            btnSupportRequests.FlatAppearance.BorderSize = 0;
-            btnSupportRequests.FlatAppearance.MouseDownBackColor = Color.White;
-            btnSupportRequests.FlatAppearance.MouseOverBackColor = Color.White;
-            btnSupportRequests.FlatStyle = FlatStyle.Flat;
-            btnSupportRequests.Font = new Font("Segoe UI Semilight", 14F);
-            btnSupportRequests.ForeColor = Color.Black;
-            btnSupportRequests.Location = new Point(15, 509);
-            btnSupportRequests.Name = "btnSupportRequests";
-            btnSupportRequests.Size = new Size(226, 58);
-            btnSupportRequests.TabIndex = 10;
-            btnSupportRequests.Text = "Support Requests";
-            btnSupportRequests.UseVisualStyleBackColor = false;
-            btnSupportRequests.Click += btnSupportRequests_Click;
+            btnAssessments.BackColor = Color.White;
+            btnAssessments.Cursor = Cursors.Hand;
+            btnAssessments.FlatAppearance.BorderSize = 0;
+            btnAssessments.FlatAppearance.MouseDownBackColor = Color.White;
+            btnAssessments.FlatAppearance.MouseOverBackColor = Color.White;
+            btnAssessments.FlatStyle = FlatStyle.Flat;
+            btnAssessments.Font = new Font("Segoe UI Semilight", 14F);
+            btnAssessments.ForeColor = Color.Black;
+            btnAssessments.Location = new Point(15, 509);
+            btnAssessments.Name = "btnAssessments";
+            btnAssessments.Size = new Size(226, 58);
+            btnAssessments.TabIndex = 10;
+            btnAssessments.Text = "Assessments";
+            btnAssessments.UseVisualStyleBackColor = false;
+            btnAssessments.Click += btnAssessments_Click;
             // 
             // btnEnrollment
             // 
@@ -491,7 +491,7 @@
         private Panel pnlIndicatorHome;
         private Button btnResults;
         private Button btnStudentManagement;
-        private Button btnSupportRequests;
+        private Button btnAssessments;
         private Button btnEnrollment;
         private Button btnExit;
         private Button btnLogout;
