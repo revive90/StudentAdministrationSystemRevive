@@ -30,19 +30,19 @@
         {
             label1 = new Label();
             panel2 = new Panel();
-            textBox4 = new TextBox();
+            txtCAEmailAddress = new TextBox();
             label5 = new Label();
             textBox5 = new TextBox();
             label6 = new Label();
             textBox6 = new TextBox();
             label7 = new Label();
-            textBox1 = new TextBox();
+            txtCAPhoneNumber = new TextBox();
             label2 = new Label();
-            textBox2 = new TextBox();
+            txtCALastName = new TextBox();
             label3 = new Label();
-            textBox7 = new TextBox();
+            txtCA = new TextBox();
             label8 = new Label();
-            textBox8 = new TextBox();
+            txtCAFirstname = new TextBox();
             label9 = new Label();
             button1 = new Button();
             lblForgotPassword = new Label();
@@ -72,15 +72,15 @@
             panel2.Size = new Size(364, 1);
             panel2.TabIndex = 16;
             // 
-            // textBox4
+            // txtCAEmailAddress
             // 
-            textBox4.BackColor = Color.White;
-            textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.Location = new Point(63, 358);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(330, 34);
-            textBox4.TabIndex = 22;
+            txtCAEmailAddress.BackColor = Color.White;
+            txtCAEmailAddress.BorderStyle = BorderStyle.FixedSingle;
+            txtCAEmailAddress.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCAEmailAddress.Location = new Point(63, 358);
+            txtCAEmailAddress.Name = "txtCAEmailAddress";
+            txtCAEmailAddress.Size = new Size(330, 34);
+            txtCAEmailAddress.TabIndex = 22;
             // 
             // label5
             // 
@@ -135,15 +135,15 @@
             label7.TabIndex = 25;
             label7.Text = "Set Password";
             // 
-            // textBox1
+            // txtCAPhoneNumber
             // 
-            textBox1.BackColor = Color.White;
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(63, 289);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(330, 34);
-            textBox1.TabIndex = 36;
+            txtCAPhoneNumber.BackColor = Color.White;
+            txtCAPhoneNumber.BorderStyle = BorderStyle.FixedSingle;
+            txtCAPhoneNumber.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCAPhoneNumber.Location = new Point(63, 289);
+            txtCAPhoneNumber.Name = "txtCAPhoneNumber";
+            txtCAPhoneNumber.Size = new Size(330, 34);
+            txtCAPhoneNumber.TabIndex = 36;
             // 
             // label2
             // 
@@ -156,15 +156,15 @@
             label2.TabIndex = 35;
             label2.Text = "Phone Number";
             // 
-            // textBox2
+            // txtCALastName
             // 
-            textBox2.BackColor = Color.White;
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(63, 218);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(330, 34);
-            textBox2.TabIndex = 34;
+            txtCALastName.BackColor = Color.White;
+            txtCALastName.BorderStyle = BorderStyle.FixedSingle;
+            txtCALastName.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCALastName.Location = new Point(63, 218);
+            txtCALastName.Name = "txtCALastName";
+            txtCALastName.Size = new Size(330, 34);
+            txtCALastName.TabIndex = 34;
             // 
             // label3
             // 
@@ -177,15 +177,15 @@
             label3.TabIndex = 33;
             label3.Text = "Last Name";
             // 
-            // textBox7
+            // txtCA
             // 
-            textBox7.BackColor = Color.White;
-            textBox7.BorderStyle = BorderStyle.FixedSingle;
-            textBox7.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox7.Location = new Point(63, 425);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(330, 34);
-            textBox7.TabIndex = 32;
+            txtCA.BackColor = Color.White;
+            txtCA.BorderStyle = BorderStyle.FixedSingle;
+            txtCA.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCA.Location = new Point(63, 425);
+            txtCA.Name = "txtCA";
+            txtCA.Size = new Size(330, 34);
+            txtCA.TabIndex = 32;
             // 
             // label8
             // 
@@ -198,15 +198,15 @@
             label8.TabIndex = 31;
             label8.Text = "Confirm Email Address";
             // 
-            // textBox8
+            // txtCAFirstname
             // 
-            textBox8.BackColor = Color.White;
-            textBox8.BorderStyle = BorderStyle.FixedSingle;
-            textBox8.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox8.Location = new Point(63, 149);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(330, 34);
-            textBox8.TabIndex = 30;
+            txtCAFirstname.BackColor = Color.White;
+            txtCAFirstname.BorderStyle = BorderStyle.FixedSingle;
+            txtCAFirstname.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCAFirstname.Location = new Point(63, 149);
+            txtCAFirstname.Name = "txtCAFirstname";
+            txtCAFirstname.Size = new Size(330, 34);
+            txtCAFirstname.TabIndex = 30;
             // 
             // label9
             // 
@@ -265,9 +265,9 @@
             label10.ForeColor = Color.Black;
             label10.Location = new Point(482, 191);
             label10.Name = "label10";
-            label10.Size = new Size(176, 21);
+            label10.Size = new Size(147, 21);
             label10.TabIndex = 40;
-            label10.Text = "Desired Start (Cohort)";
+            label10.Text = "Desired Start Year";
             // 
             // label11
             // 
@@ -282,8 +282,10 @@
             // 
             // comboBox1
             // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.Font = new Font("Microsoft YaHei UI", 12F);
             comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "1 Year", "2 Years" });
             comboBox1.Location = new Point(482, 294);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(330, 29);
@@ -291,8 +293,10 @@
             // 
             // comboBox2
             // 
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox2.Font = new Font("Microsoft YaHei UI", 12F);
             comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "2025", "2024" });
             comboBox2.Location = new Point(482, 218);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(330, 29);
@@ -300,8 +304,10 @@
             // 
             // comboBox3
             // 
+            comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox3.Font = new Font("Microsoft YaHei UI", 12F);
             comboBox3.FormattingEnabled = true;
+            comboBox3.Items.AddRange(new object[] { "Computer Science", "Business Management", "Electrical Engineering" });
             comboBox3.Location = new Point(482, 149);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(330, 29);
@@ -321,19 +327,19 @@
             Controls.Add(label4);
             Controls.Add(lblForgotPassword);
             Controls.Add(button1);
-            Controls.Add(textBox1);
+            Controls.Add(txtCAPhoneNumber);
             Controls.Add(label2);
-            Controls.Add(textBox2);
+            Controls.Add(txtCALastName);
             Controls.Add(label3);
-            Controls.Add(textBox7);
+            Controls.Add(txtCA);
             Controls.Add(label8);
-            Controls.Add(textBox8);
+            Controls.Add(txtCAFirstname);
             Controls.Add(label9);
             Controls.Add(textBox5);
             Controls.Add(label6);
             Controls.Add(textBox6);
             Controls.Add(label7);
-            Controls.Add(textBox4);
+            Controls.Add(txtCAEmailAddress);
             Controls.Add(label5);
             Controls.Add(panel2);
             Controls.Add(label1);
@@ -348,19 +354,19 @@
 
         private Label label1;
         private Panel panel2;
-        private TextBox textBox4;
+        private TextBox txtCAEmailAddress;
         private Label label5;
         private TextBox textBox5;
         private Label label6;
         private TextBox textBox6;
         private Label label7;
-        private TextBox textBox1;
+        private TextBox txtCAPhoneNumber;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox txtCALastName;
         private Label label3;
-        private TextBox textBox7;
+        private TextBox txtCA;
         private Label label8;
-        private TextBox textBox8;
+        private TextBox txtCAFirstname;
         private Label label9;
         private Button button1;
         private Label lblForgotPassword;

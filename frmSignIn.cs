@@ -19,6 +19,10 @@ namespace StudentAdministrationSystemRevive
         private extern static void SendMessage(System.IntPtr one, int two, int three, int four);
 
 
+        private void frmSignIn_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void lblForgotPassword_Click(object sender, EventArgs e)
         {
@@ -55,10 +59,7 @@ namespace StudentAdministrationSystemRevive
             this.Hide();
         }
 
-        private void frmSignIn_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void frmSignIn_MouseDown(object sender, MouseEventArgs e)
         {

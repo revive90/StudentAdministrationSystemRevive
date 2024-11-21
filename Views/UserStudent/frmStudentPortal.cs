@@ -133,10 +133,15 @@ namespace StudentAdministrationSystemRevive.Views.Student
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            
+
 
             frmExitDialog frm = new frmExitDialog();
             frm.ShowDialog();
+        }
+
+        private void pnlContentPane_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

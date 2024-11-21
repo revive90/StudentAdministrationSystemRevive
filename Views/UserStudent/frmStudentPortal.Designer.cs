@@ -466,6 +466,7 @@
             pnlContentPane.Name = "pnlContentPane";
             pnlContentPane.Size = new Size(946, 766);
             pnlContentPane.TabIndex = 2;
+            pnlContentPane.Paint += pnlContentPane_Paint;
             // 
             // frmStudentPortal
             // 
