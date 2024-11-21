@@ -34,9 +34,11 @@
             label1 = new Label();
             txtAMModCode = new TextBox();
             label5 = new Label();
-            btnAMCreateModule = new Button();
+            btnCreateAssessment = new Button();
             txtAMModuleDescription = new TextBox();
             label4 = new Label();
+            textBox1 = new TextBox();
+            label3 = new Label();
             SuspendLayout();
             // 
             // panel1
@@ -65,7 +67,7 @@
             txtAMModuleTitle.BackColor = Color.WhiteSmoke;
             txtAMModuleTitle.BorderStyle = BorderStyle.FixedSingle;
             txtAMModuleTitle.Font = new Font("Segoe UI", 12F);
-            txtAMModuleTitle.Location = new Point(83, 174);
+            txtAMModuleTitle.Location = new Point(162, 230);
             txtAMModuleTitle.Name = "txtAMModuleTitle";
             txtAMModuleTitle.Size = new Size(425, 29);
             txtAMModuleTitle.TabIndex = 76;
@@ -76,7 +78,7 @@
             label1.Font = new Font("Segoe UI Light", 14F);
             label1.ForeColor = Color.Black;
             label1.ImeMode = ImeMode.NoControl;
-            label1.Location = new Point(83, 146);
+            label1.Location = new Point(162, 202);
             label1.Name = "label1";
             label1.Size = new Size(143, 25);
             label1.TabIndex = 75;
@@ -89,7 +91,7 @@
             txtAMModCode.BorderStyle = BorderStyle.FixedSingle;
             txtAMModCode.Enabled = false;
             txtAMModCode.Font = new Font("Segoe UI", 12F);
-            txtAMModCode.Location = new Point(516, 174);
+            txtAMModCode.Location = new Point(162, 150);
             txtAMModCode.Name = "txtAMModCode";
             txtAMModCode.Size = new Size(220, 29);
             txtAMModCode.TabIndex = 78;
@@ -100,35 +102,35 @@
             label5.Font = new Font("Segoe UI Light", 14F);
             label5.ForeColor = Color.Black;
             label5.ImeMode = ImeMode.NoControl;
-            label5.Location = new Point(516, 146);
+            label5.Location = new Point(162, 122);
             label5.Name = "label5";
             label5.Size = new Size(178, 25);
             label5.TabIndex = 77;
             label5.Text = "Parent Module Code";
             label5.TextAlign = ContentAlignment.BottomLeft;
             // 
-            // btnAMCreateModule
+            // btnCreateAssessment
             // 
-            btnAMCreateModule.BackColor = Color.RoyalBlue;
-            btnAMCreateModule.Cursor = Cursors.Hand;
-            btnAMCreateModule.FlatAppearance.BorderSize = 0;
-            btnAMCreateModule.FlatStyle = FlatStyle.Flat;
-            btnAMCreateModule.Font = new Font("Microsoft YaHei UI", 12F);
-            btnAMCreateModule.ForeColor = Color.White;
-            btnAMCreateModule.ImeMode = ImeMode.NoControl;
-            btnAMCreateModule.Location = new Point(516, 674);
-            btnAMCreateModule.Name = "btnAMCreateModule";
-            btnAMCreateModule.Size = new Size(283, 37);
-            btnAMCreateModule.TabIndex = 81;
-            btnAMCreateModule.Text = "Create Module";
-            btnAMCreateModule.UseVisualStyleBackColor = false;
+            btnCreateAssessment.BackColor = Color.RoyalBlue;
+            btnCreateAssessment.Cursor = Cursors.Hand;
+            btnCreateAssessment.FlatAppearance.BorderSize = 0;
+            btnCreateAssessment.FlatStyle = FlatStyle.Flat;
+            btnCreateAssessment.Font = new Font("Microsoft YaHei UI", 12F);
+            btnCreateAssessment.ForeColor = Color.White;
+            btnCreateAssessment.ImeMode = ImeMode.NoControl;
+            btnCreateAssessment.Location = new Point(540, 590);
+            btnCreateAssessment.Name = "btnCreateAssessment";
+            btnCreateAssessment.Size = new Size(283, 37);
+            btnCreateAssessment.TabIndex = 81;
+            btnCreateAssessment.Text = "Create Assessment";
+            btnCreateAssessment.UseVisualStyleBackColor = false;
             // 
             // txtAMModuleDescription
             // 
             txtAMModuleDescription.BackColor = Color.WhiteSmoke;
             txtAMModuleDescription.BorderStyle = BorderStyle.FixedSingle;
             txtAMModuleDescription.Font = new Font("Segoe UI", 12F);
-            txtAMModuleDescription.Location = new Point(138, 406);
+            txtAMModuleDescription.Location = new Point(162, 311);
             txtAMModuleDescription.Multiline = true;
             txtAMModuleDescription.Name = "txtAMModuleDescription";
             txtAMModuleDescription.Size = new Size(661, 238);
@@ -140,19 +142,45 @@
             label4.Font = new Font("Segoe UI Light", 14F);
             label4.ForeColor = Color.Black;
             label4.ImeMode = ImeMode.NoControl;
-            label4.Location = new Point(138, 377);
+            label4.Location = new Point(162, 282);
             label4.Name = "label4";
-            label4.Size = new Size(169, 25);
+            label4.Size = new Size(192, 25);
             label4.TabIndex = 79;
-            label4.Text = "Module Description";
+            label4.Text = "Assesment Description";
             label4.TextAlign = ContentAlignment.BottomLeft;
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.WhiteSmoke;
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
+            textBox1.Enabled = false;
+            textBox1.Font = new Font("Segoe UI", 12F);
+            textBox1.Location = new Point(603, 230);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(220, 29);
+            textBox1.TabIndex = 83;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Light", 14F);
+            label3.ForeColor = Color.Black;
+            label3.ImeMode = ImeMode.NoControl;
+            label3.Location = new Point(603, 202);
+            label3.Name = "label3";
+            label3.Size = new Size(135, 25);
+            label3.TabIndex = 82;
+            label3.Text = "Maximum Mark";
+            label3.TextAlign = ContentAlignment.BottomCenter;
             // 
             // ctrlAdminAddAssessments
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(btnAMCreateModule);
+            Controls.Add(textBox1);
+            Controls.Add(label3);
+            Controls.Add(btnCreateAssessment);
             Controls.Add(txtAMModuleDescription);
             Controls.Add(label4);
             Controls.Add(txtAMModCode);
@@ -175,8 +203,10 @@
         private Label label1;
         private TextBox txtAMModCode;
         private Label label5;
-        private Button btnAMCreateModule;
+        private Button btnCreateAssessment;
         private TextBox txtAMModuleDescription;
         private Label label4;
+        private TextBox textBox1;
+        private Label label3;
     }
 }
