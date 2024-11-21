@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StudentAdministrationSystemRevive.Views.Administrator.DegreeProgrammes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,22 @@ namespace StudentAdministrationSystemRevive.Views.UserAdministrator.Assessments
         public frmAdminAssessments()
         {
             InitializeComponent();
+            clearControlsPanel();
+            var ctrl = new ctrlAdminAddAssessments();
+            pnlAdminAssessmentsContentPane.Controls.Add(ctrl);
         }
+
+        private void newAssessmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clearControlsPanel();
+            var ctrl = new ctrlAdminAddAssessments();
+            pnlAdminAssessmentsContentPane.Controls.Add(ctrl);
+        }
+        private void clearControlsPanel()
+        {
+            pnlAdminAssessmentsContentPane.Controls.Clear();
+        }
+
+      
     }
 }

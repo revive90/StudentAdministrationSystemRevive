@@ -29,15 +29,54 @@
         private void InitializeComponent()
         {
             menuStrip1 = new MenuStrip();
+            newAssessmentToolStripMenuItem = new ToolStripMenuItem();
+            editExistingAssessmentToolStripMenuItem = new ToolStripMenuItem();
+            gradeAnAssessmentToolStripMenuItem = new ToolStripMenuItem();
+            removeAnAssessmentToolStripMenuItem = new ToolStripMenuItem();
+            pnlAdminAssessmentsContentPane = new Panel();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { newAssessmentToolStripMenuItem, editExistingAssessmentToolStripMenuItem, gradeAnAssessmentToolStripMenuItem, removeAnAssessmentToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1003, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
+            // 
+            // newAssessmentToolStripMenuItem
+            // 
+            newAssessmentToolStripMenuItem.Name = "newAssessmentToolStripMenuItem";
+            newAssessmentToolStripMenuItem.Size = new Size(108, 20);
+            newAssessmentToolStripMenuItem.Text = "New Assessment";
+            newAssessmentToolStripMenuItem.Click += newAssessmentToolStripMenuItem_Click;
+            // 
+            // editExistingAssessmentToolStripMenuItem
+            // 
+            editExistingAssessmentToolStripMenuItem.Name = "editExistingAssessmentToolStripMenuItem";
+            editExistingAssessmentToolStripMenuItem.Size = new Size(148, 20);
+            editExistingAssessmentToolStripMenuItem.Text = "Edit Existing Assessment";
+            // 
+            // gradeAnAssessmentToolStripMenuItem
+            // 
+            gradeAnAssessmentToolStripMenuItem.Name = "gradeAnAssessmentToolStripMenuItem";
+            gradeAnAssessmentToolStripMenuItem.Size = new Size(131, 20);
+            gradeAnAssessmentToolStripMenuItem.Text = "Grade an Assessment";
+            // 
+            // removeAnAssessmentToolStripMenuItem
+            // 
+            removeAnAssessmentToolStripMenuItem.Name = "removeAnAssessmentToolStripMenuItem";
+            removeAnAssessmentToolStripMenuItem.Size = new Size(143, 20);
+            removeAnAssessmentToolStripMenuItem.Text = "Remove an Assessment";
+            // 
+            // pnlAdminAssessmentsContentPane
+            // 
+            pnlAdminAssessmentsContentPane.Location = new Point(0, 27);
+            pnlAdminAssessmentsContentPane.Name = "pnlAdminAssessmentsContentPane";
+            pnlAdminAssessmentsContentPane.Size = new Size(1003, 712);
+            pnlAdminAssessmentsContentPane.TabIndex = 1;
             // 
             // frmAdminAssessments
             // 
@@ -45,11 +84,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1003, 740);
+            Controls.Add(pnlAdminAssessmentsContentPane);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.None;
             MainMenuStrip = menuStrip1;
             Name = "frmAdminAssessments";
             Text = "frmAssessments";
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -57,5 +99,10 @@
         #endregion
 
         private MenuStrip menuStrip1;
+        private ToolStripMenuItem newAssessmentToolStripMenuItem;
+        private ToolStripMenuItem editExistingAssessmentToolStripMenuItem;
+        private ToolStripMenuItem gradeAnAssessmentToolStripMenuItem;
+        private ToolStripMenuItem removeAnAssessmentToolStripMenuItem;
+        private Panel pnlAdminAssessmentsContentPane;
     }
 }
