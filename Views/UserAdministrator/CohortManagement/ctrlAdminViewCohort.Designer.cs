@@ -28,40 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnAllCohorts = new Button();
-            dgVPProgTable = new DataGridView();
+            btnAllCohort = new Button();
+            dg_AD_CohortsViewAll = new DataGridView();
             panel1 = new Panel();
             label2 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dgVPProgTable).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dg_AD_CohortsViewAll).BeginInit();
             SuspendLayout();
             // 
-            // btnAllCohorts
+            // btnAllCohort
             // 
-            btnAllCohorts.BackColor = Color.RoyalBlue;
-            btnAllCohorts.Cursor = Cursors.Hand;
-            btnAllCohorts.FlatAppearance.BorderColor = Color.RoyalBlue;
-            btnAllCohorts.FlatAppearance.BorderSize = 0;
-            btnAllCohorts.FlatStyle = FlatStyle.Flat;
-            btnAllCohorts.Font = new Font("Microsoft YaHei UI", 10F);
-            btnAllCohorts.ForeColor = Color.White;
-            btnAllCohorts.ImeMode = ImeMode.NoControl;
-            btnAllCohorts.Location = new Point(771, 98);
-            btnAllCohorts.Name = "btnAllCohorts";
-            btnAllCohorts.Size = new Size(205, 29);
-            btnAllCohorts.TabIndex = 67;
-            btnAllCohorts.Text = "Reload";
-            btnAllCohorts.UseVisualStyleBackColor = false;
+            btnAllCohort.BackColor = Color.RoyalBlue;
+            btnAllCohort.Cursor = Cursors.Hand;
+            btnAllCohort.FlatAppearance.BorderColor = Color.RoyalBlue;
+            btnAllCohort.FlatAppearance.BorderSize = 0;
+            btnAllCohort.FlatStyle = FlatStyle.Flat;
+            btnAllCohort.Font = new Font("Microsoft YaHei UI", 10F);
+            btnAllCohort.ForeColor = Color.White;
+            btnAllCohort.ImeMode = ImeMode.NoControl;
+            btnAllCohort.Location = new Point(771, 98);
+            btnAllCohort.Name = "btnAllCohort";
+            btnAllCohort.Size = new Size(205, 29);
+            btnAllCohort.TabIndex = 67;
+            btnAllCohort.Text = "Reload";
+            btnAllCohort.UseVisualStyleBackColor = false;
             // 
-            // dgVPProgTable
+            // dg_AD_CohortsViewAll
             // 
-            dgVPProgTable.AllowUserToAddRows = false;
-            dgVPProgTable.AllowUserToDeleteRows = false;
-            dgVPProgTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgVPProgTable.Location = new Point(26, 153);
-            dgVPProgTable.Name = "dgVPProgTable";
-            dgVPProgTable.ReadOnly = true;
-            dgVPProgTable.Size = new Size(950, 562);
-            dgVPProgTable.TabIndex = 66;
+            dg_AD_CohortsViewAll.AllowUserToAddRows = false;
+            dg_AD_CohortsViewAll.AllowUserToDeleteRows = false;
+            dg_AD_CohortsViewAll.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dg_AD_CohortsViewAll.Location = new Point(26, 153);
+            dg_AD_CohortsViewAll.Name = "dg_AD_CohortsViewAll";
+            dg_AD_CohortsViewAll.ReadOnly = true;
+            dg_AD_CohortsViewAll.Size = new Size(950, 562);
+            dg_AD_CohortsViewAll.TabIndex = 66;
             // 
             // panel1
             // 
@@ -89,21 +89,21 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(btnAllCohorts);
-            Controls.Add(dgVPProgTable);
+            Controls.Add(btnAllCohort);
+            Controls.Add(dg_AD_CohortsViewAll);
             Controls.Add(panel1);
             Controls.Add(label2);
             Name = "ctrlAdminViewCohort";
             Size = new Size(1003, 740);
-            ((System.ComponentModel.ISupportInitialize)dgVPProgTable).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dg_AD_CohortsViewAll).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button btnAllCohorts;
-        private DataGridView dgVPProgTable;
+        private Button btnAllCohort;
+        private DataGridView dg_AD_CohortsViewAll;
         private Panel panel1;
         private Label label2;
     }

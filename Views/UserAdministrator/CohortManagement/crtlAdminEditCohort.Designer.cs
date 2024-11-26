@@ -28,69 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnSaveChanges = new Button();
-            dgEMEditModuleTable = new DataGridView();
-            btnEPFindProg = new Button();
-            txtEMModuleTitle = new TextBox();
+            btnAD_CohortSave = new Button();
+            dg_AD_CohortEdit = new DataGridView();
+            btnAD_CohortFind = new Button();
+            txtAD_Cohort_Search_ModuleCode = new TextBox();
             label3 = new Label();
             panel1 = new Panel();
             label2 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dgEMEditModuleTable).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dg_AD_CohortEdit).BeginInit();
             SuspendLayout();
             // 
-            // btnSaveChanges
+            // btnAD_CohortSave
             // 
-            btnSaveChanges.BackColor = Color.RoyalBlue;
-            btnSaveChanges.Cursor = Cursors.Hand;
-            btnSaveChanges.FlatAppearance.BorderColor = Color.RoyalBlue;
-            btnSaveChanges.FlatAppearance.BorderSize = 0;
-            btnSaveChanges.FlatStyle = FlatStyle.Flat;
-            btnSaveChanges.Font = new Font("Microsoft YaHei UI", 10F);
-            btnSaveChanges.ForeColor = Color.White;
-            btnSaveChanges.ImeMode = ImeMode.NoControl;
-            btnSaveChanges.Location = new Point(768, 676);
-            btnSaveChanges.Name = "btnSaveChanges";
-            btnSaveChanges.Size = new Size(205, 29);
-            btnSaveChanges.TabIndex = 79;
-            btnSaveChanges.Text = "Save Changes";
-            btnSaveChanges.UseVisualStyleBackColor = false;
+            btnAD_CohortSave.BackColor = Color.RoyalBlue;
+            btnAD_CohortSave.Cursor = Cursors.Hand;
+            btnAD_CohortSave.FlatAppearance.BorderColor = Color.RoyalBlue;
+            btnAD_CohortSave.FlatAppearance.BorderSize = 0;
+            btnAD_CohortSave.FlatStyle = FlatStyle.Flat;
+            btnAD_CohortSave.Font = new Font("Microsoft YaHei UI", 10F);
+            btnAD_CohortSave.ForeColor = Color.White;
+            btnAD_CohortSave.ImeMode = ImeMode.NoControl;
+            btnAD_CohortSave.Location = new Point(768, 676);
+            btnAD_CohortSave.Name = "btnAD_CohortSave";
+            btnAD_CohortSave.Size = new Size(205, 29);
+            btnAD_CohortSave.TabIndex = 79;
+            btnAD_CohortSave.Text = "Save Changes";
+            btnAD_CohortSave.UseVisualStyleBackColor = false;
             // 
-            // dgEMEditModuleTable
+            // dg_AD_CohortEdit
             // 
-            dgEMEditModuleTable.AllowUserToAddRows = false;
-            dgEMEditModuleTable.AllowUserToDeleteRows = false;
-            dgEMEditModuleTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgEMEditModuleTable.Location = new Point(23, 206);
-            dgEMEditModuleTable.Name = "dgEMEditModuleTable";
-            dgEMEditModuleTable.Size = new Size(950, 447);
-            dgEMEditModuleTable.TabIndex = 78;
+            dg_AD_CohortEdit.AllowUserToAddRows = false;
+            dg_AD_CohortEdit.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dg_AD_CohortEdit.Location = new Point(23, 206);
+            dg_AD_CohortEdit.Name = "dg_AD_CohortEdit";
+            dg_AD_CohortEdit.Size = new Size(950, 447);
+            dg_AD_CohortEdit.TabIndex = 78;
             // 
-            // btnEPFindProg
+            // btnAD_CohortFind
             // 
-            btnEPFindProg.BackColor = Color.RoyalBlue;
-            btnEPFindProg.Cursor = Cursors.Hand;
-            btnEPFindProg.FlatAppearance.BorderColor = Color.RoyalBlue;
-            btnEPFindProg.FlatAppearance.BorderSize = 0;
-            btnEPFindProg.FlatStyle = FlatStyle.Flat;
-            btnEPFindProg.Font = new Font("Microsoft YaHei UI", 10F);
-            btnEPFindProg.ForeColor = Color.White;
-            btnEPFindProg.ImeMode = ImeMode.NoControl;
-            btnEPFindProg.Location = new Point(768, 147);
-            btnEPFindProg.Name = "btnEPFindProg";
-            btnEPFindProg.Size = new Size(205, 29);
-            btnEPFindProg.TabIndex = 77;
-            btnEPFindProg.Text = "Find";
-            btnEPFindProg.UseVisualStyleBackColor = false;
+            btnAD_CohortFind.BackColor = Color.RoyalBlue;
+            btnAD_CohortFind.Cursor = Cursors.Hand;
+            btnAD_CohortFind.FlatAppearance.BorderColor = Color.RoyalBlue;
+            btnAD_CohortFind.FlatAppearance.BorderSize = 0;
+            btnAD_CohortFind.FlatStyle = FlatStyle.Flat;
+            btnAD_CohortFind.Font = new Font("Microsoft YaHei UI", 10F);
+            btnAD_CohortFind.ForeColor = Color.White;
+            btnAD_CohortFind.ImeMode = ImeMode.NoControl;
+            btnAD_CohortFind.Location = new Point(768, 147);
+            btnAD_CohortFind.Name = "btnAD_CohortFind";
+            btnAD_CohortFind.Size = new Size(205, 29);
+            btnAD_CohortFind.TabIndex = 77;
+            btnAD_CohortFind.Text = "Find";
+            btnAD_CohortFind.UseVisualStyleBackColor = false;
             // 
-            // txtEMModuleTitle
+            // txtAD_Cohort_Search_ModuleCode
             // 
-            txtEMModuleTitle.BackColor = Color.WhiteSmoke;
-            txtEMModuleTitle.BorderStyle = BorderStyle.FixedSingle;
-            txtEMModuleTitle.Font = new Font("Segoe UI", 12F);
-            txtEMModuleTitle.Location = new Point(23, 148);
-            txtEMModuleTitle.Name = "txtEMModuleTitle";
-            txtEMModuleTitle.Size = new Size(715, 29);
-            txtEMModuleTitle.TabIndex = 76;
+            txtAD_Cohort_Search_ModuleCode.BackColor = Color.WhiteSmoke;
+            txtAD_Cohort_Search_ModuleCode.BorderStyle = BorderStyle.FixedSingle;
+            txtAD_Cohort_Search_ModuleCode.Font = new Font("Segoe UI", 12F);
+            txtAD_Cohort_Search_ModuleCode.Location = new Point(23, 148);
+            txtAD_Cohort_Search_ModuleCode.Name = "txtAD_Cohort_Search_ModuleCode";
+            txtAD_Cohort_Search_ModuleCode.Size = new Size(715, 29);
+            txtAD_Cohort_Search_ModuleCode.TabIndex = 76;
             // 
             // label3
             // 
@@ -100,9 +99,9 @@
             label3.ImeMode = ImeMode.NoControl;
             label3.Location = new Point(23, 111);
             label3.Name = "label3";
-            label3.Size = new Size(113, 25);
+            label3.Size = new Size(123, 25);
             label3.TabIndex = 75;
-            label3.Text = "Module Title";
+            label3.Text = "Module Code";
             label3.TextAlign = ContentAlignment.BottomLeft;
             // 
             // panel1
@@ -130,26 +129,26 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(btnSaveChanges);
-            Controls.Add(dgEMEditModuleTable);
-            Controls.Add(btnEPFindProg);
-            Controls.Add(txtEMModuleTitle);
+            Controls.Add(btnAD_CohortSave);
+            Controls.Add(dg_AD_CohortEdit);
+            Controls.Add(btnAD_CohortFind);
+            Controls.Add(txtAD_Cohort_Search_ModuleCode);
             Controls.Add(label3);
             Controls.Add(panel1);
             Controls.Add(label2);
             Name = "crtlAdminEditCohort";
             Size = new Size(1003, 740);
-            ((System.ComponentModel.ISupportInitialize)dgEMEditModuleTable).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dg_AD_CohortEdit).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button btnSaveChanges;
-        private DataGridView dgEMEditModuleTable;
-        private Button btnEPFindProg;
-        private TextBox txtEMModuleTitle;
+        private Button btnAD_CohortSave;
+        private DataGridView dg_AD_CohortEdit;
+        private Button btnAD_CohortFind;
+        private TextBox txtAD_Cohort_Search_ModuleCode;
         private Label label3;
         private Panel panel1;
         private Label label2;

@@ -1,6 +1,6 @@
 ﻿namespace StudentAdministrationSystemRevive.Views.UserAdministrator.Assessments
 {
-    partial class ctrlAdminAddAssessments
+    partial class ctrlAD_AssessmentAdd
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             panel1 = new Panel();
             label2 = new Label();
-            txtAMModuleTitle = new TextBox();
+            txtAD_Assessment_Title = new TextBox();
             label1 = new Label();
-            txtAMModCode = new TextBox();
+            txtAD_Assessment_ModuleCode = new TextBox();
             label5 = new Label();
-            btnCreateAssessment = new Button();
-            txtAMModuleDescription = new TextBox();
+            btnAD_AssessmentCreate = new Button();
+            txtAD_Assessment_Description = new TextBox();
             label4 = new Label();
-            textBox1 = new TextBox();
+            txtAD_Assessment_MaxMark = new TextBox();
             label3 = new Label();
             SuspendLayout();
             // 
@@ -62,15 +62,15 @@
             label2.Text = "New Assessment";
             label2.TextAlign = ContentAlignment.BottomLeft;
             // 
-            // txtAMModuleTitle
+            // txtAD_Assessment_Title
             // 
-            txtAMModuleTitle.BackColor = Color.WhiteSmoke;
-            txtAMModuleTitle.BorderStyle = BorderStyle.FixedSingle;
-            txtAMModuleTitle.Font = new Font("Segoe UI", 12F);
-            txtAMModuleTitle.Location = new Point(162, 230);
-            txtAMModuleTitle.Name = "txtAMModuleTitle";
-            txtAMModuleTitle.Size = new Size(425, 29);
-            txtAMModuleTitle.TabIndex = 76;
+            txtAD_Assessment_Title.BackColor = Color.WhiteSmoke;
+            txtAD_Assessment_Title.BorderStyle = BorderStyle.FixedSingle;
+            txtAD_Assessment_Title.Font = new Font("Segoe UI", 12F);
+            txtAD_Assessment_Title.Location = new Point(162, 230);
+            txtAD_Assessment_Title.Name = "txtAD_Assessment_Title";
+            txtAD_Assessment_Title.Size = new Size(425, 29);
+            txtAD_Assessment_Title.TabIndex = 76;
             // 
             // label1
             // 
@@ -85,16 +85,15 @@
             label1.Text = "Assessment Title";
             label1.TextAlign = ContentAlignment.BottomLeft;
             // 
-            // txtAMModCode
+            // txtAD_Assessment_ModuleCode
             // 
-            txtAMModCode.BackColor = Color.WhiteSmoke;
-            txtAMModCode.BorderStyle = BorderStyle.FixedSingle;
-            txtAMModCode.Enabled = false;
-            txtAMModCode.Font = new Font("Segoe UI", 12F);
-            txtAMModCode.Location = new Point(162, 150);
-            txtAMModCode.Name = "txtAMModCode";
-            txtAMModCode.Size = new Size(220, 29);
-            txtAMModCode.TabIndex = 78;
+            txtAD_Assessment_ModuleCode.BackColor = Color.WhiteSmoke;
+            txtAD_Assessment_ModuleCode.BorderStyle = BorderStyle.FixedSingle;
+            txtAD_Assessment_ModuleCode.Font = new Font("Segoe UI", 12F);
+            txtAD_Assessment_ModuleCode.Location = new Point(162, 150);
+            txtAD_Assessment_ModuleCode.Name = "txtAD_Assessment_ModuleCode";
+            txtAD_Assessment_ModuleCode.Size = new Size(220, 29);
+            txtAD_Assessment_ModuleCode.TabIndex = 78;
             // 
             // label5
             // 
@@ -109,32 +108,32 @@
             label5.Text = "Parent Module Code";
             label5.TextAlign = ContentAlignment.BottomLeft;
             // 
-            // btnCreateAssessment
+            // btnAD_AssessmentCreate
             // 
-            btnCreateAssessment.BackColor = Color.RoyalBlue;
-            btnCreateAssessment.Cursor = Cursors.Hand;
-            btnCreateAssessment.FlatAppearance.BorderSize = 0;
-            btnCreateAssessment.FlatStyle = FlatStyle.Flat;
-            btnCreateAssessment.Font = new Font("Microsoft YaHei UI", 12F);
-            btnCreateAssessment.ForeColor = Color.White;
-            btnCreateAssessment.ImeMode = ImeMode.NoControl;
-            btnCreateAssessment.Location = new Point(540, 590);
-            btnCreateAssessment.Name = "btnCreateAssessment";
-            btnCreateAssessment.Size = new Size(283, 37);
-            btnCreateAssessment.TabIndex = 81;
-            btnCreateAssessment.Text = "Create Assessment";
-            btnCreateAssessment.UseVisualStyleBackColor = false;
+            btnAD_AssessmentCreate.BackColor = Color.RoyalBlue;
+            btnAD_AssessmentCreate.Cursor = Cursors.Hand;
+            btnAD_AssessmentCreate.FlatAppearance.BorderSize = 0;
+            btnAD_AssessmentCreate.FlatStyle = FlatStyle.Flat;
+            btnAD_AssessmentCreate.Font = new Font("Microsoft YaHei UI", 12F);
+            btnAD_AssessmentCreate.ForeColor = Color.White;
+            btnAD_AssessmentCreate.ImeMode = ImeMode.NoControl;
+            btnAD_AssessmentCreate.Location = new Point(540, 590);
+            btnAD_AssessmentCreate.Name = "btnAD_AssessmentCreate";
+            btnAD_AssessmentCreate.Size = new Size(283, 37);
+            btnAD_AssessmentCreate.TabIndex = 81;
+            btnAD_AssessmentCreate.Text = "Create Assessment";
+            btnAD_AssessmentCreate.UseVisualStyleBackColor = false;
             // 
-            // txtAMModuleDescription
+            // txtAD_Assessment_Description
             // 
-            txtAMModuleDescription.BackColor = Color.WhiteSmoke;
-            txtAMModuleDescription.BorderStyle = BorderStyle.FixedSingle;
-            txtAMModuleDescription.Font = new Font("Segoe UI", 12F);
-            txtAMModuleDescription.Location = new Point(162, 311);
-            txtAMModuleDescription.Multiline = true;
-            txtAMModuleDescription.Name = "txtAMModuleDescription";
-            txtAMModuleDescription.Size = new Size(661, 238);
-            txtAMModuleDescription.TabIndex = 80;
+            txtAD_Assessment_Description.BackColor = Color.WhiteSmoke;
+            txtAD_Assessment_Description.BorderStyle = BorderStyle.FixedSingle;
+            txtAD_Assessment_Description.Font = new Font("Segoe UI", 12F);
+            txtAD_Assessment_Description.Location = new Point(162, 311);
+            txtAD_Assessment_Description.Multiline = true;
+            txtAD_Assessment_Description.Name = "txtAD_Assessment_Description";
+            txtAD_Assessment_Description.Size = new Size(661, 238);
+            txtAD_Assessment_Description.TabIndex = 80;
             // 
             // label4
             // 
@@ -149,16 +148,15 @@
             label4.Text = "Assesment Description";
             label4.TextAlign = ContentAlignment.BottomLeft;
             // 
-            // textBox1
+            // txtAD_Assessment_MaxMark
             // 
-            textBox1.BackColor = Color.WhiteSmoke;
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Enabled = false;
-            textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(603, 230);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(220, 29);
-            textBox1.TabIndex = 83;
+            txtAD_Assessment_MaxMark.BackColor = Color.WhiteSmoke;
+            txtAD_Assessment_MaxMark.BorderStyle = BorderStyle.FixedSingle;
+            txtAD_Assessment_MaxMark.Font = new Font("Segoe UI", 12F);
+            txtAD_Assessment_MaxMark.Location = new Point(603, 230);
+            txtAD_Assessment_MaxMark.Name = "txtAD_Assessment_MaxMark";
+            txtAD_Assessment_MaxMark.Size = new Size(220, 29);
+            txtAD_Assessment_MaxMark.TabIndex = 83;
             // 
             // label3
             // 
@@ -173,23 +171,23 @@
             label3.Text = "Maximum Mark";
             label3.TextAlign = ContentAlignment.BottomCenter;
             // 
-            // ctrlAdminAddAssessments
+            // ctrlAD_AssessmentAdd
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(textBox1);
+            Controls.Add(txtAD_Assessment_MaxMark);
             Controls.Add(label3);
-            Controls.Add(btnCreateAssessment);
-            Controls.Add(txtAMModuleDescription);
+            Controls.Add(btnAD_AssessmentCreate);
+            Controls.Add(txtAD_Assessment_Description);
             Controls.Add(label4);
-            Controls.Add(txtAMModCode);
+            Controls.Add(txtAD_Assessment_ModuleCode);
             Controls.Add(label5);
-            Controls.Add(txtAMModuleTitle);
+            Controls.Add(txtAD_Assessment_Title);
             Controls.Add(label1);
             Controls.Add(panel1);
             Controls.Add(label2);
-            Name = "ctrlAdminAddAssessments";
+            Name = "ctrlAD_AssessmentAdd";
             Size = new Size(1003, 712);
             ResumeLayout(false);
             PerformLayout();
@@ -199,14 +197,14 @@
 
         private Panel panel1;
         private Label label2;
-        private TextBox txtAMModuleTitle;
+        private TextBox txtAD_Assessment_Title;
         private Label label1;
-        private TextBox txtAMModCode;
+        private TextBox txtAD_Assessment_ModuleCode;
         private Label label5;
-        private Button btnCreateAssessment;
-        private TextBox txtAMModuleDescription;
+        private Button btnAD_AssessmentCreate;
+        private TextBox txtAD_Assessment_Description;
         private Label label4;
-        private TextBox textBox1;
+        private TextBox txtAD_Assessment_MaxMark;
         private Label label3;
     }
 }

@@ -17,7 +17,7 @@ namespace StudentAdministrationSystemRevive.Views.UserAdministrator.Assessments
         {
             InitializeComponent();
             clearControlsPanel();
-            var ctrl = new ctrlAdminAddAssessments();
+            var ctrl = new ctrlAD_AssessmentAdd();
             pnlAdminAssessmentsContentPane.Controls.Add(ctrl);
         }
         private void clearControlsPanel()
@@ -29,7 +29,7 @@ namespace StudentAdministrationSystemRevive.Views.UserAdministrator.Assessments
         private void newAssessmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             clearControlsPanel();
-            var ctrl = new ctrlAdminAddAssessments();
+            var ctrl = new ctrlAD_AssessmentAdd();
             pnlAdminAssessmentsContentPane.Controls.Add(ctrl);
         }
 
@@ -37,21 +37,21 @@ namespace StudentAdministrationSystemRevive.Views.UserAdministrator.Assessments
         private void editExistingAssessmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             clearControlsPanel();
-            var ctrl = new ctrlAdminEditAssessment();
+            var ctrl = new ctrlAD_AssessmentEdit();
             pnlAdminAssessmentsContentPane.Controls.Add(ctrl);
         }
 
         private void gradeAnAssessmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             clearControlsPanel();
-            var ctrl = new ctrlAdminGradeAssessment();
+            var ctrl = new ctrlAD_AssessmentGrade();
             pnlAdminAssessmentsContentPane.Controls.Add(ctrl);
         }
 
         private void removeAnAssessmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             clearControlsPanel();
-            var ctrl = new ctrlAdminRemoveAssessment();
+            var ctrl = new ctrlAD_AssessmentRemove();
             pnlAdminAssessmentsContentPane.Controls.Add(ctrl);
         }
     }

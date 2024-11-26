@@ -1,6 +1,6 @@
 ﻿namespace StudentAdministrationSystemRevive.Views.UserAdministrator.Assessments
 {
-    partial class ctrlAdminRemoveAssessment
+    partial class ctrlAD_AssessmentRemove
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnRMFindModule = new Button();
-            txtRMModuleTitle = new TextBox();
+            btnAD_AssessmentFind = new Button();
+            txtAD_Assessment_Search_ID = new TextBox();
             label3 = new Label();
             label1 = new Label();
-            btnRMRemoveModule = new Button();
-            txtRMModuleCode = new TextBox();
+            btnAD_AssessmentRemove = new Button();
+            txtAD_Assessment_ConfirmID = new TextBox();
             label5 = new Label();
             dgRMRemoveModuleTable = new DataGridView();
             panel1 = new Panel();
@@ -41,32 +41,32 @@
             ((System.ComponentModel.ISupportInitialize)dgRMRemoveModuleTable).BeginInit();
             SuspendLayout();
             // 
-            // btnRMFindModule
+            // btnAD_AssessmentFind
             // 
-            btnRMFindModule.BackColor = Color.RoyalBlue;
-            btnRMFindModule.Cursor = Cursors.Hand;
-            btnRMFindModule.FlatAppearance.BorderColor = Color.RoyalBlue;
-            btnRMFindModule.FlatAppearance.BorderSize = 0;
-            btnRMFindModule.FlatStyle = FlatStyle.Flat;
-            btnRMFindModule.Font = new Font("Microsoft YaHei UI", 10F);
-            btnRMFindModule.ForeColor = Color.White;
-            btnRMFindModule.ImeMode = ImeMode.NoControl;
-            btnRMFindModule.Location = new Point(768, 144);
-            btnRMFindModule.Name = "btnRMFindModule";
-            btnRMFindModule.Size = new Size(205, 29);
-            btnRMFindModule.TabIndex = 78;
-            btnRMFindModule.Text = "Find";
-            btnRMFindModule.UseVisualStyleBackColor = false;
+            btnAD_AssessmentFind.BackColor = Color.RoyalBlue;
+            btnAD_AssessmentFind.Cursor = Cursors.Hand;
+            btnAD_AssessmentFind.FlatAppearance.BorderColor = Color.RoyalBlue;
+            btnAD_AssessmentFind.FlatAppearance.BorderSize = 0;
+            btnAD_AssessmentFind.FlatStyle = FlatStyle.Flat;
+            btnAD_AssessmentFind.Font = new Font("Microsoft YaHei UI", 10F);
+            btnAD_AssessmentFind.ForeColor = Color.White;
+            btnAD_AssessmentFind.ImeMode = ImeMode.NoControl;
+            btnAD_AssessmentFind.Location = new Point(768, 144);
+            btnAD_AssessmentFind.Name = "btnAD_AssessmentFind";
+            btnAD_AssessmentFind.Size = new Size(205, 29);
+            btnAD_AssessmentFind.TabIndex = 78;
+            btnAD_AssessmentFind.Text = "Find";
+            btnAD_AssessmentFind.UseVisualStyleBackColor = false;
             // 
-            // txtRMModuleTitle
+            // txtAD_Assessment_Search_ID
             // 
-            txtRMModuleTitle.BackColor = Color.WhiteSmoke;
-            txtRMModuleTitle.BorderStyle = BorderStyle.FixedSingle;
-            txtRMModuleTitle.Font = new Font("Segoe UI", 12F);
-            txtRMModuleTitle.Location = new Point(23, 145);
-            txtRMModuleTitle.Name = "txtRMModuleTitle";
-            txtRMModuleTitle.Size = new Size(715, 29);
-            txtRMModuleTitle.TabIndex = 77;
+            txtAD_Assessment_Search_ID.BackColor = Color.WhiteSmoke;
+            txtAD_Assessment_Search_ID.BorderStyle = BorderStyle.FixedSingle;
+            txtAD_Assessment_Search_ID.Font = new Font("Segoe UI", 12F);
+            txtAD_Assessment_Search_ID.Location = new Point(23, 145);
+            txtAD_Assessment_Search_ID.Name = "txtAD_Assessment_Search_ID";
+            txtAD_Assessment_Search_ID.Size = new Size(715, 29);
+            txtAD_Assessment_Search_ID.TabIndex = 77;
             // 
             // label3
             // 
@@ -94,32 +94,32 @@
             label1.Text = "** Removing an assessment is irreversible! **";
             label1.TextAlign = ContentAlignment.BottomLeft;
             // 
-            // btnRMRemoveModule
+            // btnAD_AssessmentRemove
             // 
-            btnRMRemoveModule.BackColor = Color.Red;
-            btnRMRemoveModule.Cursor = Cursors.Hand;
-            btnRMRemoveModule.FlatAppearance.BorderColor = Color.OrangeRed;
-            btnRMRemoveModule.FlatAppearance.BorderSize = 0;
-            btnRMRemoveModule.FlatStyle = FlatStyle.Flat;
-            btnRMRemoveModule.Font = new Font("Microsoft YaHei UI", 10F);
-            btnRMRemoveModule.ForeColor = Color.White;
-            btnRMRemoveModule.ImeMode = ImeMode.NoControl;
-            btnRMRemoveModule.Location = new Point(332, 574);
-            btnRMRemoveModule.Name = "btnRMRemoveModule";
-            btnRMRemoveModule.Size = new Size(205, 29);
-            btnRMRemoveModule.TabIndex = 74;
-            btnRMRemoveModule.Text = "Remove Assessment";
-            btnRMRemoveModule.UseVisualStyleBackColor = false;
+            btnAD_AssessmentRemove.BackColor = Color.Red;
+            btnAD_AssessmentRemove.Cursor = Cursors.Hand;
+            btnAD_AssessmentRemove.FlatAppearance.BorderColor = Color.OrangeRed;
+            btnAD_AssessmentRemove.FlatAppearance.BorderSize = 0;
+            btnAD_AssessmentRemove.FlatStyle = FlatStyle.Flat;
+            btnAD_AssessmentRemove.Font = new Font("Microsoft YaHei UI", 10F);
+            btnAD_AssessmentRemove.ForeColor = Color.White;
+            btnAD_AssessmentRemove.ImeMode = ImeMode.NoControl;
+            btnAD_AssessmentRemove.Location = new Point(332, 574);
+            btnAD_AssessmentRemove.Name = "btnAD_AssessmentRemove";
+            btnAD_AssessmentRemove.Size = new Size(205, 29);
+            btnAD_AssessmentRemove.TabIndex = 74;
+            btnAD_AssessmentRemove.Text = "Remove Assessment";
+            btnAD_AssessmentRemove.UseVisualStyleBackColor = false;
             // 
-            // txtRMModuleCode
+            // txtAD_Assessment_ConfirmID
             // 
-            txtRMModuleCode.BackColor = Color.WhiteSmoke;
-            txtRMModuleCode.BorderStyle = BorderStyle.FixedSingle;
-            txtRMModuleCode.Font = new Font("Segoe UI", 12F);
-            txtRMModuleCode.Location = new Point(23, 574);
-            txtRMModuleCode.Name = "txtRMModuleCode";
-            txtRMModuleCode.Size = new Size(276, 29);
-            txtRMModuleCode.TabIndex = 73;
+            txtAD_Assessment_ConfirmID.BackColor = Color.WhiteSmoke;
+            txtAD_Assessment_ConfirmID.BorderStyle = BorderStyle.FixedSingle;
+            txtAD_Assessment_ConfirmID.Font = new Font("Segoe UI", 12F);
+            txtAD_Assessment_ConfirmID.Location = new Point(23, 574);
+            txtAD_Assessment_ConfirmID.Name = "txtAD_Assessment_ConfirmID";
+            txtAD_Assessment_ConfirmID.Size = new Size(276, 29);
+            txtAD_Assessment_ConfirmID.TabIndex = 73;
             // 
             // label5
             // 
@@ -166,22 +166,22 @@
             label2.Text = "Remove Assessment";
             label2.TextAlign = ContentAlignment.BottomLeft;
             // 
-            // ctrlAdminRemoveAssessment
+            // ctrlAD_AssessmentRemove
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(btnRMFindModule);
-            Controls.Add(txtRMModuleTitle);
+            Controls.Add(btnAD_AssessmentFind);
+            Controls.Add(txtAD_Assessment_Search_ID);
             Controls.Add(label3);
             Controls.Add(label1);
-            Controls.Add(btnRMRemoveModule);
-            Controls.Add(txtRMModuleCode);
+            Controls.Add(btnAD_AssessmentRemove);
+            Controls.Add(txtAD_Assessment_ConfirmID);
             Controls.Add(label5);
             Controls.Add(dgRMRemoveModuleTable);
             Controls.Add(panel1);
             Controls.Add(label2);
-            Name = "ctrlAdminRemoveAssessment";
+            Name = "ctrlAD_AssessmentRemove";
             Size = new Size(1003, 712);
             ((System.ComponentModel.ISupportInitialize)dgRMRemoveModuleTable).EndInit();
             ResumeLayout(false);
@@ -190,12 +190,12 @@
 
         #endregion
 
-        private Button btnRMFindModule;
-        private TextBox txtRMModuleTitle;
+        private Button btnAD_AssessmentFind;
+        private TextBox txtAD_Assessment_Search_ID;
         private Label label3;
         private Label label1;
-        private Button btnRMRemoveModule;
-        private TextBox txtRMModuleCode;
+        private Button btnAD_AssessmentRemove;
+        private TextBox txtAD_Assessment_ConfirmID;
         private Label label5;
         private DataGridView dgRMRemoveModuleTable;
         private Panel panel1;

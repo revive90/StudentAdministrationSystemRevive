@@ -28,38 +28,79 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            button2 = new Button();
+            btnAD_ReloadStudentResults = new Button();
+            dg_AD_Student_Results = new DataGridView();
+            panel1 = new Panel();
+            label2 = new Label();
+            button1 = new Button();
+            ((System.ComponentModel.ISupportInitialize)dg_AD_Student_Results).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // btnAD_ReloadStudentResults
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Light", 25F);
-            label1.ForeColor = Color.RoyalBlue;
-            label1.ImeMode = ImeMode.NoControl;
-            label1.Location = new Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(117, 46);
-            label1.TabIndex = 29;
-            label1.Text = "Results";
-            label1.TextAlign = ContentAlignment.BottomLeft;
+            btnAD_ReloadStudentResults.BackColor = Color.RoyalBlue;
+            btnAD_ReloadStudentResults.Cursor = Cursors.Hand;
+            btnAD_ReloadStudentResults.FlatAppearance.BorderColor = Color.RoyalBlue;
+            btnAD_ReloadStudentResults.FlatAppearance.BorderSize = 0;
+            btnAD_ReloadStudentResults.FlatStyle = FlatStyle.Flat;
+            btnAD_ReloadStudentResults.Font = new Font("Microsoft YaHei UI", 10F);
+            btnAD_ReloadStudentResults.ForeColor = Color.White;
+            btnAD_ReloadStudentResults.ImeMode = ImeMode.NoControl;
+            btnAD_ReloadStudentResults.Location = new Point(769, 26);
+            btnAD_ReloadStudentResults.Name = "btnAD_ReloadStudentResults";
+            btnAD_ReloadStudentResults.Size = new Size(205, 29);
+            btnAD_ReloadStudentResults.TabIndex = 84;
+            btnAD_ReloadStudentResults.Text = "Reload";
+            btnAD_ReloadStudentResults.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // dg_AD_Student_Results
             // 
-            button2.BackColor = Color.RoyalBlue;
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Microsoft YaHei UI", 12F);
-            button2.ForeColor = Color.White;
-            button2.ImeMode = ImeMode.NoControl;
-            button2.Location = new Point(871, 12);
-            button2.Name = "button2";
-            button2.Size = new Size(120, 37);
-            button2.TabIndex = 28;
-            button2.Text = "Reload";
-            button2.UseVisualStyleBackColor = false;
+            dg_AD_Student_Results.AllowUserToAddRows = false;
+            dg_AD_Student_Results.AllowUserToDeleteRows = false;
+            dg_AD_Student_Results.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dg_AD_Student_Results.Location = new Point(24, 94);
+            dg_AD_Student_Results.Name = "dg_AD_Student_Results";
+            dg_AD_Student_Results.ReadOnly = true;
+            dg_AD_Student_Results.Size = new Size(950, 585);
+            dg_AD_Student_Results.TabIndex = 81;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Gainsboro;
+            panel1.Location = new Point(24, 68);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(950, 1);
+            panel1.TabIndex = 80;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Light", 18F);
+            label2.ForeColor = Color.RoyalBlue;
+            label2.ImeMode = ImeMode.NoControl;
+            label2.Location = new Point(24, 20);
+            label2.Name = "label2";
+            label2.Size = new Size(166, 32);
+            label2.TabIndex = 79;
+            label2.Text = "Student Results";
+            label2.TextAlign = ContentAlignment.BottomLeft;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.RoyalBlue;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderColor = Color.RoyalBlue;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Microsoft YaHei UI", 10F);
+            button1.ForeColor = Color.White;
+            button1.ImeMode = ImeMode.NoControl;
+            button1.Location = new Point(769, 703);
+            button1.Name = "button1";
+            button1.Size = new Size(205, 29);
+            button1.TabIndex = 85;
+            button1.Text = "Save";
+            button1.UseVisualStyleBackColor = false;
             // 
             // frmAdminResults
             // 
@@ -67,18 +108,25 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1003, 769);
-            Controls.Add(label1);
-            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(btnAD_ReloadStudentResults);
+            Controls.Add(dg_AD_Student_Results);
+            Controls.Add(panel1);
+            Controls.Add(label2);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmAdminResults";
             Text = "frmAdminResults";
+            ((System.ComponentModel.ISupportInitialize)dg_AD_Student_Results).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private Button button2;
+        private Button btnAD_ReloadStudentResults;
+        private DataGridView dg_AD_Student_Results;
+        private Panel panel1;
+        private Label label2;
+        private Button button1;
     }
 }

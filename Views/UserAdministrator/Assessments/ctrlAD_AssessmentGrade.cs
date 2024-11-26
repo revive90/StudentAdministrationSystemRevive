@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StudentAdministrationSystemRevive.Views.UserAdministrator.Assessments
 {
-    public partial class ctrlAdminGradeAssessment : UserControl
+    public partial class ctrlAD_AssessmentGrade : UserControl
     {
-        public ctrlAdminGradeAssessment()
+        public ctrlAD_AssessmentGrade()
         {
             InitializeComponent();
         }

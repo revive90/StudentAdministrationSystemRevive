@@ -78,6 +78,13 @@
             label4 = new Label();
             label1 = new Label();
             button2 = new Button();
+            pnlMDAssessments = new Panel();
+            flowAssessments = new FlowLayoutPanel();
+            label5 = new Label();
+            pnlMDGrades = new Panel();
+            flowAssessmentGrades = new FlowLayoutPanel();
+            pnlMDMyFeedback = new Panel();
+            flowAssessmentFeedback = new FlowLayoutPanel();
             pnlMDAboutModule = new Panel();
             rtModuleIntro = new RichTextBox();
             panel1 = new Panel();
@@ -101,13 +108,6 @@
             pnlMDAnnouncements = new Panel();
             flowAnnouncements = new FlowLayoutPanel();
             label78 = new Label();
-            pnlMDAssessments = new Panel();
-            flowAssessments = new FlowLayoutPanel();
-            label5 = new Label();
-            pnlMDGrades = new Panel();
-            flowAssessmentGrades = new FlowLayoutPanel();
-            pnlMDMyFeedback = new Panel();
-            flowAssessmentFeedback = new FlowLayoutPanel();
             pnlModulePreviewAll.SuspendLayout();
             panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
@@ -122,14 +122,14 @@
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             pnlModuleDetails.SuspendLayout();
+            pnlMDAssessments.SuspendLayout();
+            pnlMDGrades.SuspendLayout();
+            pnlMDMyFeedback.SuspendLayout();
             pnlMDAboutModule.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             pnlMDEvaluation.SuspendLayout();
             pnlMDAnnouncements.SuspendLayout();
-            pnlMDAssessments.SuspendLayout();
-            pnlMDGrades.SuspendLayout();
-            pnlMDMyFeedback.SuspendLayout();
             SuspendLayout();
             // 
             // lblMyModulesTitle
@@ -780,6 +780,80 @@
             button2.Text = "Refresh";
             button2.UseVisualStyleBackColor = false;
             // 
+            // pnlMDAssessments
+            // 
+            pnlMDAssessments.BackColor = Color.White;
+            pnlMDAssessments.Controls.Add(flowAssessments);
+            pnlMDAssessments.Controls.Add(label5);
+            pnlMDAssessments.Location = new Point(24, 167);
+            pnlMDAssessments.Name = "pnlMDAssessments";
+            pnlMDAssessments.Size = new Size(900, 585);
+            pnlMDAssessments.TabIndex = 55;
+            // 
+            // flowAssessments
+            // 
+            flowAssessments.AutoScroll = true;
+            flowAssessments.BackColor = Color.White;
+            flowAssessments.FlowDirection = FlowDirection.TopDown;
+            flowAssessments.Location = new Point(0, 30);
+            flowAssessments.Name = "flowAssessments";
+            flowAssessments.Size = new Size(900, 552);
+            flowAssessments.TabIndex = 30;
+            flowAssessments.WrapContents = false;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Light", 9F, FontStyle.Bold | FontStyle.Italic);
+            label5.ForeColor = Color.RoyalBlue;
+            label5.ImeMode = ImeMode.NoControl;
+            label5.Location = new Point(699, 6);
+            label5.Name = "label5";
+            label5.Size = new Size(198, 15);
+            label5.TabIndex = 29;
+            label5.Text = "Scroll to view more assessments";
+            label5.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // pnlMDGrades
+            // 
+            pnlMDGrades.BackColor = Color.White;
+            pnlMDGrades.Controls.Add(flowAssessmentGrades);
+            pnlMDGrades.Location = new Point(24, 167);
+            pnlMDGrades.Name = "pnlMDGrades";
+            pnlMDGrades.Size = new Size(900, 585);
+            pnlMDGrades.TabIndex = 52;
+            // 
+            // flowAssessmentGrades
+            // 
+            flowAssessmentGrades.AutoScroll = true;
+            flowAssessmentGrades.BackColor = Color.White;
+            flowAssessmentGrades.FlowDirection = FlowDirection.TopDown;
+            flowAssessmentGrades.Location = new Point(3, 19);
+            flowAssessmentGrades.Name = "flowAssessmentGrades";
+            flowAssessmentGrades.Size = new Size(894, 563);
+            flowAssessmentGrades.TabIndex = 20;
+            flowAssessmentGrades.WrapContents = false;
+            // 
+            // pnlMDMyFeedback
+            // 
+            pnlMDMyFeedback.BackColor = Color.White;
+            pnlMDMyFeedback.Controls.Add(flowAssessmentFeedback);
+            pnlMDMyFeedback.Location = new Point(24, 167);
+            pnlMDMyFeedback.Name = "pnlMDMyFeedback";
+            pnlMDMyFeedback.Size = new Size(900, 585);
+            pnlMDMyFeedback.TabIndex = 51;
+            // 
+            // flowAssessmentFeedback
+            // 
+            flowAssessmentFeedback.AutoScroll = true;
+            flowAssessmentFeedback.BackColor = Color.White;
+            flowAssessmentFeedback.FlowDirection = FlowDirection.TopDown;
+            flowAssessmentFeedback.Location = new Point(5, 24);
+            flowAssessmentFeedback.Name = "flowAssessmentFeedback";
+            flowAssessmentFeedback.Size = new Size(892, 558);
+            flowAssessmentFeedback.TabIndex = 20;
+            flowAssessmentFeedback.WrapContents = false;
+            // 
             // pnlMDAboutModule
             // 
             pnlMDAboutModule.BackColor = Color.White;
@@ -1061,88 +1135,14 @@
             label78.Text = "Announcements";
             label78.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // pnlMDAssessments
-            // 
-            pnlMDAssessments.BackColor = Color.White;
-            pnlMDAssessments.Controls.Add(flowAssessments);
-            pnlMDAssessments.Controls.Add(label5);
-            pnlMDAssessments.Location = new Point(24, 167);
-            pnlMDAssessments.Name = "pnlMDAssessments";
-            pnlMDAssessments.Size = new Size(900, 585);
-            pnlMDAssessments.TabIndex = 55;
-            // 
-            // flowAssessments
-            // 
-            flowAssessments.AutoScroll = true;
-            flowAssessments.BackColor = Color.White;
-            flowAssessments.FlowDirection = FlowDirection.TopDown;
-            flowAssessments.Location = new Point(0, 30);
-            flowAssessments.Name = "flowAssessments";
-            flowAssessments.Size = new Size(900, 552);
-            flowAssessments.TabIndex = 30;
-            flowAssessments.WrapContents = false;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Light", 9F, FontStyle.Bold | FontStyle.Italic);
-            label5.ForeColor = Color.RoyalBlue;
-            label5.ImeMode = ImeMode.NoControl;
-            label5.Location = new Point(699, 6);
-            label5.Name = "label5";
-            label5.Size = new Size(198, 15);
-            label5.TabIndex = 29;
-            label5.Text = "Scroll to view more assessments";
-            label5.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // pnlMDGrades
-            // 
-            pnlMDGrades.BackColor = Color.White;
-            pnlMDGrades.Controls.Add(flowAssessmentGrades);
-            pnlMDGrades.Location = new Point(24, 167);
-            pnlMDGrades.Name = "pnlMDGrades";
-            pnlMDGrades.Size = new Size(900, 585);
-            pnlMDGrades.TabIndex = 52;
-            // 
-            // flowAssessmentGrades
-            // 
-            flowAssessmentGrades.AutoScroll = true;
-            flowAssessmentGrades.BackColor = Color.White;
-            flowAssessmentGrades.FlowDirection = FlowDirection.TopDown;
-            flowAssessmentGrades.Location = new Point(3, 19);
-            flowAssessmentGrades.Name = "flowAssessmentGrades";
-            flowAssessmentGrades.Size = new Size(894, 563);
-            flowAssessmentGrades.TabIndex = 20;
-            flowAssessmentGrades.WrapContents = false;
-            // 
-            // pnlMDMyFeedback
-            // 
-            pnlMDMyFeedback.BackColor = Color.White;
-            pnlMDMyFeedback.Controls.Add(flowAssessmentFeedback);
-            pnlMDMyFeedback.Location = new Point(24, 167);
-            pnlMDMyFeedback.Name = "pnlMDMyFeedback";
-            pnlMDMyFeedback.Size = new Size(900, 585);
-            pnlMDMyFeedback.TabIndex = 51;
-            // 
-            // flowAssessmentFeedback
-            // 
-            flowAssessmentFeedback.AutoScroll = true;
-            flowAssessmentFeedback.BackColor = Color.White;
-            flowAssessmentFeedback.FlowDirection = FlowDirection.TopDown;
-            flowAssessmentFeedback.Location = new Point(5, 24);
-            flowAssessmentFeedback.Name = "flowAssessmentFeedback";
-            flowAssessmentFeedback.Size = new Size(892, 558);
-            flowAssessmentFeedback.TabIndex = 20;
-            flowAssessmentFeedback.WrapContents = false;
-            // 
             // frmStudentModules
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(946, 766);
-            Controls.Add(pnlModuleDetails);
             Controls.Add(pnlModulePreviewAll);
+            Controls.Add(pnlModuleDetails);
             FormBorderStyle = FormBorderStyle.None;
             MaximizeBox = false;
             Name = "frmStudentModules";
@@ -1170,6 +1170,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             pnlModuleDetails.ResumeLayout(false);
             pnlModuleDetails.PerformLayout();
+            pnlMDAssessments.ResumeLayout(false);
+            pnlMDAssessments.PerformLayout();
+            pnlMDGrades.ResumeLayout(false);
+            pnlMDMyFeedback.ResumeLayout(false);
             pnlMDAboutModule.ResumeLayout(false);
             pnlMDAboutModule.PerformLayout();
             panel1.ResumeLayout(false);
@@ -1179,10 +1183,6 @@
             pnlMDEvaluation.PerformLayout();
             pnlMDAnnouncements.ResumeLayout(false);
             pnlMDAnnouncements.PerformLayout();
-            pnlMDAssessments.ResumeLayout(false);
-            pnlMDAssessments.PerformLayout();
-            pnlMDGrades.ResumeLayout(false);
-            pnlMDMyFeedback.ResumeLayout(false);
             ResumeLayout(false);
         }
 

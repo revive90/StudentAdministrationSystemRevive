@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace StudentAdministrationSystemRevive.Views.UserAdministrator.Assessments
 {
-    public partial class ctrlAdminAddAssessments : UserControl
+    public partial class ctrlAD_AssessmentRemove : UserControl
     {
-        public ctrlAdminAddAssessments()
+        public ctrlAD_AssessmentRemove()
         {
             InitializeComponent();
         }
-
-        public bool TopLevel { get; internal set; }
     }
 }

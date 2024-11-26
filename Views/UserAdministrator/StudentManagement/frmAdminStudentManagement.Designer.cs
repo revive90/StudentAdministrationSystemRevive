@@ -28,55 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtEMModuleTitle = new TextBox();
-            cmbProgLength = new ComboBox();
-            btnEPFindProg = new Button();
+            txtStudentInfo = new TextBox();
+            cmbSearchByItem = new ComboBox();
+            btnFindStudent = new Button();
             label3 = new Label();
-            btnFindProg = new Button();
+            btnReloadStudentInfo = new Button();
             dgVPProgTable = new DataGridView();
             panel1 = new Panel();
             label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgVPProgTable).BeginInit();
             SuspendLayout();
             // 
-            // txtEMModuleTitle
+            // txtStudentInfo
             // 
-            txtEMModuleTitle.BackColor = Color.WhiteSmoke;
-            txtEMModuleTitle.BorderStyle = BorderStyle.FixedSingle;
-            txtEMModuleTitle.Font = new Font("Segoe UI", 12F);
-            txtEMModuleTitle.Location = new Point(334, 105);
-            txtEMModuleTitle.Name = "txtEMModuleTitle";
-            txtEMModuleTitle.Size = new Size(417, 29);
-            txtEMModuleTitle.TabIndex = 98;
+            txtStudentInfo.BackColor = Color.WhiteSmoke;
+            txtStudentInfo.BorderStyle = BorderStyle.FixedSingle;
+            txtStudentInfo.Font = new Font("Segoe UI", 12F);
+            txtStudentInfo.Location = new Point(334, 105);
+            txtStudentInfo.Name = "txtStudentInfo";
+            txtStudentInfo.Size = new Size(417, 29);
+            txtStudentInfo.TabIndex = 98;
             // 
-            // cmbProgLength
+            // cmbSearchByItem
             // 
-            cmbProgLength.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbProgLength.FlatStyle = FlatStyle.System;
-            cmbProgLength.Font = new Font("Segoe UI", 12F);
-            cmbProgLength.FormattingEnabled = true;
-            cmbProgLength.Items.AddRange(new object[] { "Student Name", "Student Number" });
-            cmbProgLength.Location = new Point(127, 105);
-            cmbProgLength.Name = "cmbProgLength";
-            cmbProgLength.Size = new Size(189, 29);
-            cmbProgLength.TabIndex = 97;
+            cmbSearchByItem.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbSearchByItem.FlatStyle = FlatStyle.System;
+            cmbSearchByItem.Font = new Font("Segoe UI", 12F);
+            cmbSearchByItem.FormattingEnabled = true;
+            cmbSearchByItem.Items.AddRange(new object[] { "Student Name", "Student Number" });
+            cmbSearchByItem.Location = new Point(127, 105);
+            cmbSearchByItem.Name = "cmbSearchByItem";
+            cmbSearchByItem.Size = new Size(189, 29);
+            cmbSearchByItem.TabIndex = 97;
             // 
-            // btnEPFindProg
+            // btnFindStudent
             // 
-            btnEPFindProg.BackColor = Color.RoyalBlue;
-            btnEPFindProg.Cursor = Cursors.Hand;
-            btnEPFindProg.FlatAppearance.BorderColor = Color.RoyalBlue;
-            btnEPFindProg.FlatAppearance.BorderSize = 0;
-            btnEPFindProg.FlatStyle = FlatStyle.Flat;
-            btnEPFindProg.Font = new Font("Microsoft YaHei UI", 10F);
-            btnEPFindProg.ForeColor = Color.White;
-            btnEPFindProg.ImeMode = ImeMode.NoControl;
-            btnEPFindProg.Location = new Point(771, 105);
-            btnEPFindProg.Name = "btnEPFindProg";
-            btnEPFindProg.Size = new Size(205, 29);
-            btnEPFindProg.TabIndex = 96;
-            btnEPFindProg.Text = "Find";
-            btnEPFindProg.UseVisualStyleBackColor = false;
+            btnFindStudent.BackColor = Color.RoyalBlue;
+            btnFindStudent.Cursor = Cursors.Hand;
+            btnFindStudent.FlatAppearance.BorderColor = Color.RoyalBlue;
+            btnFindStudent.FlatAppearance.BorderSize = 0;
+            btnFindStudent.FlatStyle = FlatStyle.Flat;
+            btnFindStudent.Font = new Font("Microsoft YaHei UI", 10F);
+            btnFindStudent.ForeColor = Color.White;
+            btnFindStudent.ImeMode = ImeMode.NoControl;
+            btnFindStudent.Location = new Point(771, 105);
+            btnFindStudent.Name = "btnFindStudent";
+            btnFindStudent.Size = new Size(205, 29);
+            btnFindStudent.TabIndex = 96;
+            btnFindStudent.Text = "Find";
+            btnFindStudent.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -91,22 +91,22 @@
             label3.Text = "Search By";
             label3.TextAlign = ContentAlignment.BottomLeft;
             // 
-            // btnFindProg
+            // btnReloadStudentInfo
             // 
-            btnFindProg.BackColor = Color.RoyalBlue;
-            btnFindProg.Cursor = Cursors.Hand;
-            btnFindProg.FlatAppearance.BorderColor = Color.RoyalBlue;
-            btnFindProg.FlatAppearance.BorderSize = 0;
-            btnFindProg.FlatStyle = FlatStyle.Flat;
-            btnFindProg.Font = new Font("Microsoft YaHei UI", 10F);
-            btnFindProg.ForeColor = Color.White;
-            btnFindProg.ImeMode = ImeMode.NoControl;
-            btnFindProg.Location = new Point(771, 42);
-            btnFindProg.Name = "btnFindProg";
-            btnFindProg.Size = new Size(205, 29);
-            btnFindProg.TabIndex = 94;
-            btnFindProg.Text = "Reload";
-            btnFindProg.UseVisualStyleBackColor = false;
+            btnReloadStudentInfo.BackColor = Color.RoyalBlue;
+            btnReloadStudentInfo.Cursor = Cursors.Hand;
+            btnReloadStudentInfo.FlatAppearance.BorderColor = Color.RoyalBlue;
+            btnReloadStudentInfo.FlatAppearance.BorderSize = 0;
+            btnReloadStudentInfo.FlatStyle = FlatStyle.Flat;
+            btnReloadStudentInfo.Font = new Font("Microsoft YaHei UI", 10F);
+            btnReloadStudentInfo.ForeColor = Color.White;
+            btnReloadStudentInfo.ImeMode = ImeMode.NoControl;
+            btnReloadStudentInfo.Location = new Point(771, 42);
+            btnReloadStudentInfo.Name = "btnReloadStudentInfo";
+            btnReloadStudentInfo.Size = new Size(205, 29);
+            btnReloadStudentInfo.TabIndex = 94;
+            btnReloadStudentInfo.Text = "Reload";
+            btnReloadStudentInfo.UseVisualStyleBackColor = false;
             // 
             // dgVPProgTable
             // 
@@ -145,11 +145,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1003, 769);
-            Controls.Add(txtEMModuleTitle);
-            Controls.Add(cmbProgLength);
-            Controls.Add(btnEPFindProg);
+            Controls.Add(txtStudentInfo);
+            Controls.Add(cmbSearchByItem);
+            Controls.Add(btnFindStudent);
             Controls.Add(label3);
-            Controls.Add(btnFindProg);
+            Controls.Add(btnReloadStudentInfo);
             Controls.Add(dgVPProgTable);
             Controls.Add(panel1);
             Controls.Add(label2);
@@ -163,11 +163,11 @@
 
         #endregion
 
-        private TextBox txtEMModuleTitle;
-        private ComboBox cmbProgLength;
-        private Button btnEPFindProg;
+        private TextBox txtStudentInfo;
+        private ComboBox cmbSearchByItem;
+        private Button btnFindStudent;
         private Label label3;
-        private Button btnFindProg;
+        private Button btnReloadStudentInfo;
         private DataGridView dgVPProgTable;
         private Panel panel1;
         private Label label2;

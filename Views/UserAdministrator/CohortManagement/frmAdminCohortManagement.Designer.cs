@@ -78,7 +78,7 @@
             // 
             pnlAdminCohortContentPane.Location = new Point(0, 27);
             pnlAdminCohortContentPane.Name = "pnlAdminCohortContentPane";
-            pnlAdminCohortContentPane.Size = new Size(945, 740);
+            pnlAdminCohortContentPane.Size = new Size(1003, 740);
             pnlAdminCohortContentPane.TabIndex = 28;
             // 
             // frmAdminCohortManagement

@@ -57,6 +57,7 @@
             btnRMFindModule.TabIndex = 68;
             btnRMFindModule.Text = "Find";
             btnRMFindModule.UseVisualStyleBackColor = false;
+            btnRMFindModule.Click += btnRMFindModule_Click;
             // 
             // txtRMModuleTitle
             // 
@@ -110,6 +111,7 @@
             btnRMRemoveModule.TabIndex = 64;
             btnRMRemoveModule.Text = "Remove Module";
             btnRMRemoveModule.UseVisualStyleBackColor = false;
+            btnRMRemoveModule.Click += btnRMRemoveModule_Click;
             // 
             // txtRMModuleCode
             // 

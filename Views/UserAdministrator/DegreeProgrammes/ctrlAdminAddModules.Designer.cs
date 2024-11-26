@@ -83,12 +83,12 @@
             btnAMCreateModule.TabIndex = 58;
             btnAMCreateModule.Text = "Create Module";
             btnAMCreateModule.UseVisualStyleBackColor = false;
+            btnAMCreateModule.Click += btnAMCreateModule_Click;
             // 
             // txtAMModCode
             // 
             txtAMModCode.BackColor = Color.WhiteSmoke;
             txtAMModCode.BorderStyle = BorderStyle.FixedSingle;
-            txtAMModCode.Enabled = false;
             txtAMModCode.Font = new Font("Segoe UI", 12F);
             txtAMModCode.Location = new Point(171, 337);
             txtAMModCode.Name = "txtAMModCode";

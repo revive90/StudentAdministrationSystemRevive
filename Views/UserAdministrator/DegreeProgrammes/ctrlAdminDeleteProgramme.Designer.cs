@@ -66,6 +66,7 @@
             // 
             dgRemoveProgTable.AllowUserToAddRows = false;
             dgRemoveProgTable.AllowUserToDeleteRows = false;
+            dgRemoveProgTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgRemoveProgTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgRemoveProgTable.Location = new Point(24, 196);
             dgRemoveProgTable.Name = "dgRemoveProgTable";
@@ -89,6 +90,7 @@
             btnRemoveProg.TabIndex = 54;
             btnRemoveProg.Text = "Remove Programme";
             btnRemoveProg.UseVisualStyleBackColor = false;
+            btnRemoveProg.Click += btnRemoveProg_Click;
             // 
             // txtRPProgCode
             // 
@@ -165,6 +167,7 @@
             btnFindProg.TabIndex = 58;
             btnFindProg.Text = "Find";
             btnFindProg.UseVisualStyleBackColor = false;
+            btnFindProg.Click += btnFindProg_Click;
             // 
             // ctrlAdminDeleteProgramme
             // 

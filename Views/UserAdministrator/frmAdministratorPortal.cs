@@ -1,4 +1,5 @@
-﻿using StudentAdministrationSystemRevive.Views.Administrator.CohortManagement;
+﻿using StudentAdministrationSystemRevive.DataAccess;
+using StudentAdministrationSystemRevive.Views.Administrator.CohortManagement;
 using StudentAdministrationSystemRevive.Views.Administrator.DegreeProgrammes;
 using StudentAdministrationSystemRevive.Views.Administrator.Enrollment;
 using StudentAdministrationSystemRevive.Views.Administrator.Overview;
@@ -51,6 +52,8 @@ namespace StudentAdministrationSystemRevive.Views.Administrator
             pnlAdminContentPane.Controls.Add(frm);
             frm.BringToFront();
             frm.Show();
+
+            AdminConnect.initConnection();
         }
 
         private void btnDegreeProgrammes_Click(object sender, EventArgs e)

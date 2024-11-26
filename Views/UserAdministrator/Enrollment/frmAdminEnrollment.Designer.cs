@@ -28,42 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnFindProg = new Button();
-            dgVPProgTable = new DataGridView();
+            dg_AD_StudentEnrollment = new DataGridView();
             panel1 = new Panel();
             label2 = new Label();
-            btnEPFindProg = new Button();
+            btn_AD_FindUnenrolled = new Button();
             label3 = new Label();
-            cmbProgLength = new ComboBox();
-            ((System.ComponentModel.ISupportInitialize)dgVPProgTable).BeginInit();
+            cmbEnrollmentStatus = new ComboBox();
+            ((System.ComponentModel.ISupportInitialize)dg_AD_StudentEnrollment).BeginInit();
             SuspendLayout();
             // 
-            // btnFindProg
+            // dg_AD_StudentEnrollment
             // 
-            btnFindProg.BackColor = Color.RoyalBlue;
-            btnFindProg.Cursor = Cursors.Hand;
-            btnFindProg.FlatAppearance.BorderColor = Color.RoyalBlue;
-            btnFindProg.FlatAppearance.BorderSize = 0;
-            btnFindProg.FlatStyle = FlatStyle.Flat;
-            btnFindProg.Font = new Font("Microsoft YaHei UI", 10F);
-            btnFindProg.ForeColor = Color.White;
-            btnFindProg.ImeMode = ImeMode.NoControl;
-            btnFindProg.Location = new Point(771, 42);
-            btnFindProg.Name = "btnFindProg";
-            btnFindProg.Size = new Size(205, 29);
-            btnFindProg.TabIndex = 67;
-            btnFindProg.Text = "Reload";
-            btnFindProg.UseVisualStyleBackColor = false;
-            // 
-            // dgVPProgTable
-            // 
-            dgVPProgTable.AllowUserToAddRows = false;
-            dgVPProgTable.AllowUserToDeleteRows = false;
-            dgVPProgTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgVPProgTable.Location = new Point(26, 149);
-            dgVPProgTable.Name = "dgVPProgTable";
-            dgVPProgTable.Size = new Size(950, 580);
-            dgVPProgTable.TabIndex = 66;
+            dg_AD_StudentEnrollment.AllowUserToAddRows = false;
+            dg_AD_StudentEnrollment.AllowUserToDeleteRows = false;
+            dg_AD_StudentEnrollment.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dg_AD_StudentEnrollment.Location = new Point(26, 149);
+            dg_AD_StudentEnrollment.Name = "dg_AD_StudentEnrollment";
+            dg_AD_StudentEnrollment.Size = new Size(950, 580);
+            dg_AD_StudentEnrollment.TabIndex = 66;
             // 
             // panel1
             // 
@@ -86,22 +68,22 @@
             label2.Text = "Student Enrollment";
             label2.TextAlign = ContentAlignment.BottomLeft;
             // 
-            // btnEPFindProg
+            // btn_AD_FindUnenrolled
             // 
-            btnEPFindProg.BackColor = Color.RoyalBlue;
-            btnEPFindProg.Cursor = Cursors.Hand;
-            btnEPFindProg.FlatAppearance.BorderColor = Color.RoyalBlue;
-            btnEPFindProg.FlatAppearance.BorderSize = 0;
-            btnEPFindProg.FlatStyle = FlatStyle.Flat;
-            btnEPFindProg.Font = new Font("Microsoft YaHei UI", 10F);
-            btnEPFindProg.ForeColor = Color.White;
-            btnEPFindProg.ImeMode = ImeMode.NoControl;
-            btnEPFindProg.Location = new Point(771, 105);
-            btnEPFindProg.Name = "btnEPFindProg";
-            btnEPFindProg.Size = new Size(205, 29);
-            btnEPFindProg.TabIndex = 80;
-            btnEPFindProg.Text = "Find";
-            btnEPFindProg.UseVisualStyleBackColor = false;
+            btn_AD_FindUnenrolled.BackColor = Color.RoyalBlue;
+            btn_AD_FindUnenrolled.Cursor = Cursors.Hand;
+            btn_AD_FindUnenrolled.FlatAppearance.BorderColor = Color.RoyalBlue;
+            btn_AD_FindUnenrolled.FlatAppearance.BorderSize = 0;
+            btn_AD_FindUnenrolled.FlatStyle = FlatStyle.Flat;
+            btn_AD_FindUnenrolled.Font = new Font("Microsoft YaHei UI", 10F);
+            btn_AD_FindUnenrolled.ForeColor = Color.White;
+            btn_AD_FindUnenrolled.ImeMode = ImeMode.NoControl;
+            btn_AD_FindUnenrolled.Location = new Point(771, 105);
+            btn_AD_FindUnenrolled.Name = "btn_AD_FindUnenrolled";
+            btn_AD_FindUnenrolled.Size = new Size(205, 29);
+            btn_AD_FindUnenrolled.TabIndex = 80;
+            btn_AD_FindUnenrolled.Text = "Find";
+            btn_AD_FindUnenrolled.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -116,17 +98,17 @@
             label3.Text = "Search for";
             label3.TextAlign = ContentAlignment.BottomLeft;
             // 
-            // cmbProgLength
+            // cmbEnrollmentStatus
             // 
-            cmbProgLength.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbProgLength.FlatStyle = FlatStyle.System;
-            cmbProgLength.Font = new Font("Segoe UI", 12F);
-            cmbProgLength.FormattingEnabled = true;
-            cmbProgLength.Items.AddRange(new object[] { "Not Enrolled", "Enrolled" });
-            cmbProgLength.Location = new Point(440, 105);
-            cmbProgLength.Name = "cmbProgLength";
-            cmbProgLength.Size = new Size(296, 29);
-            cmbProgLength.TabIndex = 81;
+            cmbEnrollmentStatus.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbEnrollmentStatus.FlatStyle = FlatStyle.System;
+            cmbEnrollmentStatus.Font = new Font("Segoe UI", 12F);
+            cmbEnrollmentStatus.FormattingEnabled = true;
+            cmbEnrollmentStatus.Items.AddRange(new object[] { "Not Enrolled", "Enrolled" });
+            cmbEnrollmentStatus.Location = new Point(440, 105);
+            cmbEnrollmentStatus.Name = "cmbEnrollmentStatus";
+            cmbEnrollmentStatus.Size = new Size(296, 29);
+            cmbEnrollmentStatus.TabIndex = 81;
             // 
             // frmAdminEnrollment
             // 
@@ -134,29 +116,26 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1003, 769);
-            Controls.Add(cmbProgLength);
-            Controls.Add(btnEPFindProg);
+            Controls.Add(cmbEnrollmentStatus);
+            Controls.Add(btn_AD_FindUnenrolled);
             Controls.Add(label3);
-            Controls.Add(btnFindProg);
-            Controls.Add(dgVPProgTable);
+            Controls.Add(dg_AD_StudentEnrollment);
             Controls.Add(panel1);
             Controls.Add(label2);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmAdminEnrollment";
             Text = "frmAdminEnrollment";
-            ((System.ComponentModel.ISupportInitialize)dgVPProgTable).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dg_AD_StudentEnrollment).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button btnFindProg;
-        private DataGridView dgVPProgTable;
+        private DataGridView dg_AD_StudentEnrollment;
         private Panel panel1;
         private Label label2;
-        private Button btnEPFindProg;
+        private Button btn_AD_FindUnenrolled;
         private Label label3;
-        private ComboBox cmbProgLength;
+        private ComboBox cmbEnrollmentStatus;
     }
 }

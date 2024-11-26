@@ -48,7 +48,7 @@
             label1.Font = new Font("Segoe UI Light", 18F);
             label1.ForeColor = Color.RoyalBlue;
             label1.ImeMode = ImeMode.NoControl;
-            label1.Location = new Point(153, 32);
+            label1.Location = new Point(159, 32);
             label1.Name = "label1";
             label1.Size = new Size(206, 32);
             label1.TabIndex = 36;
@@ -61,7 +61,7 @@
             label2.Font = new Font("Segoe UI Light", 14F);
             label2.ForeColor = Color.Black;
             label2.ImeMode = ImeMode.NoControl;
-            label2.Location = new Point(389, 149);
+            label2.Location = new Point(395, 149);
             label2.Name = "label2";
             label2.Size = new Size(146, 25);
             label2.TabIndex = 37;
@@ -73,7 +73,7 @@
             txtProgTitle.BackColor = Color.WhiteSmoke;
             txtProgTitle.BorderStyle = BorderStyle.FixedSingle;
             txtProgTitle.Font = new Font("Segoe UI", 12F);
-            txtProgTitle.Location = new Point(389, 186);
+            txtProgTitle.Location = new Point(395, 186);
             txtProgTitle.Name = "txtProgTitle";
             txtProgTitle.Size = new Size(425, 29);
             txtProgTitle.TabIndex = 39;
@@ -84,7 +84,7 @@
             label3.Font = new Font("Segoe UI Light", 14F);
             label3.ForeColor = Color.Black;
             label3.ImeMode = ImeMode.NoControl;
-            label3.Location = new Point(153, 152);
+            label3.Location = new Point(159, 152);
             label3.Name = "label3";
             label3.Size = new Size(168, 25);
             label3.TabIndex = 40;
@@ -97,8 +97,8 @@
             cmbProgLength.FlatStyle = FlatStyle.System;
             cmbProgLength.Font = new Font("Segoe UI", 12F);
             cmbProgLength.FormattingEnabled = true;
-            cmbProgLength.Items.AddRange(new object[] { "1 Year", "2 Years" });
-            cmbProgLength.Location = new Point(153, 186);
+            cmbProgLength.Items.AddRange(new object[] { "1 Year", "2 Years", "3 Years" });
+            cmbProgLength.Location = new Point(159, 186);
             cmbProgLength.Name = "cmbProgLength";
             cmbProgLength.Size = new Size(220, 29);
             cmbProgLength.TabIndex = 41;
@@ -108,7 +108,7 @@
             txtProgDescription.BackColor = Color.WhiteSmoke;
             txtProgDescription.BorderStyle = BorderStyle.FixedSingle;
             txtProgDescription.Font = new Font("Segoe UI", 12F);
-            txtProgDescription.Location = new Point(153, 367);
+            txtProgDescription.Location = new Point(159, 367);
             txtProgDescription.Multiline = true;
             txtProgDescription.Name = "txtProgDescription";
             txtProgDescription.Size = new Size(661, 238);
@@ -120,7 +120,7 @@
             label4.Font = new Font("Segoe UI Light", 14F);
             label4.ForeColor = Color.Black;
             label4.ImeMode = ImeMode.NoControl;
-            label4.Location = new Point(153, 328);
+            label4.Location = new Point(159, 328);
             label4.Name = "label4";
             label4.Size = new Size(202, 25);
             label4.TabIndex = 42;
@@ -133,7 +133,7 @@
             txtProgCode.BorderStyle = BorderStyle.FixedSingle;
             txtProgCode.Enabled = false;
             txtProgCode.Font = new Font("Segoe UI", 12F);
-            txtProgCode.Location = new Point(153, 276);
+            txtProgCode.Location = new Point(159, 276);
             txtProgCode.Name = "txtProgCode";
             txtProgCode.Size = new Size(220, 29);
             txtProgCode.TabIndex = 45;
@@ -144,7 +144,7 @@
             label5.Font = new Font("Segoe UI Light", 14F);
             label5.ForeColor = Color.Black;
             label5.ImeMode = ImeMode.NoControl;
-            label5.Location = new Point(153, 242);
+            label5.Location = new Point(159, 242);
             label5.Name = "label5";
             label5.Size = new Size(156, 25);
             label5.TabIndex = 44;
@@ -160,12 +160,13 @@
             btnCreateProg.Font = new Font("Microsoft YaHei UI", 12F);
             btnCreateProg.ForeColor = Color.White;
             btnCreateProg.ImeMode = ImeMode.NoControl;
-            btnCreateProg.Location = new Point(531, 626);
+            btnCreateProg.Location = new Point(537, 626);
             btnCreateProg.Name = "btnCreateProg";
             btnCreateProg.Size = new Size(283, 37);
             btnCreateProg.TabIndex = 46;
             btnCreateProg.Text = "Create Programme";
             btnCreateProg.UseVisualStyleBackColor = false;
+            btnCreateProg.Click += btnCreateProg_Click;
             // 
             // btnGenerateProgCode
             // 
@@ -176,17 +177,18 @@
             btnGenerateProgCode.Font = new Font("Microsoft YaHei UI", 10F);
             btnGenerateProgCode.ForeColor = Color.White;
             btnGenerateProgCode.ImeMode = ImeMode.NoControl;
-            btnGenerateProgCode.Location = new Point(389, 276);
+            btnGenerateProgCode.Location = new Point(395, 276);
             btnGenerateProgCode.Name = "btnGenerateProgCode";
             btnGenerateProgCode.Size = new Size(170, 29);
             btnGenerateProgCode.TabIndex = 47;
             btnGenerateProgCode.Text = "Generate Code";
             btnGenerateProgCode.UseVisualStyleBackColor = false;
+            btnGenerateProgCode.Click += btnGenerateProgCode_Click;
             // 
             // panel1
             // 
             panel1.BackColor = Color.Gainsboro;
-            panel1.Location = new Point(153, 98);
+            panel1.Location = new Point(159, 98);
             panel1.Name = "panel1";
             panel1.Size = new Size(661, 1);
             panel1.TabIndex = 48;
