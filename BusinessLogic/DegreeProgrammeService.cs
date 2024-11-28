@@ -1,6 +1,7 @@
 ﻿using StudentAdministrationSystemRevive.DataAccess;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,6 +44,14 @@ namespace StudentAdministrationSystemRevive.BusinessLogic
         {
             return _repository.GetProgrammeByTitle(title); 
         }
+
+        // Filling the Data Grid view with programme information
+        public List<DegreeProgramme> GetDegreeProgrammes()
+        {
+            return _repository.GetAllDegreeProgrammes();
+        }
+
+        
 
 
 

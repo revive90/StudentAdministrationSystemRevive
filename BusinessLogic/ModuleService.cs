@@ -15,9 +15,9 @@ namespace StudentAdministrationSystemRevive.BusinessLogic
 
         public ModuleService()
         {
-            _moduleRepository = new ModuleRepository(ConnectSettingsDB.ConnectionString());
+            _moduleRepository = new ModuleRepository();
             _degreeProgrammeModuleRepository = new DegreeProgrammeModuleRepository(ConnectSettingsDB.ConnectionString());
-            _repository = new ModuleRepository(ConnectSettingsDB.ConnectionString());
+            _repository = new ModuleRepository();
         }
 
         public bool AddModule(Module module, DegreeProgrammeModule degreeProgrammeModule)
@@ -45,6 +45,8 @@ namespace StudentAdministrationSystemRevive.BusinessLogic
             return _repository.GetModulesByTitle(title);
         }
 
+        
+
         public bool RemoveModule(string moduleID)
         {
             if (string.IsNullOrEmpty(moduleID))
@@ -52,8 +54,12 @@ namespace StudentAdministrationSystemRevive.BusinessLogic
                 MessageBox.Show("Module ID is invalid", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+            else
+            {
+                return _repository.RemoveModule(moduleID);
+            }
 
-            return _repository.RemoveModule(moduleID);
+            
         }
     }
 }

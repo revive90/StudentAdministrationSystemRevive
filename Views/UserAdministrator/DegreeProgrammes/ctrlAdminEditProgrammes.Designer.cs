@@ -54,6 +54,7 @@
             btnEPFindProg.TabIndex = 63;
             btnEPFindProg.Text = "Find";
             btnEPFindProg.UseVisualStyleBackColor = false;
+            btnEPFindProg.Click += btnEPFindProg_Click;
             // 
             // txtEPProgTitle
             // 
@@ -103,6 +104,7 @@
             // 
             dgEPEditProgTable.AllowUserToAddRows = false;
             dgEPEditProgTable.AllowUserToDeleteRows = false;
+            dgEPEditProgTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgEPEditProgTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgEPEditProgTable.Location = new Point(18, 198);
             dgEPEditProgTable.Name = "dgEPEditProgTable";
@@ -125,6 +127,7 @@
             btnEPSaveChanges.TabIndex = 65;
             btnEPSaveChanges.Text = "Save Changes";
             btnEPSaveChanges.UseVisualStyleBackColor = false;
+            btnEPSaveChanges.Click += btnEPSaveChanges_Click;
             // 
             // ctrlAdminEditProgrammes
             // 

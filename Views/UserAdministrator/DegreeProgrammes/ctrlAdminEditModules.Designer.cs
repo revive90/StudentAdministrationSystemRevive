@@ -30,7 +30,7 @@
         {
             btnSaveChanges = new Button();
             dgEMEditModuleTable = new DataGridView();
-            btnEPFindProg = new Button();
+            btnEPFindModule = new Button();
             txtEMModuleTitle = new TextBox();
             label3 = new Label();
             panel1 = new Panel();
@@ -54,33 +54,36 @@
             btnSaveChanges.TabIndex = 72;
             btnSaveChanges.Text = "Save Changes";
             btnSaveChanges.UseVisualStyleBackColor = false;
+            btnSaveChanges.Click += btnSaveChanges_Click;
             // 
             // dgEMEditModuleTable
             // 
             dgEMEditModuleTable.AllowUserToAddRows = false;
             dgEMEditModuleTable.AllowUserToDeleteRows = false;
+            dgEMEditModuleTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgEMEditModuleTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgEMEditModuleTable.Location = new Point(26, 208);
             dgEMEditModuleTable.Name = "dgEMEditModuleTable";
             dgEMEditModuleTable.Size = new Size(950, 447);
             dgEMEditModuleTable.TabIndex = 71;
             // 
-            // btnEPFindProg
+            // btnEPFindModule
             // 
-            btnEPFindProg.BackColor = Color.RoyalBlue;
-            btnEPFindProg.Cursor = Cursors.Hand;
-            btnEPFindProg.FlatAppearance.BorderColor = Color.RoyalBlue;
-            btnEPFindProg.FlatAppearance.BorderSize = 0;
-            btnEPFindProg.FlatStyle = FlatStyle.Flat;
-            btnEPFindProg.Font = new Font("Microsoft YaHei UI", 10F);
-            btnEPFindProg.ForeColor = Color.White;
-            btnEPFindProg.ImeMode = ImeMode.NoControl;
-            btnEPFindProg.Location = new Point(771, 149);
-            btnEPFindProg.Name = "btnEPFindProg";
-            btnEPFindProg.Size = new Size(205, 29);
-            btnEPFindProg.TabIndex = 70;
-            btnEPFindProg.Text = "Find";
-            btnEPFindProg.UseVisualStyleBackColor = false;
+            btnEPFindModule.BackColor = Color.RoyalBlue;
+            btnEPFindModule.Cursor = Cursors.Hand;
+            btnEPFindModule.FlatAppearance.BorderColor = Color.RoyalBlue;
+            btnEPFindModule.FlatAppearance.BorderSize = 0;
+            btnEPFindModule.FlatStyle = FlatStyle.Flat;
+            btnEPFindModule.Font = new Font("Microsoft YaHei UI", 10F);
+            btnEPFindModule.ForeColor = Color.White;
+            btnEPFindModule.ImeMode = ImeMode.NoControl;
+            btnEPFindModule.Location = new Point(771, 149);
+            btnEPFindModule.Name = "btnEPFindModule";
+            btnEPFindModule.Size = new Size(205, 29);
+            btnEPFindModule.TabIndex = 70;
+            btnEPFindModule.Text = "Find";
+            btnEPFindModule.UseVisualStyleBackColor = false;
+            btnEPFindModule.Click += btnEPFindProg_Click;
             // 
             // txtEMModuleTitle
             // 
@@ -133,7 +136,7 @@
             BackColor = Color.White;
             Controls.Add(btnSaveChanges);
             Controls.Add(dgEMEditModuleTable);
-            Controls.Add(btnEPFindProg);
+            Controls.Add(btnEPFindModule);
             Controls.Add(txtEMModuleTitle);
             Controls.Add(label3);
             Controls.Add(panel1);
@@ -149,7 +152,7 @@
 
         private Button btnSaveChanges;
         private DataGridView dgEMEditModuleTable;
-        private Button btnEPFindProg;
+        private Button btnEPFindModule;
         private TextBox txtEMModuleTitle;
         private Label label3;
         private Panel panel1;

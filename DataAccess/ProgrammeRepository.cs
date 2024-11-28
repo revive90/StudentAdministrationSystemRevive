@@ -1,6 +1,7 @@
 ﻿using StudentAdministrationSystemRevive.BusinessLogic;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SQLite;
 using System.Diagnostics;
 using System.Linq;
@@ -101,6 +102,38 @@ namespace StudentAdministrationSystemRevive.DataAccess
                 return programmes;
         }
 
+        // Fill up Data Grid View
+
+        public List<DegreeProgramme> GetAllDegreeProgrammes()
+        {
+            string query = "SELECT * FROM DegreeProgrammes"; 
+            List<DegreeProgramme> programmes = new List<DegreeProgramme>();
+
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectSettingsDB.ConnectionString()))
+            {
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    connection.Open();
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var programme = new DegreeProgramme(
+                                reader["DegreeProgrammeID"].ToString(),
+                                reader["ProgrammeTitle"].ToString(),
+                                reader["DurationYears"].ToString(),
+                                reader["ProgrammeDescription"].ToString()
+                            );
+                            programmes.Add(programme);
+                        }
+                    }
+                }
+            }
+
+            return programmes;
+        }
+
+
         // Remove Programme
         public bool RemoveProgramme(string degreeProgrammeID)
         {
@@ -112,9 +145,42 @@ namespace StudentAdministrationSystemRevive.DataAccess
                 {
                     cmd.Parameters.AddWithValue("@DegreeProgrammeID", degreeProgrammeID);
                     int rowsAffected = cmd.ExecuteNonQuery();
+
                     return rowsAffected > 0;  // Returns true if deletion was successful
                 }
             }
         }
+
+        //Updating a programme
+        public void UpdateDegreeProgramme(string degreeProgrammeID, string programmeTitle, string programmeDescription, string programmeDuration)
+        {
+            string query = "UPDATE DegreeProgrammes SET ProgrammeTitle = @ProgrammeTitle, ProgrammeDescription = @ProgrammeDescription, DurationYears = @DurationYears WHERE DegreeProgrammeID = @DegreeProgrammeID";
+
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectSettingsDB.ConnectionString()))
+            {
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+
+                    command.Parameters.AddWithValue("@DegreeProgrammeID", degreeProgrammeID);
+                    command.Parameters.AddWithValue("@ProgrammeTitle", programmeTitle);
+                    command.Parameters.AddWithValue("@ProgrammeDescription", programmeDescription);
+                    command.Parameters.AddWithValue("@DurationYears", programmeDuration);
+
+                    connection.Open();
+                    int rowsAffected = command.ExecuteNonQuery(); 
+                    connection.Close();
+
+                    if (rowsAffected == 0)
+                    {
+                        MessageBox.Show("No changes made or invalid data.");
+                    }
+                    
+                }
+            }
+        }
+
+
+
+
     }
 }

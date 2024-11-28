@@ -28,34 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnFindProg = new Button();
+            btnRefreshProg = new Button();
             dgVPProgTable = new DataGridView();
             panel1 = new Panel();
             label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgVPProgTable).BeginInit();
             SuspendLayout();
             // 
-            // btnFindProg
+            // btnRefreshProg
             // 
-            btnFindProg.BackColor = Color.RoyalBlue;
-            btnFindProg.Cursor = Cursors.Hand;
-            btnFindProg.FlatAppearance.BorderColor = Color.RoyalBlue;
-            btnFindProg.FlatAppearance.BorderSize = 0;
-            btnFindProg.FlatStyle = FlatStyle.Flat;
-            btnFindProg.Font = new Font("Microsoft YaHei UI", 10F);
-            btnFindProg.ForeColor = Color.White;
-            btnFindProg.ImeMode = ImeMode.NoControl;
-            btnFindProg.Location = new Point(771, 98);
-            btnFindProg.Name = "btnFindProg";
-            btnFindProg.Size = new Size(205, 29);
-            btnFindProg.TabIndex = 63;
-            btnFindProg.Text = "Reload";
-            btnFindProg.UseVisualStyleBackColor = false;
+            btnRefreshProg.BackColor = Color.RoyalBlue;
+            btnRefreshProg.Cursor = Cursors.Hand;
+            btnRefreshProg.FlatAppearance.BorderColor = Color.RoyalBlue;
+            btnRefreshProg.FlatAppearance.BorderSize = 0;
+            btnRefreshProg.FlatStyle = FlatStyle.Flat;
+            btnRefreshProg.Font = new Font("Microsoft YaHei UI", 10F);
+            btnRefreshProg.ForeColor = Color.White;
+            btnRefreshProg.ImeMode = ImeMode.NoControl;
+            btnRefreshProg.Location = new Point(771, 98);
+            btnRefreshProg.Name = "btnRefreshProg";
+            btnRefreshProg.Size = new Size(205, 29);
+            btnRefreshProg.TabIndex = 63;
+            btnRefreshProg.Text = "Reload";
+            btnRefreshProg.UseVisualStyleBackColor = false;
             // 
             // dgVPProgTable
             // 
             dgVPProgTable.AllowUserToAddRows = false;
             dgVPProgTable.AllowUserToDeleteRows = false;
+            dgVPProgTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgVPProgTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgVPProgTable.Location = new Point(26, 153);
             dgVPProgTable.Name = "dgVPProgTable";
@@ -89,12 +90,13 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(btnFindProg);
+            Controls.Add(btnRefreshProg);
             Controls.Add(dgVPProgTable);
             Controls.Add(panel1);
             Controls.Add(label2);
             Name = "ctrlAdminViewProgrammes";
             Size = new Size(1003, 740);
+            Load += ctrlAdminViewProgrammes_Load;
             ((System.ComponentModel.ISupportInitialize)dgVPProgTable).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -102,7 +104,7 @@
 
         #endregion
 
-        private Button btnFindProg;
+        private Button btnRefreshProg;
         private DataGridView dgVPProgTable;
         private Panel panel1;
         private Label label2;

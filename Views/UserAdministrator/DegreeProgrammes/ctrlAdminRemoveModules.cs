@@ -41,7 +41,7 @@ namespace StudentAdministrationSystemRevive.Views.Administrator.DegreeProgrammes
                 {
                     MessageBox.Show("Module removed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Optionally clear the form or refresh the DataGridView if needed
+                    // Clear the form or refresh the DataGridView if needed
                     txtRMModuleCode.Clear();
                     dgRMRemoveModuleTable.DataSource = null; // Clear DataGridView
                 }
