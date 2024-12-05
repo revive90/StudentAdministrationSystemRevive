@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StudentAdministrationSystemRevive.BusinessLogic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,31 @@ namespace StudentAdministrationSystemRevive.Views.UserAdministrator.CohortManage
         public ctrlAdminViewCohort()
         {
             InitializeComponent();
+        }
+
+        private void ctrlAdminViewCohort_Load(object sender, EventArgs e)
+        {
+            showCohorts();
+        }
+
+        private void showCohorts()
+        {
+            try
+            {
+                CohortServices cohortServices = new CohortServices();
+                var cohorts = cohortServices.GetCohorts();
+                dg_AD_CohortsViewAll.DataSource = cohorts;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading degree Cohorts: {ex.Message}");
+            }
+        }
+
+        private void btnAllCohort_Click(object sender, EventArgs e)
+        {
+            showCohorts();
         }
     }
 }

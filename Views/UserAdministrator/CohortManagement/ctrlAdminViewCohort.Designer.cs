@@ -51,11 +51,13 @@
             btnAllCohort.TabIndex = 67;
             btnAllCohort.Text = "Reload";
             btnAllCohort.UseVisualStyleBackColor = false;
+            btnAllCohort.Click += btnAllCohort_Click;
             // 
             // dg_AD_CohortsViewAll
             // 
             dg_AD_CohortsViewAll.AllowUserToAddRows = false;
             dg_AD_CohortsViewAll.AllowUserToDeleteRows = false;
+            dg_AD_CohortsViewAll.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dg_AD_CohortsViewAll.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dg_AD_CohortsViewAll.Location = new Point(26, 153);
             dg_AD_CohortsViewAll.Name = "dg_AD_CohortsViewAll";
@@ -95,6 +97,7 @@
             Controls.Add(label2);
             Name = "ctrlAdminViewCohort";
             Size = new Size(1003, 740);
+            Load += ctrlAdminViewCohort_Load;
             ((System.ComponentModel.ISupportInitialize)dg_AD_CohortsViewAll).EndInit();
             ResumeLayout(false);
             PerformLayout();

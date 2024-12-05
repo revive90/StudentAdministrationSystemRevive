@@ -62,12 +62,12 @@
             btnCreateCohort.TabIndex = 58;
             btnCreateCohort.Text = "Create Cohort";
             btnCreateCohort.UseVisualStyleBackColor = false;
+            btnCreateCohort.Click += btnCreateCohort_Click;
             // 
             // txtAD_Cohort_Start_Year
             // 
             txtAD_Cohort_Start_Year.BackColor = Color.WhiteSmoke;
             txtAD_Cohort_Start_Year.BorderStyle = BorderStyle.FixedSingle;
-            txtAD_Cohort_Start_Year.Enabled = false;
             txtAD_Cohort_Start_Year.Font = new Font("Segoe UI", 12F);
             txtAD_Cohort_Start_Year.Location = new Point(181, 209);
             txtAD_Cohort_Start_Year.Name = "txtAD_Cohort_Start_Year";
@@ -126,6 +126,7 @@
             // dg_AD_CohortAdd
             // 
             dg_AD_CohortAdd.AllowUserToDeleteRows = false;
+            dg_AD_CohortAdd.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dg_AD_CohortAdd.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dg_AD_CohortAdd.Location = new Point(181, 260);
             dg_AD_CohortAdd.Name = "dg_AD_CohortAdd";
@@ -148,6 +149,7 @@
             Controls.Add(label1);
             Name = "ctrlAdminAddCohort";
             Size = new Size(1003, 740);
+            Load += ctrlAdminAddCohort_Load;
             ((System.ComponentModel.ISupportInitialize)dg_AD_CohortAdd).EndInit();
             ResumeLayout(false);
             PerformLayout();
