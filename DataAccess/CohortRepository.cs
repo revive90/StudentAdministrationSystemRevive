@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -58,6 +59,41 @@ namespace StudentAdministrationSystemRevive.DataAccess
                 }
             }
 
+            return cohorts;
+        }
+
+        // Get Cohorts by ProgrammeCode
+        public List<Cohort> GetCohortsByProgCode(string progCode)
+        {
+            var cohorts = new List<Cohort>();
+
+            try
+            {
+                using (var connection = new SQLiteConnection(ConnectSettingsDB.ConnectionString()))
+                {
+                    connection.Open();
+                    var cmd = new SQLiteCommand("SELECT CohortID, DegreeProgrammeID, CohortYear FROM Cohorts WHERE DegreeProgrammeID LIKE @ProgCode", connection);
+                    cmd.Parameters.AddWithValue("@ProgCode", "%" + progCode + "%");
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var cohort = new Cohort
+                            (
+                                reader["CohortID"].ToString(),
+                                reader["DegreeProgrammeID"].ToString(),
+                                reader["CohortYear"].ToString()
+                            );
+                            cohorts.Add(cohort);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             return cohorts;
         }
 

@@ -34,5 +34,12 @@ namespace StudentAdministrationSystemRevive.BusinessLogic
         {
             return _repository.GetAllCohorts();
         }
+
+
+        // Find Cohorts by Module Code
+        public List<Cohort> FindCohortByProgCode(string progCode)
+        {
+            return _repository.GetCohortsByProgCode(progCode);
+        }
     }
 }

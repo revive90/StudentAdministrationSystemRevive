@@ -1,4 +1,5 @@
 ﻿using StudentAdministrationSystemRevive.BusinessLogic;
+using StudentAdministrationSystemRevive.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,11 @@ namespace StudentAdministrationSystemRevive.Views.UserAdministrator.CohortManage
 {
     public partial class ctrlAdminViewCohort : UserControl
     {
+        
         public ctrlAdminViewCohort()
         {
             InitializeComponent();
+            
         }
 
         private void ctrlAdminViewCohort_Load(object sender, EventArgs e)

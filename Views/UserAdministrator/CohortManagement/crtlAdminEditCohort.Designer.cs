@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             btnAD_CohortSave = new Button();
             dg_AD_CohortEdit = new DataGridView();
-            btnAD_CohortFind = new Button();
-            txtAD_Cohort_Search_ModuleCode = new TextBox();
+            btnAD_CohortFindModule = new Button();
+            txtAD_Cohort_Search_ModuleTitle = new TextBox();
             label3 = new Label();
             panel1 = new Panel();
             label2 = new Label();
@@ -58,38 +59,48 @@
             // dg_AD_CohortEdit
             // 
             dg_AD_CohortEdit.AllowUserToAddRows = false;
+            dg_AD_CohortEdit.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dg_AD_CohortEdit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dg_AD_CohortEdit.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dg_AD_CohortEdit.Location = new Point(23, 206);
             dg_AD_CohortEdit.Name = "dg_AD_CohortEdit";
             dg_AD_CohortEdit.Size = new Size(950, 447);
             dg_AD_CohortEdit.TabIndex = 78;
             // 
-            // btnAD_CohortFind
+            // btnAD_CohortFindModule
             // 
-            btnAD_CohortFind.BackColor = Color.RoyalBlue;
-            btnAD_CohortFind.Cursor = Cursors.Hand;
-            btnAD_CohortFind.FlatAppearance.BorderColor = Color.RoyalBlue;
-            btnAD_CohortFind.FlatAppearance.BorderSize = 0;
-            btnAD_CohortFind.FlatStyle = FlatStyle.Flat;
-            btnAD_CohortFind.Font = new Font("Microsoft YaHei UI", 10F);
-            btnAD_CohortFind.ForeColor = Color.White;
-            btnAD_CohortFind.ImeMode = ImeMode.NoControl;
-            btnAD_CohortFind.Location = new Point(768, 147);
-            btnAD_CohortFind.Name = "btnAD_CohortFind";
-            btnAD_CohortFind.Size = new Size(205, 29);
-            btnAD_CohortFind.TabIndex = 77;
-            btnAD_CohortFind.Text = "Find";
-            btnAD_CohortFind.UseVisualStyleBackColor = false;
+            btnAD_CohortFindModule.BackColor = Color.RoyalBlue;
+            btnAD_CohortFindModule.Cursor = Cursors.Hand;
+            btnAD_CohortFindModule.FlatAppearance.BorderColor = Color.RoyalBlue;
+            btnAD_CohortFindModule.FlatAppearance.BorderSize = 0;
+            btnAD_CohortFindModule.FlatStyle = FlatStyle.Flat;
+            btnAD_CohortFindModule.Font = new Font("Microsoft YaHei UI", 10F);
+            btnAD_CohortFindModule.ForeColor = Color.White;
+            btnAD_CohortFindModule.ImeMode = ImeMode.NoControl;
+            btnAD_CohortFindModule.Location = new Point(768, 147);
+            btnAD_CohortFindModule.Name = "btnAD_CohortFindModule";
+            btnAD_CohortFindModule.Size = new Size(205, 29);
+            btnAD_CohortFindModule.TabIndex = 77;
+            btnAD_CohortFindModule.Text = "Find";
+            btnAD_CohortFindModule.UseVisualStyleBackColor = false;
+            btnAD_CohortFindModule.Click += btnAD_CohortFindModule_Click;
             // 
-            // txtAD_Cohort_Search_ModuleCode
+            // txtAD_Cohort_Search_ModuleTitle
             // 
-            txtAD_Cohort_Search_ModuleCode.BackColor = Color.WhiteSmoke;
-            txtAD_Cohort_Search_ModuleCode.BorderStyle = BorderStyle.FixedSingle;
-            txtAD_Cohort_Search_ModuleCode.Font = new Font("Segoe UI", 12F);
-            txtAD_Cohort_Search_ModuleCode.Location = new Point(23, 148);
-            txtAD_Cohort_Search_ModuleCode.Name = "txtAD_Cohort_Search_ModuleCode";
-            txtAD_Cohort_Search_ModuleCode.Size = new Size(715, 29);
-            txtAD_Cohort_Search_ModuleCode.TabIndex = 76;
+            txtAD_Cohort_Search_ModuleTitle.BackColor = Color.WhiteSmoke;
+            txtAD_Cohort_Search_ModuleTitle.BorderStyle = BorderStyle.FixedSingle;
+            txtAD_Cohort_Search_ModuleTitle.Font = new Font("Segoe UI", 12F);
+            txtAD_Cohort_Search_ModuleTitle.Location = new Point(23, 148);
+            txtAD_Cohort_Search_ModuleTitle.Name = "txtAD_Cohort_Search_ModuleTitle";
+            txtAD_Cohort_Search_ModuleTitle.Size = new Size(715, 29);
+            txtAD_Cohort_Search_ModuleTitle.TabIndex = 76;
             // 
             // label3
             // 
@@ -99,9 +110,9 @@
             label3.ImeMode = ImeMode.NoControl;
             label3.Location = new Point(23, 111);
             label3.Name = "label3";
-            label3.Size = new Size(123, 25);
+            label3.Size = new Size(113, 25);
             label3.TabIndex = 75;
-            label3.Text = "Module Code";
+            label3.Text = "Module Title";
             label3.TextAlign = ContentAlignment.BottomLeft;
             // 
             // panel1
@@ -131,13 +142,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(btnAD_CohortSave);
             Controls.Add(dg_AD_CohortEdit);
-            Controls.Add(btnAD_CohortFind);
-            Controls.Add(txtAD_Cohort_Search_ModuleCode);
+            Controls.Add(btnAD_CohortFindModule);
+            Controls.Add(txtAD_Cohort_Search_ModuleTitle);
             Controls.Add(label3);
             Controls.Add(panel1);
             Controls.Add(label2);
             Name = "crtlAdminEditCohort";
             Size = new Size(1003, 740);
+            Load += crtlAdminEditCohort_Load;
             ((System.ComponentModel.ISupportInitialize)dg_AD_CohortEdit).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -147,8 +159,8 @@
 
         private Button btnAD_CohortSave;
         private DataGridView dg_AD_CohortEdit;
-        private Button btnAD_CohortFind;
-        private TextBox txtAD_Cohort_Search_ModuleCode;
+        private Button btnAD_CohortFindModule;
+        private TextBox txtAD_Cohort_Search_ModuleTitle;
         private Label label3;
         private Panel panel1;
         private Label label2;
