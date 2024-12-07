@@ -36,6 +36,7 @@
             dgVPProgTable = new DataGridView();
             panel1 = new Panel();
             label2 = new Label();
+            btnSave = new Button();
             ((System.ComponentModel.ISupportInitialize)dgVPProgTable).BeginInit();
             SuspendLayout();
             // 
@@ -77,6 +78,7 @@
             btnFindStudent.TabIndex = 96;
             btnFindStudent.Text = "Find";
             btnFindStudent.UseVisualStyleBackColor = false;
+            btnFindStudent.Click += btnFindStudent_Click;
             // 
             // label3
             // 
@@ -107,11 +109,13 @@
             btnReloadStudentInfo.TabIndex = 94;
             btnReloadStudentInfo.Text = "Reload";
             btnReloadStudentInfo.UseVisualStyleBackColor = false;
+            btnReloadStudentInfo.Click += btnReloadStudentInfo_Click;
             // 
             // dgVPProgTable
             // 
             dgVPProgTable.AllowUserToAddRows = false;
             dgVPProgTable.AllowUserToDeleteRows = false;
+            dgVPProgTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgVPProgTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgVPProgTable.Location = new Point(26, 149);
             dgVPProgTable.Name = "dgVPProgTable";
@@ -139,12 +143,31 @@
             label2.Text = "Student Information Management";
             label2.TextAlign = ContentAlignment.BottomLeft;
             // 
+            // btnSave
+            // 
+            btnSave.BackColor = Color.RoyalBlue;
+            btnSave.Cursor = Cursors.Hand;
+            btnSave.FlatAppearance.BorderColor = Color.RoyalBlue;
+            btnSave.FlatAppearance.BorderSize = 0;
+            btnSave.FlatStyle = FlatStyle.Flat;
+            btnSave.Font = new Font("Microsoft YaHei UI", 10F);
+            btnSave.ForeColor = Color.White;
+            btnSave.ImeMode = ImeMode.NoControl;
+            btnSave.Location = new Point(771, 735);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(205, 29);
+            btnSave.TabIndex = 99;
+            btnSave.Text = "Save";
+            btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
+            // 
             // frmAdminStudentManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1003, 769);
+            Controls.Add(btnSave);
             Controls.Add(txtStudentInfo);
             Controls.Add(cmbSearchByItem);
             Controls.Add(btnFindStudent);
@@ -156,6 +179,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmAdminStudentManagement";
             Text = "frmStudentManagement";
+            Load += frmAdminStudentManagement_Load;
             ((System.ComponentModel.ISupportInitialize)dgVPProgTable).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -171,5 +195,6 @@
         private DataGridView dgVPProgTable;
         private Panel panel1;
         private Label label2;
+        private Button btnSave;
     }
 }

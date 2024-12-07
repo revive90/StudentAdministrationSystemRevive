@@ -1,6 +1,7 @@
 ﻿using StudentAdministrationSystemRevive.BusinessLogic;
 using System.Data.SQLite;
 using System.Reflection;
+using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace StudentAdministrationSystemRevive.DataAccess
@@ -80,6 +81,90 @@ namespace StudentAdministrationSystemRevive.DataAccess
                     connection.Open();
                     var cmd = new SQLiteCommand("SELECT *  FROM StudentInfo WHERE EnrolmentStatus LIKE @EnrolmentStatus", connection);
                     cmd.Parameters.AddWithValue("@EnrolmentStatus", enrolmentStatus);
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var student = new Students
+                            (
+                                reader["StudentID"].ToString(),
+                                reader["Firstname"].ToString(),
+                                reader["Lastname"].ToString(),
+                                reader["Email"].ToString(),
+                                reader["DegreeProgrammeID"].ToString(),
+                                reader["CohortYear"].ToString(),
+                                reader["EnrolmentStatus"].ToString(),
+                                reader["DurationYears"].ToString()
+                            );
+                            students.Add(student);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return students;
+        }
+
+
+
+        // Get student by name 
+        public List<Students> GetStudentsByStudentName(string name)
+        {
+            var students = new List<Students>();
+
+            try
+            {
+                using (var connection = new SQLiteConnection(ConnectSettingsDB.ConnectionString()))
+                {
+                    connection.Open();
+                    var cmd = new SQLiteCommand("SELECT *  FROM StudentInfo WHERE Firstname LIKE @Firstname", connection);
+                    cmd.Parameters.AddWithValue("@Firstname", "%" + name + "%");
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var student = new Students
+                            (
+                                reader["StudentID"].ToString(),
+                                reader["Firstname"].ToString(),
+                                reader["Lastname"].ToString(),
+                                reader["Email"].ToString(),
+                                reader["DegreeProgrammeID"].ToString(),
+                                reader["CohortYear"].ToString(),
+                                reader["EnrolmentStatus"].ToString(),
+                                reader["DurationYears"].ToString()
+                            );
+                            students.Add(student);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return students;
+        }
+
+
+        // Get Student by ID
+        // Get student by name 
+        public List<Students> GetStudentsByStudentID(string ID)
+        {
+            var students = new List<Students>();
+
+            try
+            {
+                using (var connection = new SQLiteConnection(ConnectSettingsDB.ConnectionString()))
+                {
+                    connection.Open();
+                    var cmd = new SQLiteCommand("SELECT *  FROM StudentInfo WHERE StudentID LIKE @StudentID", connection);
+                    cmd.Parameters.AddWithValue("@StudentID", "%" + ID + "%");
 
                     using (var reader = cmd.ExecuteReader())
                     {

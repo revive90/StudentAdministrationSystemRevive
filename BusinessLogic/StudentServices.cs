@@ -38,5 +38,17 @@ namespace StudentAdministrationSystemRevive.BusinessLogic
         {
             return _studentRepository.GetStudentsByEnrolmentStatus(enrolmentStatus);
         }
+
+        // Return Students by Student Name
+        public List<Students> FindStudentsByStudentName(string name)
+        {
+            return _studentRepository.GetStudentsByStudentName(name);
+        }
+
+        // Return Students by Student ID
+        public List<Students> FindStudentsByStudentID(string ID)
+        {
+            return _studentRepository.GetStudentsByStudentID(ID);
+        }
     }
 }
