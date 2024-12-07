@@ -34,6 +34,7 @@
             btn_AD_FindUnenrolled = new Button();
             label3 = new Label();
             cmbEnrollmentStatus = new ComboBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dg_AD_StudentEnrollment).BeginInit();
             SuspendLayout();
             // 
@@ -41,6 +42,7 @@
             // 
             dg_AD_StudentEnrollment.AllowUserToAddRows = false;
             dg_AD_StudentEnrollment.AllowUserToDeleteRows = false;
+            dg_AD_StudentEnrollment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dg_AD_StudentEnrollment.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dg_AD_StudentEnrollment.Location = new Point(26, 149);
             dg_AD_StudentEnrollment.Name = "dg_AD_StudentEnrollment";
@@ -78,12 +80,13 @@
             btn_AD_FindUnenrolled.Font = new Font("Microsoft YaHei UI", 10F);
             btn_AD_FindUnenrolled.ForeColor = Color.White;
             btn_AD_FindUnenrolled.ImeMode = ImeMode.NoControl;
-            btn_AD_FindUnenrolled.Location = new Point(771, 105);
+            btn_AD_FindUnenrolled.Location = new Point(550, 105);
             btn_AD_FindUnenrolled.Name = "btn_AD_FindUnenrolled";
             btn_AD_FindUnenrolled.Size = new Size(205, 29);
             btn_AD_FindUnenrolled.TabIndex = 80;
             btn_AD_FindUnenrolled.Text = "Find";
             btn_AD_FindUnenrolled.UseVisualStyleBackColor = false;
+            btn_AD_FindUnenrolled.Click += btn_AD_FindUnenrolled_Click;
             // 
             // label3
             // 
@@ -91,7 +94,7 @@
             label3.Font = new Font("Segoe UI Light", 14F);
             label3.ForeColor = Color.Black;
             label3.ImeMode = ImeMode.NoControl;
-            label3.Location = new Point(342, 108);
+            label3.Location = new Point(121, 108);
             label3.Name = "label3";
             label3.Size = new Size(91, 25);
             label3.TabIndex = 78;
@@ -104,11 +107,28 @@
             cmbEnrollmentStatus.FlatStyle = FlatStyle.System;
             cmbEnrollmentStatus.Font = new Font("Segoe UI", 12F);
             cmbEnrollmentStatus.FormattingEnabled = true;
-            cmbEnrollmentStatus.Items.AddRange(new object[] { "Not Enrolled", "Enrolled" });
-            cmbEnrollmentStatus.Location = new Point(440, 105);
+            cmbEnrollmentStatus.Items.AddRange(new object[] { "Not Yet Enrolled", "Enrolled" });
+            cmbEnrollmentStatus.Location = new Point(219, 105);
             cmbEnrollmentStatus.Name = "cmbEnrollmentStatus";
             cmbEnrollmentStatus.Size = new Size(296, 29);
             cmbEnrollmentStatus.TabIndex = 81;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Transparent;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.BorderColor = Color.RoyalBlue;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Microsoft YaHei UI", 10F);
+            button1.ForeColor = Color.RoyalBlue;
+            button1.ImeMode = ImeMode.NoControl;
+            button1.Location = new Point(771, 105);
+            button1.Name = "button1";
+            button1.Size = new Size(205, 29);
+            button1.TabIndex = 82;
+            button1.Text = "Save All Changes";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // frmAdminEnrollment
             // 
@@ -116,6 +136,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1003, 769);
+            Controls.Add(button1);
             Controls.Add(cmbEnrollmentStatus);
             Controls.Add(btn_AD_FindUnenrolled);
             Controls.Add(label3);
@@ -125,6 +146,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmAdminEnrollment";
             Text = "frmAdminEnrollment";
+            Load += frmAdminEnrollment_Load;
             ((System.ComponentModel.ISupportInitialize)dg_AD_StudentEnrollment).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -137,5 +159,6 @@
         private Button btn_AD_FindUnenrolled;
         private Label label3;
         private ComboBox cmbEnrollmentStatus;
+        private Button button1;
     }
 }

@@ -1,14 +1,5 @@
 ﻿using StudentAdministrationSystemRevive.BusinessLogic;
 using StudentAdministrationSystemRevive.DataAccess;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace StudentAdministrationSystemRevive.Views.Administrator.DegreeProgrammes
 {
@@ -33,7 +24,7 @@ namespace StudentAdministrationSystemRevive.Views.Administrator.DegreeProgrammes
             dgEPEditProgTable.DataSource = programmes;
         }
 
-       
+
 
         private void btnEPSaveChanges_Click(object sender, EventArgs e)
         {
@@ -42,27 +33,27 @@ namespace StudentAdministrationSystemRevive.Views.Administrator.DegreeProgrammes
             foreach (DataGridViewRow row in dgEPEditProgTable.Rows)
             {
                 if (row.IsNewRow)
-                    continue; 
-                
+                    continue;
+
                 var degreeProgrammeID = row.Cells["DegreeProgrammeID"].Value?.ToString();
                 var programmeTitle = row.Cells["ProgrammeTitle"].Value?.ToString();
                 var programmeDescription = row.Cells["ProgrammeDescription"].Value?.ToString();
                 var programmeDuration = row.Cells["ProgrammeDuration"].Value?.ToString();
 
-                
+
                 if (string.IsNullOrWhiteSpace(degreeProgrammeID) ||
                     string.IsNullOrWhiteSpace(programmeTitle) ||
                     string.IsNullOrWhiteSpace(programmeDescription) ||
                     string.IsNullOrWhiteSpace(programmeDuration))
                 {
-                    continue; 
+                    continue;
                 }
 
-               
+
                 programmeRepository.UpdateDegreeProgramme(degreeProgrammeID, programmeTitle, programmeDescription, programmeDuration);
             }
 
-            
+
             isUpdating = false;
 
             MessageBox.Show("Changes saved successfully.");

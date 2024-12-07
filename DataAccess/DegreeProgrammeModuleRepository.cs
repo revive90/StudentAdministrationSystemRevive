@@ -1,10 +1,5 @@
 ﻿using StudentAdministrationSystemRevive.BusinessLogic;
-using System;
-using System.Collections.Generic;
 using System.Data.SQLite;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StudentAdministrationSystemRevive.DataAccess
 {
@@ -30,7 +25,7 @@ namespace StudentAdministrationSystemRevive.DataAccess
 
                     return command.ExecuteNonQuery() > 0;
                 }
-            } 
+            }
         }
     }
 }

@@ -1,9 +1,4 @@
 ﻿using StudentAdministrationSystemRevive.DataAccess;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StudentAdministrationSystemRevive.BusinessLogic
 {
@@ -45,7 +40,7 @@ namespace StudentAdministrationSystemRevive.BusinessLogic
             return _repository.GetModulesByTitle(title);
         }
 
-        
+
 
         public bool RemoveModule(string moduleID)
         {
@@ -59,7 +54,7 @@ namespace StudentAdministrationSystemRevive.BusinessLogic
                 return _repository.RemoveModule(moduleID);
             }
 
-            
+
         }
     }
 }

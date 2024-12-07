@@ -1,12 +1,6 @@
 ﻿using StudentAdministrationSystemRevive.BusinessLogic;
-using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StudentAdministrationSystemRevive.DataAccess
 {
@@ -19,7 +13,7 @@ namespace StudentAdministrationSystemRevive.DataAccess
             using (var connection = new SQLiteConnection(ConnectSettingsDB.ConnectionString()))
             {
                 connection.Open();
-                
+
 
                 using (var command = new SQLiteCommand(query, connection))
                 {
@@ -30,12 +24,12 @@ namespace StudentAdministrationSystemRevive.DataAccess
 
                     //command.ExecuteNonQuery();
                     Console.WriteLine("Executing query for ProgrammeID: " + programme.DegreeProgrammeID);
-                    return (command.ExecuteNonQuery()>0);
+                    return (command.ExecuteNonQuery() > 0);
                 }
             }
         }
 
-        
+
         public DegreeProgramme? GetProgrammeByID(string programmeID)
         {
             using (var connection = new SQLiteConnection(ConnectSettingsDB.ConnectionString()))
@@ -50,7 +44,7 @@ namespace StudentAdministrationSystemRevive.DataAccess
                     {
                         if (reader.Read())
                         {
-                            return new DegreeProgramme (
+                            return new DegreeProgramme(
                                 reader["ProgrammeID"].ToString(),
                                 reader["Title"].ToString(),
                                 reader["DurationYears"].ToString(),
@@ -66,13 +60,13 @@ namespace StudentAdministrationSystemRevive.DataAccess
                 }
 
             }
-            
+
         }
 
 
 
         // Get Programme by Title
-        public List<DegreeProgramme> GetProgrammeByTitle(string title) 
+        public List<DegreeProgramme> GetProgrammeByTitle(string title)
         {
             var programmes = new List<DegreeProgramme>();
             string query = "SELECT DegreeProgrammeID, ProgrammeTitle, DurationYears, ProgrammeDescription FROM DegreeProgrammes WHERE ProgrammeTitle LIKE @Title";
@@ -99,14 +93,14 @@ namespace StudentAdministrationSystemRevive.DataAccess
                     }
                 }
             }
-                return programmes;
+            return programmes;
         }
 
         // Fill up Data Grid View
 
         public List<DegreeProgramme> GetAllDegreeProgrammes()
         {
-            string query = "SELECT * FROM DegreeProgrammes"; 
+            string query = "SELECT * FROM DegreeProgrammes";
             List<DegreeProgramme> programmes = new List<DegreeProgramme>();
 
             using (SQLiteConnection connection = new SQLiteConnection(ConnectSettingsDB.ConnectionString()))
@@ -167,16 +161,33 @@ namespace StudentAdministrationSystemRevive.DataAccess
                     command.Parameters.AddWithValue("@DurationYears", programmeDuration);
 
                     connection.Open();
-                    int rowsAffected = command.ExecuteNonQuery(); 
+                    int rowsAffected = command.ExecuteNonQuery();
                     connection.Close();
 
                     if (rowsAffected == 0)
                     {
                         MessageBox.Show("No changes made or invalid data.");
                     }
-                    
+
                 }
             }
+        }
+
+
+        // Fetch all programmes for Student RegistrationWindow
+        public DataTable GetProgrammes()
+        {
+            DataTable programmes = new DataTable();
+            string query = "SELECT DegreeProgrammeID, ProgrammeTitle FROM DegreeProgrammes";
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectSettingsDB.ConnectionString()))
+            {
+                connection.Open();
+                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, connection))
+                {
+                    adapter.Fill(programmes);
+                }
+            }
+            return programmes;
         }
 
 

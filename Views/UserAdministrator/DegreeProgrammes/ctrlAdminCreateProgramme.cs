@@ -1,16 +1,4 @@
 ﻿using StudentAdministrationSystemRevive.BusinessLogic;
-using StudentAdministrationSystemRevive.DataAccess;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SQLite;
-using System.Drawing;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace StudentAdministrationSystemRevive.Views.Administrator.DegreeProgrammes
 {
@@ -57,11 +45,11 @@ namespace StudentAdministrationSystemRevive.Views.Administrator.DegreeProgrammes
                     MessageBox.Show("Failed to create programme.");
                 }
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
-            
+
 
 
             //string progLength = cmbProgLength.Text.ToString();

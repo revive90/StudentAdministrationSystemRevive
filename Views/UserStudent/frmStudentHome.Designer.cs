@@ -43,11 +43,11 @@
             label9 = new Label();
             label8 = new Label();
             panel3 = new Panel();
+            panel6 = new Panel();
             label11 = new Label();
             label3 = new Label();
             button2 = new Button();
             label1 = new Label();
-            panel6 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -144,6 +144,12 @@
             resources.ApplyResources(panel3, "panel3");
             panel3.Name = "panel3";
             // 
+            // panel6
+            // 
+            panel6.BackColor = SystemColors.ControlDark;
+            resources.ApplyResources(panel6, "panel6");
+            panel6.Name = "panel6";
+            // 
             // label11
             // 
             resources.ApplyResources(label11, "label11");
@@ -171,12 +177,6 @@
             label1.ForeColor = Color.RoyalBlue;
             label1.Name = "label1";
             // 
-            // panel6
-            // 
-            panel6.BackColor = SystemColors.ControlDark;
-            resources.ApplyResources(panel6, "panel6");
-            panel6.Name = "panel6";
-            // 
             // frmStudentHome
             // 
             resources.ApplyResources(this, "$this");
@@ -189,6 +189,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmStudentHome";
+            Load += frmStudentHome_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

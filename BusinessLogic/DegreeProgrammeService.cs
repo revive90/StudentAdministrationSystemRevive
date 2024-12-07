@@ -1,17 +1,11 @@
 ﻿using StudentAdministrationSystemRevive.DataAccess;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StudentAdministrationSystemRevive.BusinessLogic
 {
     public class DegreeProgrammeService
     {
         private readonly ProgrammeRepository _repository;
-        public DegreeProgrammeService() 
+        public DegreeProgrammeService()
         {
             _repository = new ProgrammeRepository();
 
@@ -25,12 +19,12 @@ namespace StudentAdministrationSystemRevive.BusinessLogic
                 MessageBox.Show("Programme is Null", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            else 
+            else
             {
                 return _repository.InsertProgramme(programme);
             }
 
-            
+
         }
 
         // Removing a programme
@@ -40,9 +34,9 @@ namespace StudentAdministrationSystemRevive.BusinessLogic
         }
 
         // Returning a list of programmes.
-        public List<DegreeProgramme> GetProgrammeByTitle(string title) 
+        public List<DegreeProgramme> GetProgrammeByTitle(string title)
         {
-            return _repository.GetProgrammeByTitle(title); 
+            return _repository.GetProgrammeByTitle(title);
         }
 
         // Filling the Data Grid view with programme information
@@ -51,7 +45,7 @@ namespace StudentAdministrationSystemRevive.BusinessLogic
             return _repository.GetAllDegreeProgrammes();
         }
 
-        
+
 
 
 

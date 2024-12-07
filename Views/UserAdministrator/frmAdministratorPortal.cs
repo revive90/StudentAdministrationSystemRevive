@@ -7,17 +7,7 @@ using StudentAdministrationSystemRevive.Views.Administrator.Results;
 using StudentAdministrationSystemRevive.Views.Administrator.StudentManagement;
 using StudentAdministrationSystemRevive.Views.Administrator.TeachingStaff;
 using StudentAdministrationSystemRevive.Views.Alerts;
-using StudentAdministrationSystemRevive.Views.StudentPages;
 using StudentAdministrationSystemRevive.Views.UserAdministrator.Assessments;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace StudentAdministrationSystemRevive.Views.Administrator
 {

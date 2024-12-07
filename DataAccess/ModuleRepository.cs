@@ -1,21 +1,10 @@
 ﻿using StudentAdministrationSystemRevive.BusinessLogic;
-using System;
-using System.Collections.Generic;
 using System.Data.SQLite;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StudentAdministrationSystemRevive.DataAccess
 {
     public class ModuleRepository
     {
-        //private readonly string _connectionString;
-
-        //public ModuleRepository(string connectionString)
-        //{
-        //    _connectionString = connectionString;
-        //}
 
         // Method to insert a module
         public bool InsertModule(Module module)
@@ -35,6 +24,8 @@ namespace StudentAdministrationSystemRevive.DataAccess
             }
         }
 
+
+        // Method to fetch modules by title
         public List<Module> GetModulesByTitle(string title)
         {
             var modules = new List<Module>();
@@ -79,7 +70,7 @@ namespace StudentAdministrationSystemRevive.DataAccess
                 {
                     connection.Open();
 
-                    
+
                     using (var transaction = connection.BeginTransaction())
                     {
                         // Delete from DegreeProgrammeModules table
@@ -99,7 +90,7 @@ namespace StudentAdministrationSystemRevive.DataAccess
                         return rowsAffected > 0;
                     }
 
-                    
+
                 }
             }
             catch (Exception ex)

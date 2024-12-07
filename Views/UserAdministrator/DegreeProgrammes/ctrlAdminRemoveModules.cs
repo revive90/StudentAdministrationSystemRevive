@@ -1,13 +1,4 @@
 ﻿using StudentAdministrationSystemRevive.BusinessLogic;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace StudentAdministrationSystemRevive.Views.Administrator.DegreeProgrammes
 {
@@ -55,7 +46,7 @@ namespace StudentAdministrationSystemRevive.Views.Administrator.DegreeProgrammes
                 MessageBox.Show($"An error occurred while removing the module: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+
 
         private void btnRMFindModule_Click(object sender, EventArgs e)
         {

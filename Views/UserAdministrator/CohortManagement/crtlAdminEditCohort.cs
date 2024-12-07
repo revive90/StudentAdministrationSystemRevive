@@ -1,14 +1,5 @@
 ﻿using StudentAdministrationSystemRevive.BusinessLogic;
 using StudentAdministrationSystemRevive.DataAccess;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace StudentAdministrationSystemRevive.Views.UserAdministrator.CohortManagement
 {
@@ -49,7 +40,12 @@ namespace StudentAdministrationSystemRevive.Views.UserAdministrator.CohortManage
             CohortServices cohortServices = new CohortServices();
             var cohorts = cohortServices.FindCohortByProgCode(progCode);
 
-            dg_AD_CohortEdit.DataSource= cohorts;
+            dg_AD_CohortEdit.DataSource = cohorts;
+        }
+
+        private void btnAD_CohortSave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

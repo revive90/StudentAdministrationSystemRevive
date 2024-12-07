@@ -55,6 +55,7 @@
             btnAD_CohortSave.TabIndex = 79;
             btnAD_CohortSave.Text = "Save Changes";
             btnAD_CohortSave.UseVisualStyleBackColor = false;
+            btnAD_CohortSave.Click += btnAD_CohortSave_Click;
             // 
             // dg_AD_CohortEdit
             // 

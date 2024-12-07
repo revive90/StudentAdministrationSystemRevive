@@ -1,15 +1,5 @@
 ﻿using StudentAdministrationSystemRevive.Views.Student;
 using StudentAdministrationSystemRevive.Views.Student.Assessments;
-using StudentAdministrationSystemRevive.Views.Student.Modules_Preview;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace StudentAdministrationSystemRevive.Views.StudentPages
 {
@@ -180,7 +170,7 @@ namespace StudentAdministrationSystemRevive.Views.StudentPages
             flowAssessmentFeedback.Controls.Add(ctrlAssessmentFeedback);
         }
 
-        
+
 
         private void btnViewModuleDetail_Click(object sender, EventArgs e)
         {
