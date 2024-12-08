@@ -123,6 +123,7 @@
             btnAD_AssessmentCreate.TabIndex = 81;
             btnAD_AssessmentCreate.Text = "Create Assessment";
             btnAD_AssessmentCreate.UseVisualStyleBackColor = false;
+            btnAD_AssessmentCreate.Click += btnAD_AssessmentCreate_Click;
             // 
             // txtAD_Assessment_Description
             // 

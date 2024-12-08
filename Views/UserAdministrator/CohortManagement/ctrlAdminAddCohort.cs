@@ -23,7 +23,6 @@ namespace StudentAdministrationSystemRevive.Views.UserAdministrator
             string cohortStart = txtAD_Cohort_Start_Year.Text;
 
 
-
             // Create the module and degree programme module objects
             Cohort newCohort = new Cohort(cohortID, programmeID, cohortStart);
 
