@@ -12,7 +12,7 @@ namespace StudentAdministrationSystemRevive.DataAccess
     {
 
         // Insert Or Update Grade
-        public void InsertOrUpdateGrade(string studentID, string assessmentID, int mark)
+        public bool InsertOrUpdateGrade(string studentID, string assessmentID, int mark)
         {
             string query = @"
                             INSERT INTO StudentAssessments (StudentID, AssessmentID, Mark)
@@ -29,7 +29,9 @@ namespace StudentAdministrationSystemRevive.DataAccess
                     command.Parameters.AddWithValue("@Mark", mark);
 
                     connection.Open();
-                    command.ExecuteNonQuery();
+                    int rowsAffected = command.ExecuteNonQuery(); // Returns the number of rows affected
+
+                    return rowsAffected > 0; // Return true if at least one row was affected
                 }
             }
         }

@@ -113,7 +113,6 @@
             // 
             // dgVPProgTable
             // 
-            dgVPProgTable.AllowUserToAddRows = false;
             dgVPProgTable.AllowUserToDeleteRows = false;
             dgVPProgTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgVPProgTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;

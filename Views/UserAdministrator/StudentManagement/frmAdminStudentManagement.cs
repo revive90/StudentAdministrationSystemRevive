@@ -27,6 +27,7 @@ namespace StudentAdministrationSystemRevive.Views.Administrator.StudentManagemen
                 StudentServices studentServices = new StudentServices();
                 var students = studentServices.GetAllStudents();
                 dgVPProgTable.DataSource = students;
+                dgVPProgTable.AllowUserToAddRows = true;
             }
             catch (Exception ex)
             {

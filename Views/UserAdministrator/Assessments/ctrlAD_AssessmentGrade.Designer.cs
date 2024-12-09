@@ -31,13 +31,13 @@
             btnAD_AssessmentSaveChanges = new Button();
             dg_AD_AssessmentGrade = new DataGridView();
             btnAD_AssessmentFind = new Button();
-            txtAD_Assessment_Search_ID = new TextBox();
+            txtAssessmentID = new TextBox();
             label3 = new Label();
             panel1 = new Panel();
             label2 = new Label();
-            textBox1 = new TextBox();
+            txtStudentID = new TextBox();
             label1 = new Label();
-            textBox2 = new TextBox();
+            txtMark = new TextBox();
             label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)dg_AD_AssessmentGrade).BeginInit();
             SuspendLayout();
@@ -65,9 +65,9 @@
             dg_AD_AssessmentGrade.AllowUserToDeleteRows = false;
             dg_AD_AssessmentGrade.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dg_AD_AssessmentGrade.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dg_AD_AssessmentGrade.Location = new Point(26, 378);
+            dg_AD_AssessmentGrade.Location = new Point(26, 195);
             dg_AD_AssessmentGrade.Name = "dg_AD_AssessmentGrade";
-            dg_AD_AssessmentGrade.Size = new Size(950, 263);
+            dg_AD_AssessmentGrade.Size = new Size(950, 446);
             dg_AD_AssessmentGrade.TabIndex = 98;
             // 
             // btnAD_AssessmentFind
@@ -86,16 +86,17 @@
             btnAD_AssessmentFind.TabIndex = 97;
             btnAD_AssessmentFind.Text = "Grade Assessment";
             btnAD_AssessmentFind.UseVisualStyleBackColor = false;
+            btnAD_AssessmentFind.Click += btnAD_AssessmentFind_Click;
             // 
-            // txtAD_Assessment_Search_ID
+            // txtAssessmentID
             // 
-            txtAD_Assessment_Search_ID.BackColor = Color.WhiteSmoke;
-            txtAD_Assessment_Search_ID.BorderStyle = BorderStyle.FixedSingle;
-            txtAD_Assessment_Search_ID.Font = new Font("Segoe UI", 12F);
-            txtAD_Assessment_Search_ID.Location = new Point(267, 128);
-            txtAD_Assessment_Search_ID.Name = "txtAD_Assessment_Search_ID";
-            txtAD_Assessment_Search_ID.Size = new Size(230, 29);
-            txtAD_Assessment_Search_ID.TabIndex = 96;
+            txtAssessmentID.BackColor = Color.WhiteSmoke;
+            txtAssessmentID.BorderStyle = BorderStyle.FixedSingle;
+            txtAssessmentID.Font = new Font("Segoe UI", 12F);
+            txtAssessmentID.Location = new Point(267, 128);
+            txtAssessmentID.Name = "txtAssessmentID";
+            txtAssessmentID.Size = new Size(230, 29);
+            txtAssessmentID.TabIndex = 96;
             // 
             // label3
             // 
@@ -131,15 +132,15 @@
             label2.Text = "Grade an Assessment";
             label2.TextAlign = ContentAlignment.BottomLeft;
             // 
-            // textBox1
+            // txtStudentID
             // 
-            textBox1.BackColor = Color.WhiteSmoke;
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(26, 128);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(230, 29);
-            textBox1.TabIndex = 101;
+            txtStudentID.BackColor = Color.WhiteSmoke;
+            txtStudentID.BorderStyle = BorderStyle.FixedSingle;
+            txtStudentID.Font = new Font("Segoe UI", 12F);
+            txtStudentID.Location = new Point(26, 128);
+            txtStudentID.Name = "txtStudentID";
+            txtStudentID.Size = new Size(230, 29);
+            txtStudentID.TabIndex = 101;
             // 
             // label1
             // 
@@ -154,15 +155,15 @@
             label1.Text = "Student ID";
             label1.TextAlign = ContentAlignment.BottomLeft;
             // 
-            // textBox2
+            // txtMark
             // 
-            textBox2.BackColor = Color.WhiteSmoke;
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Font = new Font("Segoe UI", 12F);
-            textBox2.Location = new Point(509, 128);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(230, 29);
-            textBox2.TabIndex = 103;
+            txtMark.BackColor = Color.WhiteSmoke;
+            txtMark.BorderStyle = BorderStyle.FixedSingle;
+            txtMark.Font = new Font("Segoe UI", 12F);
+            txtMark.Location = new Point(509, 128);
+            txtMark.Name = "txtMark";
+            txtMark.Size = new Size(230, 29);
+            txtMark.TabIndex = 103;
             // 
             // label4
             // 
@@ -172,9 +173,9 @@
             label4.ImeMode = ImeMode.NoControl;
             label4.Location = new Point(509, 100);
             label4.Name = "label4";
-            label4.Size = new Size(126, 25);
+            label4.Size = new Size(51, 25);
             label4.TabIndex = 102;
-            label4.Text = "Assessment ID";
+            label4.Text = "Mark";
             label4.TextAlign = ContentAlignment.BottomLeft;
             // 
             // ctrlAD_AssessmentGrade
@@ -182,14 +183,14 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(textBox2);
+            Controls.Add(txtMark);
             Controls.Add(label4);
-            Controls.Add(textBox1);
+            Controls.Add(txtStudentID);
             Controls.Add(label1);
             Controls.Add(btnAD_AssessmentSaveChanges);
             Controls.Add(dg_AD_AssessmentGrade);
             Controls.Add(btnAD_AssessmentFind);
-            Controls.Add(txtAD_Assessment_Search_ID);
+            Controls.Add(txtAssessmentID);
             Controls.Add(label3);
             Controls.Add(panel1);
             Controls.Add(label2);
@@ -205,13 +206,13 @@
         private Button btnAD_AssessmentSaveChanges;
         private DataGridView dg_AD_AssessmentGrade;
         private Button btnAD_AssessmentFind;
-        private TextBox txtAD_Assessment_Search_ID;
+        private TextBox txtAssessmentID;
         private Label label3;
         private Panel panel1;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox txtStudentID;
         private Label label1;
-        private TextBox textBox2;
+        private TextBox txtMark;
         private Label label4;
     }
 }

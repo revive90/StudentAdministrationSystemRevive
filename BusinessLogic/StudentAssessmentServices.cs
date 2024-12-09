@@ -15,12 +15,19 @@ namespace StudentAdministrationSystemRevive.BusinessLogic
             studentAssessmentRepository = new StudentAssessmentRepository();
         }
 
-        public void GradeAssessment(string studentID, string assessmentID, int mark)
+        public bool GradeAssessment(string studentID, string assessmentID, int mark)
         {
-            if (mark < 0 || mark > 100) 
+            if (mark < 0 || mark > 100)
+            {
+                return false;
                 throw new ArgumentException("Mark must be between 0 and the maximum possible mark.");
-
-            studentAssessmentRepository.InsertOrUpdateGrade(studentID, assessmentID, mark);
+                
+            }
+            else
+            {
+                return (studentAssessmentRepository.InsertOrUpdateGrade(studentID, assessmentID, mark));
+            }
+            
         }
 
 

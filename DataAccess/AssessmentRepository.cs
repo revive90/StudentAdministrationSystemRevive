@@ -165,5 +165,29 @@ namespace StudentAdministrationSystemRevive.DataAccess
             }
         }
 
+
+        // Getting maximum possible mark for the assessment
+        public int GetMaximumPossibleMark(string assessmentID)
+        {
+            string query = "SELECT MaximumPossibleMark FROM Assessments WHERE AssessmentID = @AssessmentID";
+
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectSettingsDB.ConnectionString()))
+            {
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@AssessmentID", assessmentID);
+                    connection.Open();
+
+                    object result = command.ExecuteScalar();
+                    if (result != null && int.TryParse(result.ToString(), out int maxMark))
+                    {
+                        return maxMark;
+                    }
+
+                    throw new InvalidOperationException("Assessment not found or invalid maximum mark.");
+                }
+            }
+        }
+
     }
 }

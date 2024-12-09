@@ -48,5 +48,15 @@ namespace StudentAdministrationSystemRevive.BusinessLogic
         {
             return assessmentRepository.GetAssessmentsByModCode(modCode);
         }
+
+
+        // Get assessments maximum possible mark
+        public int GetMaximumPossibleMark(string assessmentID)
+        {
+            if (string.IsNullOrWhiteSpace(assessmentID))
+                throw new ArgumentException("Assessment ID cannot be null or empty.");
+
+            return assessmentRepository.GetMaximumPossibleMark(assessmentID);
+        }
     }
 }

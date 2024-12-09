@@ -63,5 +63,48 @@ namespace StudentAdministrationSystemRevive.Views.UserAdministrator.Assessments
                 MessageBox.Show($"Error loading student assessments: {ex.Message}");
             }
         }
+
+        private void btnAD_AssessmentFind_Click(object sender, EventArgs e)
+        {
+            AssessmentServices assessmentServices = new AssessmentServices();
+            StudentAssessmentServices studentAssessmentServices = new StudentAssessmentServices();
+
+            string studentID = txtStudentID.Text.Trim();
+            string assessmentID = txtAssessmentID.Text.Trim();
+            string markText = txtMark.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(studentID) || string.IsNullOrWhiteSpace(assessmentID) || string.IsNullOrWhiteSpace(markText))
+            {
+                MessageBox.Show("Please fill in all fields.");
+                return;
+            }
+
+            if (!int.TryParse(markText, out int mark))
+            {
+                MessageBox.Show("Mark must be a valid number.");
+                return;
+            }
+
+            // Fetch the maximum possible mark for the assessment
+            int maxMark = assessmentServices.GetMaximumPossibleMark(assessmentID);
+            if (mark < 0 || mark > maxMark)
+            {
+                MessageBox.Show($"Mark must be between 0 and {maxMark}.");
+                return;
+            }
+
+            // Grade the assessment
+            bool isSuccess = studentAssessmentServices.GradeAssessment(studentID, assessmentID, mark);
+
+            if (isSuccess)
+            {
+                MessageBox.Show("Assessment graded successfully.");
+                
+            }
+            else
+            {
+                MessageBox.Show("Error grading assessment. Please check the details and try again.");
+            }
+        }
     }
 }
