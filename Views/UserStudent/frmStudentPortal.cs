@@ -1,15 +1,24 @@
 ﻿using StudentAdministrationSystemRevive.Views.Alerts;
 using StudentAdministrationSystemRevive.Views.StudentPages;
 using System.Runtime.InteropServices;
+using StudentAdministrationSystemRevive.BusinessLogic;
+using StudentAdministrationSystemRevive.DataAccess;
+
 
 namespace StudentAdministrationSystemRevive.Views.Student
 {
     public partial class frmStudentPortal : Form
     {
-        public frmStudentPortal()
+        private User _currentUser;
+        public static string _email;
+        private UserService _userService;
+
+        public frmStudentPortal(string email)
         {
             InitializeComponent();
-
+            _email = email;
+            _userService = new UserService(new UserRepository());
+            
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -28,20 +37,21 @@ namespace StudentAdministrationSystemRevive.Views.Student
 
         private void frmStudentPortal_Load(object sender, EventArgs e)
         {
-            frmStudentHome frm = new frmStudentHome();
+            frmStudentHome frm = new frmStudentHome(_userService);
             frm.TopLevel = false;
             pnlContentPane.Controls.Add(frm);
             frm.BringToFront();
             frm.Show();
 
             hideIndicatorPanels();
+            lblAccountEmail.Text = _email;
         }
 
 
 
         private void btnHomeScreen_Click(object sender, EventArgs e)
         {
-            frmStudentHome frm = new frmStudentHome();
+            frmStudentHome frm = new frmStudentHome(_userService);
             frm.TopLevel = false;
             pnlContentPane.Controls.Add(frm);
             frm.BringToFront();

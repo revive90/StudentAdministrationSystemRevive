@@ -31,8 +31,8 @@
             pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtUsername = new TextBox();
+            txtPassword = new TextBox();
             label4 = new Label();
             label5 = new Label();
             btnStudentSignIn = new Button();
@@ -80,27 +80,27 @@
             label2.TabIndex = 2;
             label2.Text = "Username";
             // 
-            // textBox1
+            // txtUsername
             // 
-            textBox1.BackColor = Color.White;
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(237, 174);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(241, 28);
-            textBox1.TabIndex = 4;
+            txtUsername.BackColor = Color.White;
+            txtUsername.BorderStyle = BorderStyle.FixedSingle;
+            txtUsername.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUsername.Location = new Point(237, 174);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(241, 28);
+            txtUsername.TabIndex = 4;
             // 
-            // textBox2
+            // txtPassword
             // 
-            textBox2.BackColor = Color.White;
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(237, 333);
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(241, 28);
-            textBox2.TabIndex = 6;
-            textBox2.TextAlign = HorizontalAlignment.Center;
+            txtPassword.BackColor = Color.White;
+            txtPassword.BorderStyle = BorderStyle.FixedSingle;
+            txtPassword.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPassword.Location = new Point(237, 333);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
+            txtPassword.Size = new Size(241, 28);
+            txtPassword.TabIndex = 6;
+            txtPassword.TextAlign = HorizontalAlignment.Center;
             // 
             // label4
             // 
@@ -274,12 +274,12 @@
             Controls.Add(label7);
             Controls.Add(btnStaffSignInPage);
             Controls.Add(btnCreateAccount);
-            Controls.Add(textBox2);
+            Controls.Add(txtPassword);
             Controls.Add(lblForgotPassword);
             Controls.Add(btnStudentSignIn);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(textBox1);
+            Controls.Add(txtUsername);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
@@ -299,8 +299,8 @@
         private PictureBox pictureBox1;
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtUsername;
+        private TextBox txtPassword;
         private Label label4;
         private Label label5;
         private Button btnStudentSignIn;

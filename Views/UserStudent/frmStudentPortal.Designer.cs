@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            label2 = new Label();
+            lblAccountEmail = new Label();
             label1 = new Label();
             panel3 = new Panel();
             panel2 = new Panel();
@@ -61,6 +61,9 @@
             btnHomeScreen = new Button();
             btnMyDetails = new Button();
             pnlContentPane = new Panel();
+            lblStudentID = new Label();
+            label2 = new Label();
+            label3 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -68,7 +71,7 @@
             // panel1
             // 
             panel1.BackColor = Color.RoyalBlue;
-            panel1.Controls.Add(label2);
+            panel1.Controls.Add(lblAccountEmail);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -76,16 +79,16 @@
             panel1.TabIndex = 0;
             panel1.MouseDown += panel1_MouseDown;
             // 
-            // label2
+            // lblAccountEmail
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(1013, 9);
-            label2.Name = "label2";
-            label2.Size = new Size(118, 21);
-            label2.TabIndex = 0;
-            label2.Text = "Account Name";
+            lblAccountEmail.AutoSize = true;
+            lblAccountEmail.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAccountEmail.ForeColor = Color.White;
+            lblAccountEmail.Location = new Point(958, 9);
+            lblAccountEmail.Name = "lblAccountEmail";
+            lblAccountEmail.Size = new Size(118, 21);
+            lblAccountEmail.TabIndex = 0;
+            lblAccountEmail.Text = "Account Name";
             // 
             // label1
             // 
@@ -111,6 +114,9 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(lblStudentID);
             panel2.Controls.Add(panel15);
             panel2.Controls.Add(panel14);
             panel2.Controls.Add(panel13);
@@ -468,6 +474,37 @@
             pnlContentPane.TabIndex = 2;
             pnlContentPane.Paint += pnlContentPane_Paint;
             // 
+            // lblStudentID
+            // 
+            lblStudentID.AutoSize = true;
+            lblStudentID.ForeColor = SystemColors.WindowFrame;
+            lblStudentID.Location = new Point(32, 93);
+            lblStudentID.Name = "lblStudentID";
+            lblStudentID.Size = new Size(62, 15);
+            lblStudentID.TabIndex = 23;
+            lblStudentID.Text = "Student ID";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.ForeColor = SystemColors.WindowFrame;
+            label2.Location = new Point(32, 23);
+            label2.Name = "label2";
+            label2.Size = new Size(57, 15);
+            label2.TabIndex = 24;
+            label2.Text = "Welcome";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 15F);
+            label3.ForeColor = SystemColors.WindowFrame;
+            label3.Location = new Point(30, 49);
+            label3.Name = "label3";
+            label3.Size = new Size(104, 28);
+            label3.TabIndex = 25;
+            label3.Text = "Student ID";
+            // 
             // frmStudentPortal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -488,6 +525,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -505,7 +543,7 @@
         private Panel panel3;
         private Button btnHelpSupportScreen;
         private Panel pnlContentPane;
-        private Label label2;
+        private Label lblAccountEmail;
         private Button btnFiller2;
         private Button btnFiller1;
         private Button button1;
@@ -526,5 +564,8 @@
         private Panel panel12;
         private Panel panel8;
         private Panel panel15;
+        private Label label3;
+        private Label label2;
+        private Label lblStudentID;
     }
 }

@@ -32,5 +32,36 @@ namespace StudentAdministrationSystemRevive.DataAccess
             }
         }
 
+
+        // Getting the user by email
+        public User GetUserByEmail(string email)
+        {
+            using (var connection = new SQLiteConnection(ConnectSettingsDB.ConnectionString()))
+            {
+                connection.Open();
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = "SELECT * FROM Users WHERE Email = @Email";
+                    command.Parameters.AddWithValue("@Email", email);
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new User
+                            {
+                                UserID = reader["UserID"].ToString(),
+                                Email = reader["Email"].ToString(),
+                                PasswordHash = reader["PasswordHash"].ToString(),
+                                AccessLevel = reader["AccessLevel"].ToString()
+                            };
+                        }
+                    }
+                }
+            }
+
+            return null; // User not found
+        }
+
     }
 }
