@@ -31,7 +31,6 @@
             pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
-            label3 = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             label4 = new Label();
@@ -75,28 +74,18 @@
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft YaHei UI", 15.75F);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(234, 101);
+            label2.Location = new Point(234, 136);
             label2.Name = "label2";
             label2.Size = new Size(115, 28);
             label2.TabIndex = 2;
             label2.Text = "Username";
-            // 
-            // label3
-            // 
-            label3.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ControlDarkDark;
-            label3.Location = new Point(237, 189);
-            label3.Name = "label3";
-            label3.Size = new Size(184, 53);
-            label3.TabIndex = 3;
-            label3.Text = "Your username is one of the following:";
             // 
             // textBox1
             // 
             textBox1.BackColor = Color.White;
             textBox1.BorderStyle = BorderStyle.FixedSingle;
             textBox1.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(237, 139);
+            textBox1.Location = new Point(237, 174);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(241, 28);
             textBox1.TabIndex = 4;
@@ -106,7 +95,7 @@
             textBox2.BackColor = Color.White;
             textBox2.BorderStyle = BorderStyle.FixedSingle;
             textBox2.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(237, 368);
+            textBox2.Location = new Point(237, 333);
             textBox2.Name = "textBox2";
             textBox2.PasswordChar = '*';
             textBox2.Size = new Size(241, 28);
@@ -118,7 +107,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft YaHei UI", 15.75F);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(234, 333);
+            label4.Location = new Point(234, 298);
             label4.Name = "label4";
             label4.Size = new Size(108, 28);
             label4.TabIndex = 5;
@@ -128,11 +117,11 @@
             // 
             label5.Font = new Font("Microsoft YaHei UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = SystemColors.ControlDarkDark;
-            label5.Location = new Point(237, 242);
+            label5.Location = new Point(237, 231);
             label5.Name = "label5";
-            label5.Size = new Size(241, 84);
+            label5.Size = new Size(241, 59);
             label5.TabIndex = 7;
-            label5.Text = "- The email address you signed up \r\n   with.\r\n- Your student ID number.\r\n- Your university email address.";
+            label5.Text = "Your username is the email address you registered with";
             // 
             // btnStudentSignIn
             // 
@@ -142,7 +131,7 @@
             btnStudentSignIn.FlatStyle = FlatStyle.Flat;
             btnStudentSignIn.Font = new Font("Microsoft YaHei UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnStudentSignIn.ForeColor = Color.White;
-            btnStudentSignIn.Location = new Point(237, 446);
+            btnStudentSignIn.Location = new Point(237, 397);
             btnStudentSignIn.Name = "btnStudentSignIn";
             btnStudentSignIn.Size = new Size(115, 45);
             btnStudentSignIn.TabIndex = 8;
@@ -156,7 +145,7 @@
             lblForgotPassword.Cursor = Cursors.Hand;
             lblForgotPassword.Font = new Font("Microsoft YaHei UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblForgotPassword.ForeColor = Color.Black;
-            lblForgotPassword.Location = new Point(237, 412);
+            lblForgotPassword.Location = new Point(237, 460);
             lblForgotPassword.Name = "lblForgotPassword";
             lblForgotPassword.Size = new Size(128, 19);
             lblForgotPassword.TabIndex = 9;
@@ -291,7 +280,6 @@
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(textBox1);
-            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
@@ -311,7 +299,6 @@
         private PictureBox pictureBox1;
         private Label label1;
         private Label label2;
-        private Label label3;
         private TextBox textBox1;
         private TextBox textBox2;
         private Label label4;

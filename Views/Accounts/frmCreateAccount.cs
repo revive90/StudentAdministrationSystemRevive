@@ -85,77 +85,92 @@ namespace StudentAdministrationSystemRevive.Views.Accounts
         // Student Account created
         private void btnCreateStudentAccount_Click(object sender, EventArgs e)
         {
-            createUserprofile();
-            // Create Student ID
-            Random id = new Random();
-            int idint = id.Next(100000, 200000);
-            string firstpart = cmbStartYear.SelectedItem.ToString();
-            string studIDcomplete = firstpart + idint.ToString();
-
-            // Collect Form Data
-            string studentID = studIDcomplete;
-            string firstname = txtCAFirstname.Text.Trim();
-            string lastname = txtCALastName.Text.Trim();
-            string email = txtCAEmailAddress.Text.Trim();
-            string degreeProgID = cmbProgrammes.SelectedValue.ToString();
-            string cohortYear = cmbStartYear.SelectedItem.ToString();
-            string enrollmentStatus = "Not Yet Enrolled";
-            string durationYears = cmbProgLength.SelectedItem.ToString();
-
-            int degreeLength = 0;
-            if (durationYears == "1 Year")
+            if (cmbStartYear.SelectedItem == null ||
+                string.IsNullOrEmpty(txtCAFirstname.Text) ||
+                string.IsNullOrEmpty(txtCALastName.Text) ||
+                string.IsNullOrEmpty(txtCAEmailAddress.Text) ||
+                cmbProgrammes.SelectedValue == null ||
+                cmbStartYear.SelectedItem == null ||
+                cmbProgLength.SelectedItem == null)
             {
-                degreeLength = 1;
-            }
-            if (durationYears == "2 Years")
-            {
-                degreeLength = 2;
-            }
-            if (durationYears == "3 Years")
-            {
-                degreeLength = 3;
-            }
-
-            // Collect selected modules from the CheckedListBox
-            var selectedModules = new List<Module>();
-            foreach (var item in chkListModulesFromProgramme.CheckedItems)
-            {
-                if (item is ListViewItem listItem && listItem.Tag is Module module)
-                {
-                    selectedModules.Add(module);
-                }
-            }
-
-            // Check if the number of selected modules matches the required count
-            int requiredModuleCount = degreeLength * 6; // At 6 modules per year
-            if (selectedModules.Count != requiredModuleCount)
-            {
-                MessageBox.Show($"Please select exactly {requiredModuleCount} modules for a {degreeLength}-year degree.");
+                MessageBox.Show("Please ensure all fields are filled out.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            // Create a new student record
-            Students newStudent = new Students(studentID, firstname, lastname, email, degreeProgID, cohortYear, enrollmentStatus, durationYears);
-
-            bool success = _studentRepository.InsertStudent(newStudent);
-            if (success)
-            {
-                MessageBox.Show("Your details have been sent, you will be advised of your enrolment status!", "Details sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
             else
             {
-                MessageBox.Show("Error sending your details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            bool moduleEnrollmentSuccess = _studentModuleService.EnrollStudentInModules(studentID, selectedModules);
+                // Create Student ID
+                Random id = new Random();
+                int idint = id.Next(100000, 200000);
+                string firstpart = cmbStartYear.SelectedItem.ToString();
+                string studIDcomplete = firstpart + idint.ToString();
 
-            if (moduleEnrollmentSuccess)
-            {
-                MessageBox.Show("Student enrolled and modules assigned successfully.", "Enrollment Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Collect Form Data
+                string studentID = studIDcomplete;
+                string firstname = txtCAFirstname.Text.Trim();
+                string lastname = txtCALastName.Text.Trim();
+                string email = txtCAEmailAddress.Text.Trim();
+                string degreeProgID = cmbProgrammes.SelectedValue.ToString();
+                string cohortYear = cmbStartYear.SelectedItem.ToString();
+                string enrollmentStatus = "Not Yet Enrolled";
+                string durationYears = cmbProgLength.SelectedItem.ToString();
+
+                int degreeLength = 0;
+                if (durationYears == "1 Year")
+                {
+                    degreeLength = 1;
+                }
+                if (durationYears == "2 Years")
+                {
+                    degreeLength = 2;
+                }
+                if (durationYears == "3 Years")
+                {
+                    degreeLength = 3;
+                }
+
+                // Collect selected modules from the CheckedListBox
+                var selectedModules = new List<Module>();
+                foreach (var item in chkListModulesFromProgramme.CheckedItems)
+                {
+                    if (item is ListViewItem listItem && listItem.Tag is Module module)
+                    {
+                        selectedModules.Add(module);
+                    }
+                }
+
+                // Check if the number of selected modules matches the required count
+                int requiredModuleCount = degreeLength * 6; // At 6 modules per year
+                if (selectedModules.Count != requiredModuleCount)
+                {
+                    MessageBox.Show($"Please select exactly {requiredModuleCount} modules for a {degreeLength}-year degree.");
+                    return;
+                }
+
+                // Create a new student record
+                Students newStudent = new Students(studentID, firstname, lastname, email, degreeProgID, cohortYear, enrollmentStatus, durationYears);
+
+                bool success = _studentRepository.InsertStudent(newStudent);
+                if (success)
+                {
+                    MessageBox.Show("Your details have been sent, you will be advised of your enrolment status!", "Details sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error sending your details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                bool moduleEnrollmentSuccess = _studentModuleService.EnrollStudentInModules(studentID, selectedModules);
+
+                if (moduleEnrollmentSuccess)
+                {
+                    MessageBox.Show("Student enrolled and modules assigned successfully.", "Enrollment Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    createUserprofile();
+                }
+                else
+                {
+                    MessageBox.Show("Error enrolling the student in the modules.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
-            {
-                MessageBox.Show("Error enrolling the student in the modules.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
         }
 
 
