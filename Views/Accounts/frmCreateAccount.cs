@@ -2,6 +2,7 @@
 using StudentAdministrationSystemRevive.DataAccess;
 using System.Data;
 using System.Reflection;
+using System.Windows.Forms;
 using Module = StudentAdministrationSystemRevive.BusinessLogic.Module;
 
 namespace StudentAdministrationSystemRevive.Views.Accounts
@@ -12,8 +13,11 @@ namespace StudentAdministrationSystemRevive.Views.Accounts
         private readonly StudentRepository _studentRepository;
         private readonly StudentModuleRepository _studentModuleRepository;
         private StudentModuleService _studentModuleService;
-        private List<Module> modules; // Class-level variable to hold modules
+        private List<Module> modules; 
         private readonly ModuleService moduleService;
+        private readonly UserService _userService;
+        private readonly UserRepository _userRepository;
+
 
         public frmCreateAccount()
         {
@@ -23,6 +27,8 @@ namespace StudentAdministrationSystemRevive.Views.Accounts
             _studentModuleRepository = new StudentModuleRepository();
             _studentModuleService = new StudentModuleService(_studentModuleRepository);
             moduleService = new ModuleService();
+            _userRepository = new UserRepository(); 
+            _userService = new UserService(_userRepository);
         }
 
         private void lblForgotPassword_Click(object sender, EventArgs e)
@@ -76,8 +82,10 @@ namespace StudentAdministrationSystemRevive.Views.Accounts
             }
         }
 
+        // Student Account created
         private void btnCreateStudentAccount_Click(object sender, EventArgs e)
         {
+            createUserprofile();
             // Create Student ID
             Random id = new Random();
             int idint = id.Next(100000, 200000);
@@ -86,9 +94,9 @@ namespace StudentAdministrationSystemRevive.Views.Accounts
 
             // Collect Form Data
             string studentID = studIDcomplete;
-            string firstname = txtCAFirstname.Text;
-            string lastname = txtCALastName.Text;
-            string email = txtCAEmailAddress.Text;
+            string firstname = txtCAFirstname.Text.Trim();
+            string lastname = txtCALastName.Text.Trim();
+            string email = txtCAEmailAddress.Text.Trim();
             string degreeProgID = cmbProgrammes.SelectedValue.ToString();
             string cohortYear = cmbStartYear.SelectedItem.ToString();
             string enrollmentStatus = "Not Yet Enrolled";
@@ -148,6 +156,37 @@ namespace StudentAdministrationSystemRevive.Views.Accounts
             {
                 MessageBox.Show("Error enrolling the student in the modules.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+
+        // Creating a user for future login purposes
+        private void createUserprofile() 
+        {
+            string email = txtCAEmailAddress.Text.Trim() ;
+            string password = txtSetPassword.Text.Trim();
+            
+            if (String.IsNullOrEmpty(email)  || String.IsNullOrEmpty(password)) 
+            {
+                MessageBox.Show("Email Address and Password cannot be blank","Error creating account");
+                return ;
+            }
+            else
+            {
+                bool userCreated = _userService.CreateUser(email, password);
+
+                if (userCreated)
+                {
+                    MessageBox.Show("User created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   
+                }
+                else
+                {
+                    MessageBox.Show("Failed to create user. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return ;
+                }
+            }
+
+            
         }
 
     }

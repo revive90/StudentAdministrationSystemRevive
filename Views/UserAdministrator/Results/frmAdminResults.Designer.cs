@@ -33,6 +33,7 @@
             panel1 = new Panel();
             label2 = new Label();
             button1 = new Button();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dg_AD_Student_Results).BeginInit();
             SuspendLayout();
             // 
@@ -58,10 +59,10 @@
             dg_AD_Student_Results.AllowUserToAddRows = false;
             dg_AD_Student_Results.AllowUserToDeleteRows = false;
             dg_AD_Student_Results.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dg_AD_Student_Results.Location = new Point(24, 94);
+            dg_AD_Student_Results.Location = new Point(24, 140);
             dg_AD_Student_Results.Name = "dg_AD_Student_Results";
             dg_AD_Student_Results.ReadOnly = true;
-            dg_AD_Student_Results.Size = new Size(950, 585);
+            dg_AD_Student_Results.Size = new Size(950, 539);
             dg_AD_Student_Results.TabIndex = 81;
             // 
             // panel1
@@ -102,12 +103,26 @@
             button1.Text = "Save";
             button1.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Light", 12F, FontStyle.Italic);
+            label1.ForeColor = Color.Black;
+            label1.ImeMode = ImeMode.NoControl;
+            label1.Location = new Point(24, 703);
+            label1.Name = "label1";
+            label1.Size = new Size(477, 21);
+            label1.TabIndex = 86;
+            label1.Text = "Results are visible only for students whose assessments have been graded";
+            label1.TextAlign = ContentAlignment.BottomLeft;
+            // 
             // frmAdminResults
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1003, 769);
+            Controls.Add(label1);
             Controls.Add(button1);
             Controls.Add(btnAD_ReloadStudentResults);
             Controls.Add(dg_AD_Student_Results);
@@ -116,6 +131,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmAdminResults";
             Text = "frmAdminResults";
+            Load += frmAdminResults_Load;
             ((System.ComponentModel.ISupportInitialize)dg_AD_Student_Results).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -128,5 +144,6 @@
         private Panel panel1;
         private Label label2;
         private Button button1;
+        private Label label1;
     }
 }
