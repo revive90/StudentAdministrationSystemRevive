@@ -19,7 +19,16 @@ namespace StudentAdministrationSystemRevive.DataAccess
                     command.Parameters.AddWithValue("@ModuleTitle", module.ModuleTitle);
                     command.Parameters.AddWithValue("@ModuleDescription", module.ModuleDescription);
 
-                    return command.ExecuteNonQuery() > 0;
+                    try
+                    {
+                        return command.ExecuteNonQuery() > 0;
+                    }
+                    catch (Exception ex) 
+                    {
+                        MessageBox.Show("Failed to create module, Module code may be in use.","Error",MessageBoxButtons.OKCancel,MessageBoxIcon.Error);
+                        return false;
+                    }
+                    
                 }
             }
         }
@@ -129,6 +138,46 @@ namespace StudentAdministrationSystemRevive.DataAccess
                 }
             }
         }
+
+
+        // Get Modules by programme ID
+        public List<Module> GetModulesByProgrammeID(string degreeProgrammeID)
+        {
+            string query = @"
+                    SELECT m.ModuleID, m.ModuleTitle, m.ModuleDescription
+                    FROM Modules m
+                    INNER JOIN DegreeProgrammeModules dpm ON m.ModuleID = dpm.ModuleID
+                    WHERE dpm.DegreeProgrammeID = @DegreeProgrammeID";
+
+            List<Module> modules = new List<Module>();
+
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectSettingsDB.ConnectionString()))
+            {
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@DegreeProgrammeID", degreeProgrammeID);
+
+                    connection.Open();
+
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            modules.Add(new Module
+                            (
+                                reader["ModuleID"].ToString(),
+                                reader["ModuleTitle"].ToString(),
+                                reader["ModuleDescription"].ToString()
+                            ));
+                        }
+                    }
+                }
+            }
+
+            return modules;
+        }
+
+
 
     }
 }

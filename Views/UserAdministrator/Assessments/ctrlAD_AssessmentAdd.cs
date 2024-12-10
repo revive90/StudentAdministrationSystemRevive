@@ -13,6 +13,14 @@ namespace StudentAdministrationSystemRevive.Views.UserAdministrator.Assessments
 
         public bool TopLevel { get; internal set; }
 
+        //Random 8 Digits for assessment ID
+        private static Random random = new Random();
+        public static string RandomString(int length)
+        {
+            const string chars = "0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
         private void btnAD_AssessmentCreate_Click(object sender, EventArgs e)
         {
             try
@@ -21,7 +29,7 @@ namespace StudentAdministrationSystemRevive.Views.UserAdministrator.Assessments
                 string assessmentTitle = txtAD_Assessment_Title.Text.Trim();
                 string assessmentDescription = txtAD_Assessment_Description.Text.Trim();
                 int maxMarkText = Convert.ToInt32(txtAD_Assessment_MaxMark.Text.Trim());
-                string assessmentID = 32.ToString();
+                string assessmentID = RandomString(8);
 
                 if (string.IsNullOrWhiteSpace(moduleId) ||
                     string.IsNullOrWhiteSpace(assessmentTitle) ||

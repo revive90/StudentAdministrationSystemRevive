@@ -67,6 +67,7 @@
             btnGenerateModuleCode.TabIndex = 59;
             btnGenerateModuleCode.Text = "Generate Code";
             btnGenerateModuleCode.UseVisualStyleBackColor = false;
+            btnGenerateModuleCode.Click += btnGenerateModuleCode_Click;
             // 
             // btnAMCreateModule
             // 

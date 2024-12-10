@@ -56,5 +56,15 @@ namespace StudentAdministrationSystemRevive.BusinessLogic
 
 
         }
+
+        // Get module by programme code
+        public List<Module> GetModulesByProgrammeID(string degreeProgrammeID)
+        {
+            if (string.IsNullOrWhiteSpace(degreeProgrammeID))
+                throw new ArgumentException("Degree Programme ID cannot be null or empty.");
+
+            return _moduleRepository.GetModulesByProgrammeID(degreeProgrammeID);
+        }
+
     }
 }

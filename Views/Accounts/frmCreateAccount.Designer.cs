@@ -50,13 +50,17 @@
             cmbProgLength = new ComboBox();
             cmbStartYear = new ComboBox();
             cmbProgrammes = new ComboBox();
+            groupBox1 = new GroupBox();
+            chkListModulesFromProgramme = new CheckedListBox();
+            btnShowModules = new Button();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft YaHei UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(43, 61);
+            label1.Location = new Point(18, 24);
             label1.Name = "label1";
             label1.Size = new Size(384, 39);
             label1.TabIndex = 2;
@@ -65,7 +69,7 @@
             // panel2
             // 
             panel2.BackColor = Color.Gainsboro;
-            panel2.Location = new Point(448, 82);
+            panel2.Location = new Point(423, 45);
             panel2.Name = "panel2";
             panel2.Size = new Size(364, 1);
             panel2.TabIndex = 16;
@@ -75,7 +79,7 @@
             txtCAEmailAddress.BackColor = Color.White;
             txtCAEmailAddress.BorderStyle = BorderStyle.FixedSingle;
             txtCAEmailAddress.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtCAEmailAddress.Location = new Point(63, 318);
+            txtCAEmailAddress.Location = new Point(26, 257);
             txtCAEmailAddress.Name = "txtCAEmailAddress";
             txtCAEmailAddress.Size = new Size(330, 34);
             txtCAEmailAddress.TabIndex = 22;
@@ -85,7 +89,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft YaHei UI", 12F);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(63, 291);
+            label5.Location = new Point(26, 230);
             label5.Name = "label5";
             label5.Size = new Size(116, 21);
             label5.TabIndex = 21;
@@ -96,7 +100,7 @@
             txtConfirmPassword.BackColor = Color.White;
             txtConfirmPassword.BorderStyle = BorderStyle.FixedSingle;
             txtConfirmPassword.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtConfirmPassword.Location = new Point(63, 527);
+            txtConfirmPassword.Location = new Point(26, 466);
             txtConfirmPassword.Name = "txtConfirmPassword";
             txtConfirmPassword.Size = new Size(330, 34);
             txtConfirmPassword.TabIndex = 28;
@@ -106,7 +110,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft YaHei UI", 12F);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(63, 500);
+            label6.Location = new Point(26, 439);
             label6.Name = "label6";
             label6.Size = new Size(149, 21);
             label6.TabIndex = 27;
@@ -117,7 +121,7 @@
             txtSetPassword.BackColor = Color.White;
             txtSetPassword.BorderStyle = BorderStyle.FixedSingle;
             txtSetPassword.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtSetPassword.Location = new Point(63, 456);
+            txtSetPassword.Location = new Point(26, 395);
             txtSetPassword.Name = "txtSetPassword";
             txtSetPassword.Size = new Size(330, 34);
             txtSetPassword.TabIndex = 26;
@@ -127,7 +131,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Microsoft YaHei UI", 12F);
             label7.ForeColor = Color.Black;
-            label7.Location = new Point(63, 429);
+            label7.Location = new Point(26, 368);
             label7.Name = "label7";
             label7.Size = new Size(111, 21);
             label7.TabIndex = 25;
@@ -138,7 +142,7 @@
             txtCALastName.BackColor = Color.White;
             txtCALastName.BorderStyle = BorderStyle.FixedSingle;
             txtCALastName.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtCALastName.Location = new Point(63, 242);
+            txtCALastName.Location = new Point(26, 181);
             txtCALastName.Name = "txtCALastName";
             txtCALastName.Size = new Size(330, 34);
             txtCALastName.TabIndex = 34;
@@ -148,7 +152,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft YaHei UI", 12F);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(63, 215);
+            label3.Location = new Point(26, 154);
             label3.Name = "label3";
             label3.Size = new Size(91, 21);
             label3.TabIndex = 33;
@@ -159,7 +163,7 @@
             txtCA_ConfirmEmail.BackColor = Color.White;
             txtCA_ConfirmEmail.BorderStyle = BorderStyle.FixedSingle;
             txtCA_ConfirmEmail.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtCA_ConfirmEmail.Location = new Point(63, 385);
+            txtCA_ConfirmEmail.Location = new Point(26, 324);
             txtCA_ConfirmEmail.Name = "txtCA_ConfirmEmail";
             txtCA_ConfirmEmail.Size = new Size(330, 34);
             txtCA_ConfirmEmail.TabIndex = 32;
@@ -169,7 +173,7 @@
             label8.AutoSize = true;
             label8.Font = new Font("Microsoft YaHei UI", 12F);
             label8.ForeColor = Color.Black;
-            label8.Location = new Point(63, 358);
+            label8.Location = new Point(26, 297);
             label8.Name = "label8";
             label8.Size = new Size(183, 21);
             label8.TabIndex = 31;
@@ -180,7 +184,7 @@
             txtCAFirstname.BackColor = Color.White;
             txtCAFirstname.BorderStyle = BorderStyle.FixedSingle;
             txtCAFirstname.Font = new Font("Microsoft YaHei UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtCAFirstname.Location = new Point(63, 173);
+            txtCAFirstname.Location = new Point(26, 112);
             txtCAFirstname.Name = "txtCAFirstname";
             txtCAFirstname.Size = new Size(330, 34);
             txtCAFirstname.TabIndex = 30;
@@ -190,7 +194,7 @@
             label9.AutoSize = true;
             label9.Font = new Font("Microsoft YaHei UI", 12F);
             label9.ForeColor = Color.Black;
-            label9.Location = new Point(63, 146);
+            label9.Location = new Point(26, 85);
             label9.Name = "label9";
             label9.Size = new Size(90, 21);
             label9.TabIndex = 29;
@@ -204,9 +208,9 @@
             btnCreateStudentAccount.FlatStyle = FlatStyle.Flat;
             btnCreateStudentAccount.Font = new Font("Microsoft YaHei UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCreateStudentAccount.ForeColor = Color.White;
-            btnCreateStudentAccount.Location = new Point(533, 511);
+            btnCreateStudentAccount.Location = new Point(407, 579);
             btnCreateStudentAccount.Name = "btnCreateStudentAccount";
-            btnCreateStudentAccount.Size = new Size(225, 45);
+            btnCreateStudentAccount.Size = new Size(225, 35);
             btnCreateStudentAccount.TabIndex = 37;
             btnCreateStudentAccount.Text = "Create account";
             btnCreateStudentAccount.UseVisualStyleBackColor = false;
@@ -218,7 +222,7 @@
             lblForgotPassword.Cursor = Cursors.Hand;
             lblForgotPassword.Font = new Font("Microsoft YaHei UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblForgotPassword.ForeColor = Color.Black;
-            lblForgotPassword.Location = new Point(555, 582);
+            lblForgotPassword.Location = new Point(648, 588);
             lblForgotPassword.Name = "lblForgotPassword";
             lblForgotPassword.Size = new Size(179, 19);
             lblForgotPassword.TabIndex = 38;
@@ -230,7 +234,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft YaHei UI", 12F);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(482, 146);
+            label4.Location = new Point(26, 516);
             label4.Name = "label4";
             label4.Size = new Size(170, 21);
             label4.TabIndex = 39;
@@ -241,7 +245,7 @@
             label10.AutoSize = true;
             label10.Font = new Font("Microsoft YaHei UI", 12F);
             label10.ForeColor = Color.Black;
-            label10.Location = new Point(482, 215);
+            label10.Location = new Point(26, 585);
             label10.Name = "label10";
             label10.Size = new Size(147, 21);
             label10.TabIndex = 40;
@@ -252,7 +256,7 @@
             label11.AutoSize = true;
             label11.Font = new Font("Microsoft YaHei UI", 12F);
             label11.ForeColor = Color.Black;
-            label11.Location = new Point(482, 286);
+            label11.Location = new Point(407, 84);
             label11.Name = "label11";
             label11.Size = new Size(158, 21);
             label11.TabIndex = 41;
@@ -264,7 +268,7 @@
             cmbProgLength.Font = new Font("Microsoft YaHei UI", 12F);
             cmbProgLength.FormattingEnabled = true;
             cmbProgLength.Items.AddRange(new object[] { "1 Year", "2 Years", "3 Years" });
-            cmbProgLength.Location = new Point(482, 318);
+            cmbProgLength.Location = new Point(407, 116);
             cmbProgLength.Name = "cmbProgLength";
             cmbProgLength.Size = new Size(330, 29);
             cmbProgLength.TabIndex = 42;
@@ -275,7 +279,7 @@
             cmbStartYear.Font = new Font("Microsoft YaHei UI", 12F);
             cmbStartYear.FormattingEnabled = true;
             cmbStartYear.Items.AddRange(new object[] { "2025", "2026" });
-            cmbStartYear.Location = new Point(482, 242);
+            cmbStartYear.Location = new Point(26, 612);
             cmbStartYear.Name = "cmbStartYear";
             cmbStartYear.Size = new Size(330, 29);
             cmbStartYear.TabIndex = 43;
@@ -286,17 +290,55 @@
             cmbProgrammes.Font = new Font("Microsoft YaHei UI", 12F);
             cmbProgrammes.FormattingEnabled = true;
             cmbProgrammes.Items.AddRange(new object[] { "Computer Science", "Business Management", "Electrical Engineering" });
-            cmbProgrammes.Location = new Point(482, 173);
+            cmbProgrammes.Location = new Point(26, 543);
             cmbProgrammes.Name = "cmbProgrammes";
             cmbProgrammes.Size = new Size(330, 29);
             cmbProgrammes.TabIndex = 44;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(chkListModulesFromProgramme);
+            groupBox1.Location = new Point(407, 257);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(454, 275);
+            groupBox1.TabIndex = 45;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Module Choices";
+            // 
+            // chkListModulesFromProgramme
+            // 
+            chkListModulesFromProgramme.BorderStyle = BorderStyle.None;
+            chkListModulesFromProgramme.FormattingEnabled = true;
+            chkListModulesFromProgramme.Items.AddRange(new object[] { "Item 1", "Item 2" });
+            chkListModulesFromProgramme.Location = new Point(6, 22);
+            chkListModulesFromProgramme.Name = "chkListModulesFromProgramme";
+            chkListModulesFromProgramme.Size = new Size(442, 234);
+            chkListModulesFromProgramme.TabIndex = 0;
+            // 
+            // btnShowModules
+            // 
+            btnShowModules.BackColor = Color.RoyalBlue;
+            btnShowModules.Cursor = Cursors.Hand;
+            btnShowModules.FlatAppearance.BorderSize = 0;
+            btnShowModules.FlatStyle = FlatStyle.Flat;
+            btnShowModules.Font = new Font("Microsoft YaHei UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnShowModules.ForeColor = Color.White;
+            btnShowModules.Location = new Point(407, 181);
+            btnShowModules.Name = "btnShowModules";
+            btnShowModules.Size = new Size(225, 34);
+            btnShowModules.TabIndex = 46;
+            btnShowModules.Text = "Show Modules";
+            btnShowModules.UseVisualStyleBackColor = false;
+            btnShowModules.Click += btnShowModules_Click;
             // 
             // frmCreateAccount
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(873, 659);
+            ClientSize = new Size(873, 663);
+            Controls.Add(btnShowModules);
+            Controls.Add(groupBox1);
             Controls.Add(cmbProgrammes);
             Controls.Add(cmbStartYear);
             Controls.Add(cmbProgLength);
@@ -323,6 +365,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmCreateAccount";
             Load += frmCreateAccount_Load;
+            groupBox1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -351,5 +394,8 @@
         private ComboBox cmbProgLength;
         private ComboBox cmbStartYear;
         private ComboBox cmbProgrammes;
+        private GroupBox groupBox1;
+        private CheckedListBox chkListModulesFromProgramme;
+        private Button btnShowModules;
     }
 }

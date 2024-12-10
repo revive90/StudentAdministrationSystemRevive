@@ -37,5 +37,21 @@ namespace StudentAdministrationSystemRevive.Views.Administrator.DegreeProgrammes
                 MessageBox.Show("Error creating module", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnGenerateModuleCode_Click(object sender, EventArgs e)
+        {
+            String ModCode = RandomString(5);
+            txtAMModCode.Text = ModCode;
+        }
+
+
+        //Random 5 Digits
+        private static Random random = new Random();
+        public static string RandomString(int length)
+        {
+            const string chars = "0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
     }
 }
