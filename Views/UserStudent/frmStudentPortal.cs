@@ -43,6 +43,18 @@ namespace StudentAdministrationSystemRevive.Views.Student
             frm.BringToFront();
             frm.Show();
 
+            try
+            {
+                GlobalUserInfo.Email = _email; // Store the email globally
+                GlobalUserInfo.StudentID = _userService.GetStudentIDByEmail(_email);
+
+                lblStudentID.Text = GlobalUserInfo.StudentID;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error initializing portal: {ex.Message}");
+            }
+
             hideIndicatorPanels();
             lblAccountEmail.Text = _email;
         }
@@ -64,18 +76,12 @@ namespace StudentAdministrationSystemRevive.Views.Student
 
         private void btnMyModulesScreen_Click(object sender, EventArgs e)
         {
-            hideIndicatorPanels();
-            pnlIndicatorMyModules.Visible = true;
-
-            frmStudentModules frm = new frmStudentModules();
+            string studentID = _userService.GetStudentIDByEmail(_email);
+            frmStudentModules frm = new frmStudentModules(studentID,_userService);
             frm.TopLevel = false;
             pnlContentPane.Controls.Add(frm);
             frm.BringToFront();
             frm.Show();
-
-
-            // 
-
         }
 
         private void btnMyResultsScreen_Click(object sender, EventArgs e)

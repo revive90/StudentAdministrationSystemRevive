@@ -33,6 +33,9 @@
             label1 = new Label();
             panel3 = new Panel();
             panel2 = new Panel();
+            lblStudentName = new Label();
+            label2 = new Label();
+            lblStudentID = new Label();
             panel15 = new Panel();
             panel14 = new Panel();
             panel13 = new Panel();
@@ -61,9 +64,6 @@
             btnHomeScreen = new Button();
             btnMyDetails = new Button();
             pnlContentPane = new Panel();
-            lblStudentID = new Label();
-            label2 = new Label();
-            label3 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -114,7 +114,7 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
-            panel2.Controls.Add(label3);
+            panel2.Controls.Add(lblStudentName);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(lblStudentID);
             panel2.Controls.Add(panel15);
@@ -149,6 +149,37 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(255, 766);
             panel2.TabIndex = 1;
+            // 
+            // lblStudentName
+            // 
+            lblStudentName.AutoSize = true;
+            lblStudentName.Font = new Font("Segoe UI", 15F);
+            lblStudentName.ForeColor = SystemColors.WindowFrame;
+            lblStudentName.Location = new Point(30, 49);
+            lblStudentName.Name = "lblStudentName";
+            lblStudentName.Size = new Size(104, 28);
+            lblStudentName.TabIndex = 25;
+            lblStudentName.Text = "Student ID";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.ForeColor = SystemColors.WindowFrame;
+            label2.Location = new Point(32, 23);
+            label2.Name = "label2";
+            label2.Size = new Size(57, 15);
+            label2.TabIndex = 24;
+            label2.Text = "Welcome";
+            // 
+            // lblStudentID
+            // 
+            lblStudentID.AutoSize = true;
+            lblStudentID.ForeColor = SystemColors.WindowFrame;
+            lblStudentID.Location = new Point(32, 93);
+            lblStudentID.Name = "lblStudentID";
+            lblStudentID.Size = new Size(62, 15);
+            lblStudentID.TabIndex = 23;
+            lblStudentID.Text = "Student ID";
             // 
             // panel15
             // 
@@ -474,37 +505,6 @@
             pnlContentPane.TabIndex = 2;
             pnlContentPane.Paint += pnlContentPane_Paint;
             // 
-            // lblStudentID
-            // 
-            lblStudentID.AutoSize = true;
-            lblStudentID.ForeColor = SystemColors.WindowFrame;
-            lblStudentID.Location = new Point(32, 93);
-            lblStudentID.Name = "lblStudentID";
-            lblStudentID.Size = new Size(62, 15);
-            lblStudentID.TabIndex = 23;
-            lblStudentID.Text = "Student ID";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.ForeColor = SystemColors.WindowFrame;
-            label2.Location = new Point(32, 23);
-            label2.Name = "label2";
-            label2.Size = new Size(57, 15);
-            label2.TabIndex = 24;
-            label2.Text = "Welcome";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 15F);
-            label3.ForeColor = SystemColors.WindowFrame;
-            label3.Location = new Point(30, 49);
-            label3.Name = "label3";
-            label3.Size = new Size(104, 28);
-            label3.TabIndex = 25;
-            label3.Text = "Student ID";
-            // 
             // frmStudentPortal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -564,7 +564,7 @@
         private Panel panel12;
         private Panel panel8;
         private Panel panel15;
-        private Label label3;
+        private Label lblStudentName;
         private Label label2;
         private Label lblStudentID;
     }

@@ -57,11 +57,11 @@ namespace StudentAdministrationSystemRevive.BusinessLogic
             {
                 connection.Open();
                 using (var command = new SQLiteCommand(@"
-                SELECT dp.DegreeProgrammeID, dp.ProgrammeTitle, si.CohortYear, dp.DurationYears
-                FROM Users u
-                JOIN StudentInfo si ON u.Email = si.Email
-                JOIN DegreeProgrammes dp ON si.DegreeProgrammeID = dp.DegreeProgrammeID
-                WHERE u.Email = @Email", connection))
+                    SELECT dp.DegreeProgrammeID, dp.ProgrammeTitle, si.CohortYear, dp.DurationYears
+                    FROM Users u
+                    JOIN StudentInfo si ON u.Email = si.Email
+                    JOIN DegreeProgrammes dp ON si.DegreeProgrammeID = dp.DegreeProgrammeID
+                    WHERE u.Email = @Email", connection))
                 {
                     command.Parameters.AddWithValue("@Email", email);
                     using (var reader = command.ExecuteReader())
@@ -83,6 +83,73 @@ namespace StudentAdministrationSystemRevive.BusinessLogic
                 }
             }
         }
+
+
+
+        //Get student Modules
+        // Get student ID using email
+        public string GetStudentIDByEmail(string email)
+        {
+            using (var connection = new SQLiteConnection(ConnectSettingsDB.ConnectionString()))
+            {
+                connection.Open();
+                using (var command = new SQLiteCommand(@"
+            SELECT s.StudentID
+            FROM Users u
+            INNER JOIN StudentInfo s ON u.Email = s.Email
+            WHERE u.Email = @Email", connection))
+                {
+                    command.Parameters.AddWithValue("@Email", email);
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return reader["StudentID"].ToString();
+                        }
+                        else
+                        {
+                            throw new Exception("Student ID not found for the given email.");
+                        }
+                    }
+                }
+            }
+        }
+
+
+        public List<(string ModuleID, string ModuleTitle)> GetStudentModules(string studentID)
+        {
+            var modules = new List<(string ModuleID, string ModuleTitle)>();
+
+            using (var connection = new SQLiteConnection(ConnectSettingsDB.ConnectionString()))
+            {
+                connection.Open();
+                using (var command = new SQLiteCommand(@"
+                    SELECT m.ModuleID, m.ModuleTitle
+                    FROM StudentModules sm
+                    JOIN Modules m ON sm.ModuleID = m.ModuleID
+                    WHERE sm.StudentID = @StudentID", connection))
+                {
+                    command.Parameters.AddWithValue("@StudentID", studentID);
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            modules.Add((
+                                ModuleID: reader["ModuleID"].ToString(),
+                                ModuleTitle: reader["ModuleTitle"].ToString()
+                            ));
+                        }
+                    }
+                }
+            }
+
+            return modules;
+        }
+
+
+
+
 
     }
 }
