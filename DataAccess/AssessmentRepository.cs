@@ -184,7 +184,7 @@ namespace StudentAdministrationSystemRevive.DataAccess
                         return maxMark;
                     }
 
-                    throw new InvalidOperationException("Assessment not found or invalid maximum mark.");
+                    throw new InvalidOperationException();
                 }
             }
         }

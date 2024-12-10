@@ -45,6 +45,7 @@ namespace StudentAdministrationSystemRevive.Views.StudentPages
 
         private void btnMyModulesRefresh_Click(object sender, EventArgs e)
         {
+            flModules.Controls.Clear();
             LoadStudentModules(GlobalUserInfo.StudentID);
         }
     }

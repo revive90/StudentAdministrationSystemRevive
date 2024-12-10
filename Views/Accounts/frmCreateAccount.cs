@@ -164,6 +164,16 @@ namespace StudentAdministrationSystemRevive.Views.Accounts
                 {
                     MessageBox.Show("Student enrolled and modules assigned successfully.", "Enrollment Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     createUserprofile();
+                    txtCAFirstname.Clear();
+                    txtCALastName.Clear();
+                    txtCA_ConfirmEmail.Clear();
+                    txtCAEmailAddress.Clear();
+                    txtSetPassword.Clear();
+                    txtConfirmPassword.Clear();
+                    cmbProgLength.SelectedIndex = -1;
+                    cmbProgrammes.SelectedIndex = -1;
+                    cmbStartYear.SelectedIndex = -1;
+                    chkListModulesFromProgramme.SelectedIndex = -1;
                 }
                 else
                 {

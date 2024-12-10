@@ -36,7 +36,6 @@
             label4 = new Label();
             label5 = new Label();
             btnStudentSignIn = new Button();
-            lblForgotPassword = new Label();
             btnCreateAccount = new Button();
             btnStaffSignInPage = new Button();
             label7 = new Label();
@@ -139,19 +138,6 @@
             btnStudentSignIn.UseVisualStyleBackColor = false;
             btnStudentSignIn.Click += btnStudentSignIn_Click;
             // 
-            // lblForgotPassword
-            // 
-            lblForgotPassword.AutoSize = true;
-            lblForgotPassword.Cursor = Cursors.Hand;
-            lblForgotPassword.Font = new Font("Microsoft YaHei UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblForgotPassword.ForeColor = Color.Black;
-            lblForgotPassword.Location = new Point(237, 460);
-            lblForgotPassword.Name = "lblForgotPassword";
-            lblForgotPassword.Size = new Size(128, 19);
-            lblForgotPassword.TabIndex = 9;
-            lblForgotPassword.Text = "Forgot Password?";
-            lblForgotPassword.Click += lblForgotPassword_Click;
-            // 
             // btnCreateAccount
             // 
             btnCreateAccount.BackColor = Color.RoyalBlue;
@@ -180,7 +166,7 @@
             btnStaffSignInPage.Name = "btnStaffSignInPage";
             btnStaffSignInPage.Size = new Size(162, 45);
             btnStaffSignInPage.TabIndex = 11;
-            btnStaffSignInPage.Text = "Staff sign in";
+            btnStaffSignInPage.Text = "Staff Sign In";
             btnStaffSignInPage.UseVisualStyleBackColor = false;
             btnStaffSignInPage.Click += btnStaffSignInPage_Click;
             // 
@@ -275,7 +261,6 @@
             Controls.Add(btnStaffSignInPage);
             Controls.Add(btnCreateAccount);
             Controls.Add(txtPassword);
-            Controls.Add(lblForgotPassword);
             Controls.Add(btnStudentSignIn);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -304,7 +289,6 @@
         private Label label4;
         private Label label5;
         private Button btnStudentSignIn;
-        private Label lblForgotPassword;
         private Button btnCreateAccount;
         private Button btnStaffSignInPage;
         private Label label7;

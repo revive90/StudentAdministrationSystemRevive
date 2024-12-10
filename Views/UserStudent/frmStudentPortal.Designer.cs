@@ -33,7 +33,6 @@
             label1 = new Label();
             panel3 = new Panel();
             panel2 = new Panel();
-            lblStudentName = new Label();
             label2 = new Label();
             lblStudentID = new Label();
             panel15 = new Panel();
@@ -114,7 +113,6 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
-            panel2.Controls.Add(lblStudentName);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(lblStudentID);
             panel2.Controls.Add(panel15);
@@ -150,34 +148,25 @@
             panel2.Size = new Size(255, 766);
             panel2.TabIndex = 1;
             // 
-            // lblStudentName
-            // 
-            lblStudentName.AutoSize = true;
-            lblStudentName.Font = new Font("Segoe UI", 15F);
-            lblStudentName.ForeColor = SystemColors.WindowFrame;
-            lblStudentName.Location = new Point(30, 49);
-            lblStudentName.Name = "lblStudentName";
-            lblStudentName.Size = new Size(104, 28);
-            lblStudentName.TabIndex = 25;
-            lblStudentName.Text = "Student ID";
-            // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 11F);
             label2.ForeColor = SystemColors.WindowFrame;
-            label2.Location = new Point(32, 23);
+            label2.Location = new Point(32, 33);
             label2.Name = "label2";
-            label2.Size = new Size(57, 15);
+            label2.Size = new Size(71, 20);
             label2.TabIndex = 24;
             label2.Text = "Welcome";
             // 
             // lblStudentID
             // 
             lblStudentID.AutoSize = true;
+            lblStudentID.Font = new Font("Segoe UI", 14F);
             lblStudentID.ForeColor = SystemColors.WindowFrame;
-            lblStudentID.Location = new Point(32, 93);
+            lblStudentID.Location = new Point(30, 65);
             lblStudentID.Name = "lblStudentID";
-            lblStudentID.Size = new Size(62, 15);
+            lblStudentID.Size = new Size(99, 25);
             lblStudentID.TabIndex = 23;
             lblStudentID.Text = "Student ID";
             // 
@@ -280,6 +269,7 @@
             // pnlIndicatorSupport
             // 
             pnlIndicatorSupport.BackColor = Color.RoyalBlue;
+            pnlIndicatorSupport.Enabled = false;
             pnlIndicatorSupport.Location = new Point(7, 381);
             pnlIndicatorSupport.Name = "pnlIndicatorSupport";
             pnlIndicatorSupport.Size = new Size(2, 58);
@@ -372,6 +362,7 @@
             // 
             btnHelpSupportScreen.BackColor = Color.White;
             btnHelpSupportScreen.Cursor = Cursors.Hand;
+            btnHelpSupportScreen.Enabled = false;
             btnHelpSupportScreen.FlatAppearance.BorderSize = 0;
             btnHelpSupportScreen.FlatAppearance.MouseDownBackColor = Color.White;
             btnHelpSupportScreen.FlatAppearance.MouseOverBackColor = Color.White;
@@ -382,7 +373,7 @@
             btnHelpSupportScreen.Name = "btnHelpSupportScreen";
             btnHelpSupportScreen.Size = new Size(226, 58);
             btnHelpSupportScreen.TabIndex = 9;
-            btnHelpSupportScreen.Text = "Support";
+            btnHelpSupportScreen.Text = "-";
             btnHelpSupportScreen.UseVisualStyleBackColor = false;
             btnHelpSupportScreen.Click += btnHelpSupportScreen_Click;
             btnHelpSupportScreen.MouseEnter += btnHomeScreen_MouseEnter;
@@ -419,6 +410,7 @@
             btnLogout.TabIndex = 8;
             btnLogout.Text = "Logout";
             btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
             // 
             // btnMyResultsScreen
             // 
@@ -503,7 +495,6 @@
             pnlContentPane.Name = "pnlContentPane";
             pnlContentPane.Size = new Size(946, 766);
             pnlContentPane.TabIndex = 2;
-            pnlContentPane.Paint += pnlContentPane_Paint;
             // 
             // frmStudentPortal
             // 
@@ -564,7 +555,6 @@
         private Panel panel12;
         private Panel panel8;
         private Panel panel15;
-        private Label lblStudentName;
         private Label label2;
         private Label lblStudentID;
     }

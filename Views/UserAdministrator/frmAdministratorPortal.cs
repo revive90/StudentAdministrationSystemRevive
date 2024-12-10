@@ -53,6 +53,8 @@ namespace StudentAdministrationSystemRevive.Views.Administrator
             pnlAdminContentPane.Controls.Add(frm);
             frm.BringToFront();
             frm.Show();
+            hidepanels();
+            pnlDegreeIndicator.Visible = true;
         }
 
         private void btnCohortManagement_Click(object sender, EventArgs e)
@@ -62,6 +64,9 @@ namespace StudentAdministrationSystemRevive.Views.Administrator
             pnlAdminContentPane.Controls.Add(frm);
             frm.BringToFront();
             frm.Show();
+
+            hidepanels();
+            pnlCohortIndicator.Visible = true;
         }
 
         private void btnEnrollment_Click(object sender, EventArgs e)
@@ -71,6 +76,9 @@ namespace StudentAdministrationSystemRevive.Views.Administrator
             pnlAdminContentPane.Controls.Add(frm);
             frm.BringToFront();
             frm.Show();
+
+            hidepanels();
+            pnlEnrollmentIndicator.Visible = true;
         }
 
         private void btnStudentManagement_Click(object sender, EventArgs e)
@@ -80,6 +88,9 @@ namespace StudentAdministrationSystemRevive.Views.Administrator
             pnlAdminContentPane.Controls.Add(frm);
             frm.BringToFront();
             frm.Show();
+
+            hidepanels();
+            pnlStudentsIndicator.Visible = true;
         }
 
 
@@ -91,11 +102,14 @@ namespace StudentAdministrationSystemRevive.Views.Administrator
             pnlAdminContentPane.Controls.Add(frm);
             frm.BringToFront();
             frm.Show();
+
+            hidepanels();
+            pnlResult.Visible = true;
         }
 
         private void frmAdministratorPortal_Load(object sender, EventArgs e)
         {
-
+            hidepanels();
         }
 
         private void btnAssessments_Click(object sender, EventArgs e)
@@ -105,6 +119,26 @@ namespace StudentAdministrationSystemRevive.Views.Administrator
             pnlAdminContentPane.Controls.Add(frm);
             frm.BringToFront();
             frm.Show();
+
+            hidepanels();
+            pnlAssessments.Visible = true;
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            frmSignIn frmSignIn = new frmSignIn();
+            frmSignIn.Show();
+            this.Close();
+        }
+
+        private void hidepanels()
+        {
+            pnlAssessments.Visible = false;
+            pnlCohortIndicator.Visible = false;
+            pnlDegreeIndicator.Visible = false;
+            pnlEnrollmentIndicator.Visible = false;
+            pnlStudentsIndicator.Visible = false;
+            pnlResult.Visible = false;
         }
     }
 }

@@ -18,7 +18,7 @@ namespace StudentAdministrationSystemRevive.Views.Student
             InitializeComponent();
             _email = email;
             _userService = new UserService(new UserRepository());
-            
+
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -77,11 +77,13 @@ namespace StudentAdministrationSystemRevive.Views.Student
         private void btnMyModulesScreen_Click(object sender, EventArgs e)
         {
             string studentID = _userService.GetStudentIDByEmail(_email);
-            frmStudentModules frm = new frmStudentModules(studentID,_userService);
+            frmStudentModules frm = new frmStudentModules(studentID, _userService);
             frm.TopLevel = false;
             pnlContentPane.Controls.Add(frm);
             frm.BringToFront();
             frm.Show();
+            hideIndicatorPanels();
+            pnlIndicatorMyModules.Visible = true;
         }
 
         private void btnMyResultsScreen_Click(object sender, EventArgs e)
@@ -145,7 +147,7 @@ namespace StudentAdministrationSystemRevive.Views.Student
             frm.ShowDialog();
         }
 
-        private void pnlContentPane_Paint(object sender, PaintEventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
 
         }

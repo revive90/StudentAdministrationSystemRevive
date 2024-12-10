@@ -208,7 +208,7 @@
             btnCreateStudentAccount.FlatStyle = FlatStyle.Flat;
             btnCreateStudentAccount.Font = new Font("Microsoft YaHei UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCreateStudentAccount.ForeColor = Color.White;
-            btnCreateStudentAccount.Location = new Point(407, 579);
+            btnCreateStudentAccount.Location = new Point(451, 579);
             btnCreateStudentAccount.Name = "btnCreateStudentAccount";
             btnCreateStudentAccount.Size = new Size(225, 35);
             btnCreateStudentAccount.TabIndex = 37;
@@ -222,11 +222,11 @@
             lblForgotPassword.Cursor = Cursors.Hand;
             lblForgotPassword.Font = new Font("Microsoft YaHei UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblForgotPassword.ForeColor = Color.Black;
-            lblForgotPassword.Location = new Point(648, 588);
+            lblForgotPassword.Location = new Point(692, 588);
             lblForgotPassword.Name = "lblForgotPassword";
-            lblForgotPassword.Size = new Size(179, 19);
+            lblForgotPassword.Size = new Size(54, 19);
             lblForgotPassword.TabIndex = 38;
-            lblForgotPassword.Text = "Already have an account?";
+            lblForgotPassword.Text = "Sign In";
             lblForgotPassword.Click += lblForgotPassword_Click;
             // 
             // label4
@@ -309,7 +309,6 @@
             // 
             chkListModulesFromProgramme.BorderStyle = BorderStyle.None;
             chkListModulesFromProgramme.FormattingEnabled = true;
-            chkListModulesFromProgramme.Items.AddRange(new object[] { "Item 1", "Item 2" });
             chkListModulesFromProgramme.Location = new Point(6, 22);
             chkListModulesFromProgramme.Name = "chkListModulesFromProgramme";
             chkListModulesFromProgramme.Size = new Size(442, 234);
